@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "UE5_Frontend_UI",
+			"Path": "..\\Source\\UE5_Frontend_UI.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "UE5_Frontend_UIEditor",
+			"Path": "..\\Source\\UE5_Frontend_UIEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

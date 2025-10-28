@@ -5,7 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Maps/FrontEndTestMap.umap"
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Maps/FrontEndTestMap.umap",
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/BP_FrondendGameMode.uasset",
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/BP_FrontendController.uasset"
 			]
 		}
 	]
