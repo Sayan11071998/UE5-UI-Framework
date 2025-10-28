@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\sayan\\Projects\\UE5-UI-Framework\\UE5_Frontend_UI\\Source\\UE5_Frontend_UI\\UE5_Frontend_UI.Build.cs",
+		"C:\\Users\\sayan\\Projects\\UE5-UI-Framework\\UE5_Frontend_UI\\Source\\UE5_Frontend_UI.Target.cs",
+		"C:\\Users\\sayan\\Projects\\UE5-UI-Framework\\UE5_Frontend_UI\\Source\\UE5_Frontend_UIEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}
