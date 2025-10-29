@@ -38,6 +38,8 @@
 /NOEXP
 "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UE5_Frontend_UIEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_3.h.obj"
 "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UnrealEditor/Development/UE5_Frontend_UI/Module.UE5_Frontend_UI.gen.cpp.obj"
+"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UnrealEditor/Development/UE5_Frontend_UI/UE5_Frontend_UI.init.gen.cpp.obj"
+"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UnrealEditor/Development/UE5_Frontend_UI/Widget_PrimaryLayout.gen.cpp.obj"
 "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UnrealEditor/Development/UE5_Frontend_UI/UE5_Frontend_UI.cpp.obj"
 "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UnrealEditor/Development/UE5_Frontend_UI/FrontendGameplayTags.cpp.obj"
 "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UnrealEditor/Development/UE5_Frontend_UI/FrontendPlayerController.cpp.obj"
@@ -50,6 +52,7 @@
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/CoreUObject/UnrealEditor-CoreUObject.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/InputCore/UnrealEditor-InputCore.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/GameplayTags/UnrealEditor-GameplayTags.lib"
+"../Intermediate/Build/Win64/x64/UnrealEditor/Development/UMG/UnrealEditor-UMG.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
