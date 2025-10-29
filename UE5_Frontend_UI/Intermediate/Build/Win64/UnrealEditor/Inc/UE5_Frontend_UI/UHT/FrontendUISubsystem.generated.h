@@ -19,13 +19,13 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UWidget_PrimaryLayout;
 
 // ********** Begin Class UFrontendUISubsystem *****************************************************
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRegisterCreatedPrimaryLayoutWidget);
 
 
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendUISubsystem_NoRegister();
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_21_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUFrontendUISubsystem(); \
 	friend struct Z_Construct_UClass_UFrontendUISubsystem_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(UFrontendUISubsystem)
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_21_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UFrontendUISubsystem(); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -48,13 +48,13 @@ public: \
 	NO_API virtual ~UFrontendUISubsystem();
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_9_PROLOG
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_12_GENERATED_BODY \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_18_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_21_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_21_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h_21_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
