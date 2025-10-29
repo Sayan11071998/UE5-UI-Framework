@@ -126,8 +126,7 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\source\\commonui\\public\\slate\\scommonanimatedswitcher.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\slate\\public\\widgets\\layout\\swidgetswitcher.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\scommonanimatedswitcher.generated.h",
-            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonactivatablewidgetcontainer.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontenddebughelper.h"
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonactivatablewidgetcontainer.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

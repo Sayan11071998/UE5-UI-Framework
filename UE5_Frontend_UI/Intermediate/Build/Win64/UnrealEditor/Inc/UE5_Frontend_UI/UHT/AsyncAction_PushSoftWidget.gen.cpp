@@ -201,12 +201,12 @@ struct Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnWidgetCreatedBeforePush_MetaData[] = {
 		{ "ModuleRelativePath", "Public/AsyncActions/AsyncAction_PushSoftWidget.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnWidgetCreatedAfterPush_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AfterPush_MetaData[] = {
 		{ "ModuleRelativePath", "Public/AsyncActions/AsyncAction_PushSoftWidget.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnWidgetCreatedBeforePush;
-	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnWidgetCreatedAfterPush;
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_AfterPush;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -219,10 +219,10 @@ struct Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::NewProp_OnWidgetCreatedBeforePush = { "OnWidgetCreatedBeforePush", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAsyncAction_PushSoftWidget, OnWidgetCreatedBeforePush), Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnPushSoftWidgetDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnWidgetCreatedBeforePush_MetaData), NewProp_OnWidgetCreatedBeforePush_MetaData) }; // 2662528984
-const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::NewProp_OnWidgetCreatedAfterPush = { "OnWidgetCreatedAfterPush", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAsyncAction_PushSoftWidget, OnWidgetCreatedAfterPush), Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnPushSoftWidgetDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnWidgetCreatedAfterPush_MetaData), NewProp_OnWidgetCreatedAfterPush_MetaData) }; // 2662528984
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::NewProp_AfterPush = { "AfterPush", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UAsyncAction_PushSoftWidget, AfterPush), Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnPushSoftWidgetDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AfterPush_MetaData), NewProp_AfterPush_MetaData) }; // 2662528984
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::NewProp_OnWidgetCreatedBeforePush,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::NewProp_OnWidgetCreatedAfterPush,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::NewProp_AfterPush,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UAsyncAction_PushSoftWidget_Statics::DependentSingletons[])() = {
@@ -262,10 +262,10 @@ UAsyncAction_PushSoftWidget::~UAsyncAction_PushSoftWidget() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_AsyncActions_AsyncAction_PushSoftWidget_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UAsyncAction_PushSoftWidget, UAsyncAction_PushSoftWidget::StaticClass, TEXT("UAsyncAction_PushSoftWidget"), &Z_Registration_Info_UClass_UAsyncAction_PushSoftWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAsyncAction_PushSoftWidget), 450178050U) },
+		{ Z_Construct_UClass_UAsyncAction_PushSoftWidget, UAsyncAction_PushSoftWidget::StaticClass, TEXT("UAsyncAction_PushSoftWidget"), &Z_Registration_Info_UClass_UAsyncAction_PushSoftWidget, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UAsyncAction_PushSoftWidget), 3386810179U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_AsyncActions_AsyncAction_PushSoftWidget_h__Script_UE5_Frontend_UI_1121410032(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_AsyncActions_AsyncAction_PushSoftWidget_h__Script_UE5_Frontend_UI_890232323(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_AsyncActions_AsyncAction_PushSoftWidget_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_AsyncActions_AsyncAction_PushSoftWidget_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

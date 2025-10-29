@@ -12,7 +12,7 @@ class UWidget_ActivatableBase;
 enum class EAsyncPushWidgetState : uint8
 {
 	OnCreatedBeforePush,
-	OnCreatedAfterPush
+	AfterPush
 };
 
 UCLASS()

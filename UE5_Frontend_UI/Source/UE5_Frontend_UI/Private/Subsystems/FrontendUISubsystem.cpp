@@ -4,8 +4,6 @@
 #include "Widgets/CommonActivatableWidgetContainer.h"
 #include "Widgets/Widget_ActivatableBase.h"
 
-#include "FrontendDebugHelper.h"
-
 TObjectPtr<UFrontendUISubsystem> UFrontendUISubsystem::Get(const TObjectPtr<UObject> WorldContextObject)
 {
 	if (GEngine)
@@ -52,7 +50,7 @@ void UFrontendUISubsystem::PushSoftWidgetToStackAsync(const FGameplayTag& InWidg
 					}
 				);
 
-				AsyncPushStateCallback(EAsyncPushWidgetState::OnCreatedAfterPush, CreatedWidget);
+				AsyncPushStateCallback(EAsyncPushWidgetState::AfterPush, CreatedWidget);
 			}
 		)
 	);
@@ -62,6 +60,4 @@ void UFrontendUISubsystem::RegisterCreatedPrimaryLayoutWidget(UWidget_PrimaryLay
 {
 	check(InCreatedWidget);
 	CreatedPrimaryLayout = InCreatedWidget;
-
-	Debug::Print(TEXT("Primary Layout Widget Stored"));
 }
