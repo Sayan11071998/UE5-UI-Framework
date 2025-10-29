@@ -3,7 +3,8 @@
 	{
 		"Module.UE5_Frontend_UI.gen.cpp.obj": [
 			"FrontendPlayerController.gen.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj"
+			"UE5_Frontend_UI.init.gen.cpp.obj",
+			"Widget_PrimaryLayout.gen.cpp.obj"
 		]
 	}
 }

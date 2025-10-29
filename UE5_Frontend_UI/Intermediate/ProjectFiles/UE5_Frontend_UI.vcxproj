@@ -252,6 +252,7 @@
     <None Include="..\..\UE5_Frontend_UI.uproject"/>
     <None Include="..\..\Source\UE5_Frontend_UI.Target.cs"/>
     <None Include="..\..\Source\UE5_Frontend_UIEditor.Target.cs"/>
+    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
@@ -261,9 +262,13 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\UE5_Frontend_UI\UE5_Frontend_UI.h"/>
+    <ClCompile Include="..\..\Source\UE5_Frontend_UI\Private\FrontendGameplayTags.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <ClCompile Include="..\..\Source\UE5_Frontend_UI\Private\Controllers\FrontendPlayerController.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClInclude Include="..\..\Source\UE5_Frontend_UI\Public\FrontendGameplayTags.h"/>
     <ClInclude Include="..\..\Source\UE5_Frontend_UI\Public\Controllers\FrontendPlayerController.h"/>
   </ItemGroup>
   <PropertyGroup>

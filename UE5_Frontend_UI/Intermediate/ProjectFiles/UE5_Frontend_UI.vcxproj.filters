@@ -11,6 +11,7 @@
     <None Include="..\..\Source\UE5_Frontend_UIEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -41,6 +42,9 @@
     <Filter Include="Source\UE5_Frontend_UI\Private">
       <UniqueIdentifier>{8E4FFFCA-2F34-3788-AC79-0F98750387C6}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\UE5_Frontend_UI\Private\FrontendGameplayTags.cpp">
+      <Filter>Source\UE5_Frontend_UI\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\UE5_Frontend_UI\Private\Controllers">
       <UniqueIdentifier>{09BFDAD2-A1FC-3FCF-9798-306F4344BE12}</UniqueIdentifier>
     </Filter>
@@ -50,6 +54,9 @@
     <Filter Include="Source\UE5_Frontend_UI\Public">
       <UniqueIdentifier>{D7014886-D5EE-3071-8F38-0F3D93784F5C}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\UE5_Frontend_UI\Public\FrontendGameplayTags.h">
+      <Filter>Source\UE5_Frontend_UI\Public</Filter>
+    </ClInclude>
     <Filter Include="Source\UE5_Frontend_UI\Public\Controllers">
       <UniqueIdentifier>{A6F7BB83-2EF7-3226-8974-5D4B2AE4E65A}</UniqueIdentifier>
     </Filter>
