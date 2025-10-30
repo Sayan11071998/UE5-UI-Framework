@@ -2,12 +2,13 @@
 	"RemapUnityFiles": 
 	{
 		"Module.UE5_Frontend_UI.gen.cpp.obj": [
+			"AsyncAction_PushSoftWidget.gen.cpp.obj",
+			"FrontendDeveloperSettings.gen.cpp.obj",
 			"FrontendPlayerController.gen.cpp.obj",
 			"FrontendUISubsystem.gen.cpp.obj",
+			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
-			"Widget_PrimaryLayout.gen.cpp.obj",
-			"AsyncAction_PushSoftWidget.gen.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj"
+			"Widget_PrimaryLayout.gen.cpp.obj"
 		]
 	}
 }
