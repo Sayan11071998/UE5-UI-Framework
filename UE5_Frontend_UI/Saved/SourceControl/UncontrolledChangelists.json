@@ -7,7 +7,12 @@
 			"files": [
 				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Maps/FrontEndTestMap.umap",
 				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/BP_FrondendGameMode.uasset",
-				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/BP_FrontendController.uasset"
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/BP_FrontendController.uasset",
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/Widgets/WBP_CUW_PrimayLayout.uasset",
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/WBP_CAW_Test.uasset",
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/WBP_Template_Layout.uasset",
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/Widgets/WBP_CAW_PressAnyKey.uasset",
+				"C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/Styles/Style_Text_Default.uasset"
 			]
 		}
 	]
