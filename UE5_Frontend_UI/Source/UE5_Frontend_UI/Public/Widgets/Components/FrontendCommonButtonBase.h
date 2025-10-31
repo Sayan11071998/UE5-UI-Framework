@@ -17,6 +17,7 @@ public:
 
 private:
 	virtual void NativePreConstruct() override;
+	virtual void NativeOnCurrentTextStyleChanged() override;
 	
 	UPROPERTY(meta = (BindWidgetOptional))
 	TObjectPtr<UCommonTextBlock> CommonTextBlock_ButtonText;
