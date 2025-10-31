@@ -3,6 +3,7 @@
 	{
 		"Module.UE5_Frontend_UI.gen.cpp.obj": [
 			"AsyncAction_PushSoftWidget.gen.cpp.obj",
+			"FrontendCommonButtonBase.gen.cpp.obj",
 			"FrontendDeveloperSettings.gen.cpp.obj",
 			"FrontendFunctionLibrary.gen.cpp.obj",
 			"FrontendPlayerController.gen.cpp.obj",
