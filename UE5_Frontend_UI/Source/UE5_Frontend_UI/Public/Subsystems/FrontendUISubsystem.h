@@ -5,6 +5,7 @@
 #include "Widgets/Widget_ActivatableBase.h"
 #include "FrontendUISubsystem.generated.h"
 
+class UFrontendCommonButtonBase;
 struct FGameplayTag;
 class UWidget_PrimaryLayout;
 class UWidget_ActivatableBase;
@@ -14,6 +15,8 @@ enum class EAsyncPushWidgetState : uint8
 	OnCreatedBeforePush,
 	AfterPush
 };
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnButtonDescriptionTextUpdatedDelegate, UFrontendCommonButtonBase*, BroadcastingButton, FText, DescriptionText);
 
 UCLASS()
 class UE5_FRONTEND_UI_API UFrontendUISubsystem : public UGameInstanceSubsystem
@@ -27,6 +30,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void RegisterCreatedPrimaryLayoutWidget(UWidget_PrimaryLayout* InCreatedWidget);
+
+	UPROPERTY(BlueprintAssignable)
+	FOnButtonDescriptionTextUpdatedDelegate OnButtonDescriptionTextUpdated;
 
 private:
 	UPROPERTY(Transient)
