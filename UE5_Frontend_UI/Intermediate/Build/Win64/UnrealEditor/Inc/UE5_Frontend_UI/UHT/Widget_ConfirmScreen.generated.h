@@ -16,10 +16,59 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+// ********** Begin ScriptStruct FConfirmScreenButtonInfo ******************************************
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_14_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FConfirmScreenButtonInfo_Statics; \
+	UE5_FRONTEND_UI_API static class UScriptStruct* StaticStruct();
+
+
+struct FConfirmScreenButtonInfo;
+// ********** End ScriptStruct FConfirmScreenButtonInfo ********************************************
+
+// ********** Begin Class UConfirmScreenInfoObject *************************************************
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UConfirmScreenInfoObject_NoRegister();
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_26_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUConfirmScreenInfoObject(); \
+	friend struct Z_Construct_UClass_UConfirmScreenInfoObject_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UConfirmScreenInfoObject_NoRegister(); \
+public: \
+	DECLARE_CLASS2(UConfirmScreenInfoObject, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UE5_Frontend_UI"), Z_Construct_UClass_UConfirmScreenInfoObject_NoRegister) \
+	DECLARE_SERIALIZER(UConfirmScreenInfoObject)
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_26_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UConfirmScreenInfoObject(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UConfirmScreenInfoObject(UConfirmScreenInfoObject&&) = delete; \
+	UConfirmScreenInfoObject(const UConfirmScreenInfoObject&) = delete; \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UConfirmScreenInfoObject); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UConfirmScreenInfoObject); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UConfirmScreenInfoObject) \
+	NO_API virtual ~UConfirmScreenInfoObject();
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_23_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_26_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_26_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_26_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+class UConfirmScreenInfoObject;
+
+// ********** End Class UConfirmScreenInfoObject ***************************************************
+
 // ********** Begin Class UWidget_ConfirmScreen ****************************************************
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ConfirmScreen_NoRegister();
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_14_INCLASS_NO_PURE_DECLS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_46_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWidget_ConfirmScreen(); \
 	friend struct Z_Construct_UClass_UWidget_ConfirmScreen_Statics; \
@@ -30,7 +79,7 @@ public: \
 	DECLARE_SERIALIZER(UWidget_ConfirmScreen)
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_14_ENHANCED_CONSTRUCTORS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_46_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWidget_ConfirmScreen(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +91,12 @@ public: \
 	NO_API virtual ~UWidget_ConfirmScreen();
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_11_PROLOG
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_14_GENERATED_BODY \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_43_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_46_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_14_INCLASS_NO_PURE_DECLS \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_14_ENHANCED_CONSTRUCTORS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_46_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Widget_ConfirmScreen_h_46_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -25,7 +25,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	op(EConfirmScreenType::Ok) \
 	op(EConfirmScreenType::YesNo) \
 	op(EConfirmScreenType::OkCancel) \
-	op(EConfirmScreenType::Unkown) 
+	op(EConfirmScreenType::Unknown) 
 
 enum class EConfirmScreenType : uint8;
 template<> struct TIsUEnumClass<EConfirmScreenType> { enum { Value = true }; };
@@ -37,7 +37,7 @@ template<> UE5_FRONTEND_UI_API UEnum* StaticEnum<EConfirmScreenType>();
 	op(EConfirmScreenButtonType::Confirmed) \
 	op(EConfirmScreenButtonType::Cancelled) \
 	op(EConfirmScreenButtonType::Closed) \
-	op(EConfirmScreenButtonType::Unkown) 
+	op(EConfirmScreenButtonType::Unknown) 
 
 enum class EConfirmScreenButtonType : uint8;
 template<> struct TIsUEnumClass<EConfirmScreenButtonType> { enum { Value = true }; };

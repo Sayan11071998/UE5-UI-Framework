@@ -39,8 +39,8 @@ struct Z_Construct_UEnum_UE5_Frontend_UI_EConfirmScreenType_Statics
 		{ "ModuleRelativePath", "Public/FrontendTypes/FrontendEnumTypes.h" },
 		{ "Ok.Name", "EConfirmScreenType::Ok" },
 		{ "OkCancel.Name", "EConfirmScreenType::OkCancel" },
-		{ "Unkown.Hidden", "" },
-		{ "Unkown.Name", "EConfirmScreenType::Unkown" },
+		{ "Unknown.Hidden", "" },
+		{ "Unknown.Name", "EConfirmScreenType::Unknown" },
 		{ "YesNo.Name", "EConfirmScreenType::YesNo" },
 	};
 #endif // WITH_METADATA
@@ -48,7 +48,7 @@ struct Z_Construct_UEnum_UE5_Frontend_UI_EConfirmScreenType_Statics
 		{ "EConfirmScreenType::Ok", (int64)EConfirmScreenType::Ok },
 		{ "EConfirmScreenType::YesNo", (int64)EConfirmScreenType::YesNo },
 		{ "EConfirmScreenType::OkCancel", (int64)EConfirmScreenType::OkCancel },
-		{ "EConfirmScreenType::Unkown", (int64)EConfirmScreenType::Unkown },
+		{ "EConfirmScreenType::Unknown", (int64)EConfirmScreenType::Unknown },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -97,15 +97,15 @@ struct Z_Construct_UEnum_UE5_Frontend_UI_EConfirmScreenButtonType_Statics
 		{ "Closed.Name", "EConfirmScreenButtonType::Closed" },
 		{ "Confirmed.Name", "EConfirmScreenButtonType::Confirmed" },
 		{ "ModuleRelativePath", "Public/FrontendTypes/FrontendEnumTypes.h" },
-		{ "Unkown.Hidden", "" },
-		{ "Unkown.Name", "EConfirmScreenButtonType::Unkown" },
+		{ "Unknown.Hidden", "" },
+		{ "Unknown.Name", "EConfirmScreenButtonType::Unknown" },
 	};
 #endif // WITH_METADATA
 	static constexpr UECodeGen_Private::FEnumeratorParam Enumerators[] = {
 		{ "EConfirmScreenButtonType::Confirmed", (int64)EConfirmScreenButtonType::Confirmed },
 		{ "EConfirmScreenButtonType::Cancelled", (int64)EConfirmScreenButtonType::Cancelled },
 		{ "EConfirmScreenButtonType::Closed", (int64)EConfirmScreenButtonType::Closed },
-		{ "EConfirmScreenButtonType::Unkown", (int64)EConfirmScreenButtonType::Unkown },
+		{ "EConfirmScreenButtonType::Unknown", (int64)EConfirmScreenButtonType::Unknown },
 	};
 	static const UECodeGen_Private::FEnumParams EnumParams;
 };
@@ -135,11 +135,11 @@ UEnum* Z_Construct_UEnum_UE5_Frontend_UI_EConfirmScreenButtonType()
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendTypes_FrontendEnumTypes_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FEnumRegisterCompiledInInfo EnumInfo[] = {
-		{ EConfirmScreenType_StaticEnum, TEXT("EConfirmScreenType"), &Z_Registration_Info_UEnum_EConfirmScreenType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 2159292229U) },
-		{ EConfirmScreenButtonType_StaticEnum, TEXT("EConfirmScreenButtonType"), &Z_Registration_Info_UEnum_EConfirmScreenButtonType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 349316915U) },
+		{ EConfirmScreenType_StaticEnum, TEXT("EConfirmScreenType"), &Z_Registration_Info_UEnum_EConfirmScreenType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4177383571U) },
+		{ EConfirmScreenButtonType_StaticEnum, TEXT("EConfirmScreenButtonType"), &Z_Registration_Info_UEnum_EConfirmScreenButtonType, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 3260937155U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendTypes_FrontendEnumTypes_h__Script_UE5_Frontend_UI_1807397036(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendTypes_FrontendEnumTypes_h__Script_UE5_Frontend_UI_828344597(TEXT("/Script/UE5_Frontend_UI"),
 	nullptr, 0,
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendTypes_FrontendEnumTypes_h__Script_UE5_Frontend_UI_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendTypes_FrontendEnumTypes_h__Script_UE5_Frontend_UI_Statics::EnumInfo));
