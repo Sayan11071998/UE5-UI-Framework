@@ -13,4 +13,5 @@ namespace FrontendGameplayTags
 	// Frontend Widgets
 	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_PressAnyKeyScreen);
 	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_MainMenuScreen);
+	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_ConfirmScreen);
 }
