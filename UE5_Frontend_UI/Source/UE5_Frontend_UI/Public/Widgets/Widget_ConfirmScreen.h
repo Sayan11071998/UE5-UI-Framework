@@ -45,6 +45,9 @@ class UE5_FRONTEND_UI_API UWidget_ConfirmScreen : public UWidget_ActivatableBase
 {
 	GENERATED_BODY()
 
+public:
+	void InitConfirmScreen(TObjectPtr<UConfirmScreenInfoObject> InScreenInfoObject, TFunction<void(EConfirmScreenButtonType)> ClickedButtonCallback);
+
 private:
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UCommonTextBlock> CommonTextBlock_Title;

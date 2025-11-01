@@ -59,6 +59,7 @@
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/InputCore/UnrealEditor-InputCore.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/GameplayTags/UnrealEditor-GameplayTags.lib"
 "../Intermediate/Build/Win64/x64/UnrealEditor/Development/UMG/UnrealEditor-UMG.lib"
+"../Plugins/Runtime/CommonUI/Intermediate/Build/Win64/x64/UnrealEditor/Development/CommonInput/UnrealEditor-CommonInput.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
