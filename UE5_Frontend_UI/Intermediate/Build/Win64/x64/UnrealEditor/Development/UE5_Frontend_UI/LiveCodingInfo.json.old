@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.UE5_Frontend_UI.gen.cpp.obj": [
+			"AsyncAction_PushConfirmScreen.gen.cpp.obj",
 			"AsyncAction_PushSoftWidget.gen.cpp.obj",
 			"FrontendCommonButtonBase.gen.cpp.obj",
 			"FrontendDeveloperSettings.gen.cpp.obj",
@@ -12,6 +13,7 @@
 			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
+			"Widget_OptionsScreen.gen.cpp.obj",
 			"Widget_PrimaryLayout.gen.cpp.obj"
 		]
 	}
