@@ -1578,3 +1578,306 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.11.02-19.09.29:592][595]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
 [2025.11.02-19.09.29:592][595]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
 [2025.11.02-19.09.29:667][595]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2025.11.02-19.09.50:026][ 16]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen.WBP_CAW_ConfirmScreen
+[2025.11.02-19.09.50:027][ 16]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2025.11.02-19.09.50:040][ 16]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_22
+[2025.11.02-19.09.55:323][256]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.09.55:323][256]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.09.55:345][256]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.09.55:345][256]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.09.55:489][256]LogUObjectHash: Compacting FUObjectHashTables data took   1.88ms
+[2025.11.02-19.09.56:928][313]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu.WBP_CAW_MainMenu
+[2025.11.02-19.09.56:928][313]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_23
+[2025.11.02-19.09.56:939][313]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_24
+[2025.11.02-19.10.13:599][221]LogUObjectHash: Compacting FUObjectHashTables data took   1.79ms
+[2025.11.02-19.10.13:979][237]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.02-19.10.14:053][237]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu] ([2] browsable assets)...
+[2025.11.02-19.10.14:059][237]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu.WBP_CAW_MainMenu]
+[2025.11.02-19.10.14:059][237]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu]
+[2025.11.02-19.10.14:071][237]LogSavePackage: Moving output files for package: /Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu
+[2025.11.02-19.10.14:072][237]LogSavePackage: Moving '../../../../../../Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Saved/WBP_CAW_MainMenu4BA986E84276A8837FAF4AAC0F6ED594.tmp' to '../../../../../../Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/Widgets/WBP_CAW_MainMenu.uasset'
+[2025.11.02-19.10.14:082][237]LogFileHelpers: InternalPromptForCheckoutAndSave took 103.121 ms (total: 939.375 ms)
+[2025.11.02-19.10.14:160][237]LogContentValidation: Display: Starting to validate 1 assets
+[2025.11.02-19.10.14:160][237]LogContentValidation: Enabled validators:
+[2025.11.02-19.10.14:160][237]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.02-19.10.14:160][237]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.02-19.10.14:160][237]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.02-19.10.14:160][237]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.02-19.10.14:160][237]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.02-19.10.14:160][237]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.02-19.10.14:163][237]AssetCheck: /Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu Validating asset
+[2025.11.02-19.10.15:240][296]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2025.11.02-19.10.16:872][385]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2025.11.02-19.10.16:885][385]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.02-19.10.16:885][385]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_FrontEndTestMap
+[2025.11.02-19.10.16:886][385]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001870s)
+[2025.11.02-19.10.16:886][385]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/FrontEndTestMap.FrontEndTestMap to /Game/Maps/UEDPIE_0_FrontEndTestMap.FrontEndTestMap (0.001911s)
+[2025.11.02-19.10.16:918][385]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2025.11.02-19.10.16:919][385]LogChaosDD: Creating Chaos Debug Draw Scene for world FrontEndTestMap
+[2025.11.02-19.10.16:921][385]LogPlayLevel: PIE: World Init took: (0.001783s)
+[2025.11.02-19.10.16:922][385]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2025.11.02-19.10.16:922][385]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.02-19.10.16:922][385]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.02-19.10.16:922][385]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.02-19.10.16:922][385]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.02-19.10.16:922][385]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.02-19.10.16:922][385]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.02-19.10.16:922][385]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.02-19.10.16:922][385]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.02-19.10.16:922][385]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.02-19.10.16:922][385]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.02-19.10.16:922][385]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.02-19.10.16:925][385]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.02-19.10.16:966][385]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.02-19.10.16:966][385]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.02-19.10.16:966][385]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.02-19.10.16:966][385]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.02-19.10.16:967][385]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2025.11.02-19.10.16:967][385]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=5
+[2025.11.02-19.10.16:971][385]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2025.11.02-19.10.16:971][385]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2025.11.02-19.10.16:971][385]LogInit: FAudioDevice initialized with ID 5.
+[2025.11.02-19.10.16:971][385]LogAudio: Display: Audio Device (ID: 5) registered with world 'FrontEndTestMap'.
+[2025.11.02-19.10.16:971][385]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2025.11.02-19.10.16:971][385]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2025.11.02-19.10.17:017][385]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.02-19.10.17:018][385]LogLoad: Game class is 'BP_FrondendGameMode_C'
+[2025.11.02-19.10.17:022][385]LogWorld: Bringing World /Game/Maps/UEDPIE_0_FrontEndTestMap.FrontEndTestMap up for play (max tick rate 60) at 2025.11.03-00.40.17
+[2025.11.02-19.10.17:026][385]LogWorld: Bringing up level for play took: 0.007312
+[2025.11.02-19.10.17:031][385]LogOnline: OSS: Created online subsystem instance for: :Context_13
+[2025.11.02-19.10.17:037][385]PIE: Server logged in
+[2025.11.02-19.10.17:042][385]PIE: Play in editor total start time 0.158 seconds.
+[2025.11.02-19.10.17:134][385]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_PressAnyKey_C_0]
+[2025.11.02-19.10.17:135][385]LogUIActionRouter: Display: UIInputConfig being changed. bForceRefresh: 1
+[2025.11.02-19.10.17:135][385]LogUIActionRouter: Display: 	InputMode: Previous (None), New (ECommonInputMode::Menu)
+[2025.11.02-19.10.17:135][385]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2025.11.02-19.10.17:135][385]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2025.11.02-19.10.17:135][385]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2025.11.02-19.10.17:135][385]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.11.02-19.10.17:135][385]LogUIActionRouter: Display: [User 0] Focused desired target WBP_CAW_PressAnyKey_C_0
+[2025.11.02-19.10.18:627][402]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_MainMenu_C_0]
+[2025.11.02-19.10.18:627][402]LogUIActionRouter: Display: [User 0] Focused desired target Button_Story
+[2025.11.02-19.10.22:319][489]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_ConfirmScreen_C_0]
+[2025.11.02-19.10.22:319][490]LogUIActionRouter: Display: [User 0] Leaf-most node [WBP_CAW_ConfirmScreen_C_0] did not set focus through desired methods, but the currently focused widget is acceptable. Doing nothing, but this widget should be updated.
+[2025.11.02-19.10.23:278][523]Cmd: quit
+[2025.11.02-19.10.23:280][523]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.02-19.10.23:280][523]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_FrontEndTestMap
+[2025.11.02-19.10.23:280][523]LogSlate: Window 'UE5_Frontend_UI Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2025.11.02-19.10.23:396][523]LogWorld: UWorld::CleanupWorld for FrontEndTestMap, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.10.23:397][523]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.10.23:398][523]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.02-19.10.23:410][523]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.10.23:462][523]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2025.11.02-19.10.23:462][523]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5, StreamState=4
+[2025.11.02-19.10.23:464][523]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5, StreamState=2
+[2025.11.02-19.10.23:487][523]LogUObjectHash: Compacting FUObjectHashTables data took   4.80ms
+[2025.11.02-19.10.23:540][524]LogPlayLevel: Display: Destroying online subsystem :Context_13
+[2025.11.02-19.10.24:844][577]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2025.11.02-19.10.24:857][577]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.02-19.10.24:858][577]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_FrontEndTestMap
+[2025.11.02-19.10.24:859][577]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001887s)
+[2025.11.02-19.10.24:860][577]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/FrontEndTestMap.FrontEndTestMap to /Game/Maps/UEDPIE_0_FrontEndTestMap.FrontEndTestMap (0.001941s)
+[2025.11.02-19.10.24:893][577]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2025.11.02-19.10.24:894][577]LogChaosDD: Creating Chaos Debug Draw Scene for world FrontEndTestMap
+[2025.11.02-19.10.24:896][577]LogPlayLevel: PIE: World Init took: (0.002704s)
+[2025.11.02-19.10.24:898][577]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.11.02-19.10.24:898][577]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.02-19.10.24:898][577]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.02-19.10.24:898][577]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.02-19.10.24:898][577]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.02-19.10.24:898][577]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.02-19.10.24:898][577]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.02-19.10.24:898][577]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.02-19.10.24:898][577]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.02-19.10.24:898][577]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.02-19.10.24:898][577]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.02-19.10.24:898][577]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.02-19.10.24:900][577]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.02-19.10.24:940][577]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.02-19.10.24:940][577]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.02-19.10.24:940][577]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.02-19.10.24:940][577]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.02-19.10.24:941][577]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.11.02-19.10.24:941][577]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=6
+[2025.11.02-19.10.24:945][577]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.11.02-19.10.24:945][577]LogInit: FAudioDevice initialized with ID 6.
+[2025.11.02-19.10.24:945][577]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.11.02-19.10.24:945][577]LogAudio: Display: Audio Device (ID: 6) registered with world 'FrontEndTestMap'.
+[2025.11.02-19.10.24:945][577]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.11.02-19.10.24:945][577]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2025.11.02-19.10.25:003][577]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.02-19.10.25:003][577]LogLoad: Game class is 'BP_FrondendGameMode_C'
+[2025.11.02-19.10.25:011][577]LogWorld: Bringing World /Game/Maps/UEDPIE_0_FrontEndTestMap.FrontEndTestMap up for play (max tick rate 60) at 2025.11.03-00.40.25
+[2025.11.02-19.10.25:014][577]LogWorld: Bringing up level for play took: 0.009284
+[2025.11.02-19.10.25:017][577]LogOnline: OSS: Created online subsystem instance for: :Context_14
+[2025.11.02-19.10.25:026][577]PIE: Server logged in
+[2025.11.02-19.10.25:031][577]PIE: Play in editor total start time 0.173 seconds.
+[2025.11.02-19.10.25:114][577]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_PressAnyKey_C_0]
+[2025.11.02-19.10.25:114][577]LogUIActionRouter: Display: UIInputConfig being changed. bForceRefresh: 1
+[2025.11.02-19.10.25:114][577]LogUIActionRouter: Display: 	InputMode: Previous (None), New (ECommonInputMode::Menu)
+[2025.11.02-19.10.25:114][577]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2025.11.02-19.10.25:114][577]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2025.11.02-19.10.25:114][577]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2025.11.02-19.10.25:114][577]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.11.02-19.10.25:114][577]LogUIActionRouter: Display: [User 0] Focused desired target WBP_CAW_PressAnyKey_C_0
+[2025.11.02-19.10.26:593][598]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_MainMenu_C_0]
+[2025.11.02-19.10.26:593][598]LogUIActionRouter: Display: [User 0] Focused desired target Button_Story
+[2025.11.02-19.10.27:534][630]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_StoryScreen_C_0]
+[2025.11.02-19.10.27:534][630]LogUIActionRouter: Display: [User 0] No focus target for leaf-most node [WBP_CAW_StoryScreen_C_0], and the widget isn't focusable - focusing the game viewport.
+[2025.11.02-19.10.30:943][749]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_MainMenu_C_0]
+[2025.11.02-19.10.30:943][749]LogUIActionRouter: Display: [User 0] Focused desired target Button_Story
+[2025.11.02-19.10.32:115][789]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_StoryScreen_C_0]
+[2025.11.02-19.10.32:115][789]LogUIActionRouter: Display: [User 0] No focus target for leaf-most node [WBP_CAW_StoryScreen_C_0], and the widget isn't focusable - focusing the game viewport.
+[2025.11.02-19.10.32:779][812]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_ConfirmScreen_C_0]
+[2025.11.02-19.10.32:779][813]LogUIActionRouter: Display: [User 0] Leaf-most node [WBP_CAW_ConfirmScreen_C_0] did not set focus through desired methods, but the currently focused widget is acceptable. Doing nothing, but this widget should be updated.
+[2025.11.02-19.10.34:077][856]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected. InstanceID=6
+[2025.11.02-19.10.34:317][864]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_StoryScreen_C_0]
+[2025.11.02-19.10.34:317][864]LogUIActionRouter: Display: [User 0] No focus target for leaf-most node [WBP_CAW_StoryScreen_C_0], and the widget isn't focusable - focusing the game viewport.
+[2025.11.02-19.10.36:019][924]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_MainMenu_C_0]
+[2025.11.02-19.10.36:019][924]LogUIActionRouter: Display: [User 0] Focused desired target Button_Story
+[2025.11.02-19.10.37:251][967]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_ConfirmScreen_C_0]
+[2025.11.02-19.10.37:251][967]LogUIActionRouter: Display: [User 0] Leaf-most node [WBP_CAW_ConfirmScreen_C_0] did not set focus through desired methods, but the currently focused widget is acceptable. Doing nothing, but this widget should be updated.
+[2025.11.02-19.10.38:451][  7]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_MainMenu_C_0]
+[2025.11.02-19.10.38:451][  7]LogUIActionRouter: Display: [User 0] Focused desired target Button_Story
+[2025.11.02-19.10.39:491][ 43]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_ConfirmScreen_C_0]
+[2025.11.02-19.10.39:491][ 44]LogUIActionRouter: Display: [User 0] Leaf-most node [WBP_CAW_ConfirmScreen_C_0] did not set focus through desired methods, but the currently focused widget is acceptable. Doing nothing, but this widget should be updated.
+[2025.11.02-19.10.40:689][ 85]Cmd: quit
+[2025.11.02-19.10.40:691][ 85]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.02-19.10.40:692][ 85]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_FrontEndTestMap
+[2025.11.02-19.10.40:692][ 85]LogSlate: Window 'UE5_Frontend_UI Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2025.11.02-19.10.40:817][ 85]LogWorld: UWorld::CleanupWorld for FrontEndTestMap, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.10.40:818][ 85]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.10.40:819][ 85]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.02-19.10.40:827][ 85]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.10.40:874][ 85]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.11.02-19.10.40:874][ 85]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6, StreamState=4
+[2025.11.02-19.10.40:877][ 85]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6, StreamState=2
+[2025.11.02-19.10.40:911][ 85]LogUObjectHash: Compacting FUObjectHashTables data took   2.41ms
+[2025.11.02-19.10.40:963][ 86]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2025.11.02-19.10.54:477][468]LogWorld: UWorld::CleanupWorld for World_24, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.10.54:477][468]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.10.54:489][468]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.10.54:489][468]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.10.54:562][468]LogUObjectHash: Compacting FUObjectHashTables data took   1.81ms
+[2025.11.02-19.11.21:093][996]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1041.160767
+[2025.11.02-19.11.21:450][ 15]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.11.02-19.11.21:450][ 15]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1041.501221, Update Interval: 333.531311
+[2025.11.02-19.11.32:671][656]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen.WBP_CAW_ConfirmScreen
+[2025.11.02-19.11.32:672][656]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_27
+[2025.11.02-19.11.32:681][656]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_28
+[2025.11.02-19.12.03:186][421]LogSlate: Window 'Color Picker' being destroyed
+[2025.11.02-19.12.10:338][846]LogUObjectHash: Compacting FUObjectHashTables data took   1.71ms
+[2025.11.02-19.12.17:803][241]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/UI/Styles/Text/Style_Text_ConfirmScreenDefault.Style_Text_ConfirmScreenDefault
+[2025.11.02-19.12.17:803][241]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_30
+[2025.11.02-19.12.26:318][717]LogSlate: Window 'Color Picker' being destroyed
+[2025.11.02-19.12.27:533][786]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2025.11.02-19.12.27:955][808]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.02-19.12.28:023][808]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/Blueprints/UI/Styles/Text/Style_Text_ConfirmScreenDefault] ([2] browsable assets)...
+[2025.11.02-19.12.28:023][808]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI/Styles/Text/Style_Text_ConfirmScreenDefault]
+[2025.11.02-19.12.28:026][808]LogSavePackage: Moving output files for package: /Game/Blueprints/UI/Styles/Text/Style_Text_ConfirmScreenDefault
+[2025.11.02-19.12.28:027][808]LogSavePackage: Moving '../../../../../../Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Saved/Style_Text_ConfirmScreenDefaultB48E6D364232CE036296B5B4C0740F8B.tmp' to '../../../../../../Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/Styles/Text/Style_Text_ConfirmScreenDefault.uasset'
+[2025.11.02-19.12.28:037][808]LogFileHelpers: InternalPromptForCheckoutAndSave took 82.061 ms (total: 1.02 sec)
+[2025.11.02-19.12.28:105][808]LogContentValidation: Display: Starting to validate 1 assets
+[2025.11.02-19.12.28:105][808]LogContentValidation: Enabled validators:
+[2025.11.02-19.12.28:105][808]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.02-19.12.28:105][808]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.02-19.12.28:105][808]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.02-19.12.28:105][808]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.02-19.12.28:105][808]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.02-19.12.28:106][808]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.02-19.12.28:106][808]AssetCheck: /Game/Blueprints/UI/Styles/Text/Style_Text_ConfirmScreenDefault Validating asset
+[2025.11.02-19.12.30:344][934]LogUObjectHash: Compacting FUObjectHashTables data took   1.76ms
+[2025.11.02-19.12.30:350][934]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.11.02-19.12.30:433][934]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen] ([2] browsable assets)...
+[2025.11.02-19.12.30:442][934]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen.WBP_CAW_ConfirmScreen]
+[2025.11.02-19.12.30:442][934]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen]
+[2025.11.02-19.12.30:448][934]LogSavePackage: Moving output files for package: /Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen
+[2025.11.02-19.12.30:449][934]LogSavePackage: Moving '../../../../../../Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Saved/WBP_CAW_ConfirmScreen76C655B24F80B573A29B3F94481EE6A9.tmp' to '../../../../../../Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Content/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen.uasset'
+[2025.11.02-19.12.30:462][934]LogFileHelpers: InternalPromptForCheckoutAndSave took 112.227 ms (total: 1.13 sec)
+[2025.11.02-19.12.30:555][934]LogContentValidation: Display: Starting to validate 1 assets
+[2025.11.02-19.12.30:555][934]LogContentValidation: Enabled validators:
+[2025.11.02-19.12.30:555][934]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.11.02-19.12.30:555][934]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.11.02-19.12.30:555][934]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.11.02-19.12.30:555][934]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.11.02-19.12.30:555][934]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.11.02-19.12.30:555][934]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.11.02-19.12.30:557][934]AssetCheck: /Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen Validating asset
+[2025.11.02-19.12.31:785][  1]LogDebuggerCommands: Repeating last play command: New Editor Window (PIE)
+[2025.11.02-19.12.31:799][  1]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.11.02-19.12.31:799][  1]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_FrontEndTestMap
+[2025.11.02-19.12.31:801][  1]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001922s)
+[2025.11.02-19.12.31:801][  1]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/FrontEndTestMap.FrontEndTestMap to /Game/Maps/UEDPIE_0_FrontEndTestMap.FrontEndTestMap (0.001977s)
+[2025.11.02-19.12.31:832][  1]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2025.11.02-19.12.31:833][  1]LogChaosDD: Creating Chaos Debug Draw Scene for world FrontEndTestMap
+[2025.11.02-19.12.31:835][  1]LogPlayLevel: PIE: World Init took: (0.001994s)
+[2025.11.02-19.12.31:835][  1]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2025.11.02-19.12.31:836][  1]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.11.02-19.12.31:836][  1]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.11.02-19.12.31:836][  1]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.11.02-19.12.31:836][  1]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.11.02-19.12.31:836][  1]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.11.02-19.12.31:836][  1]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.11.02-19.12.31:836][  1]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.11.02-19.12.31:836][  1]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.11.02-19.12.31:836][  1]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.11.02-19.12.31:836][  1]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.11.02-19.12.31:836][  1]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.11.02-19.12.31:838][  1]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.11.02-19.12.31:882][  1]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2025.11.02-19.12.31:883][  1]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.11.02-19.12.31:883][  1]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.11.02-19.12.31:883][  1]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.11.02-19.12.31:883][  1]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2025.11.02-19.12.31:883][  1]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=8, Samples=8192, InstanceID=7
+[2025.11.02-19.12.31:886][  1]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2025.11.02-19.12.31:886][  1]LogInit: FAudioDevice initialized with ID 7.
+[2025.11.02-19.12.31:886][  1]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2025.11.02-19.12.31:886][  1]LogAudio: Display: Audio Device (ID: 7) registered with world 'FrontEndTestMap'.
+[2025.11.02-19.12.31:886][  1]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2025.11.02-19.12.31:886][  1]LogUIActionRouter: Display: Found 0 derived classes when attemping to create action router (CommonUIActionRouterBase)
+[2025.11.02-19.12.31:936][  1]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.02-19.12.31:936][  1]LogLoad: Game class is 'BP_FrondendGameMode_C'
+[2025.11.02-19.12.31:942][  1]LogWorld: Bringing World /Game/Maps/UEDPIE_0_FrontEndTestMap.FrontEndTestMap up for play (max tick rate 60) at 2025.11.03-00.42.31
+[2025.11.02-19.12.31:946][  1]LogWorld: Bringing up level for play took: 0.009303
+[2025.11.02-19.12.31:950][  1]LogOnline: OSS: Created online subsystem instance for: :Context_18
+[2025.11.02-19.12.31:957][  1]PIE: Server logged in
+[2025.11.02-19.12.31:962][  1]PIE: Play in editor total start time 0.164 seconds.
+[2025.11.02-19.12.32:036][  1]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_PressAnyKey_C_0]
+[2025.11.02-19.12.32:036][  1]LogUIActionRouter: Display: UIInputConfig being changed. bForceRefresh: 1
+[2025.11.02-19.12.32:036][  1]LogUIActionRouter: Display: 	InputMode: Previous (None), New (ECommonInputMode::Menu)
+[2025.11.02-19.12.32:036][  1]LogViewport: Display: Viewport MouseCaptureMode Changed, CapturePermanently_IncludingInitialMouseDown -> NoCapture
+[2025.11.02-19.12.32:037][  1]LogViewport: Display: Viewport HideCursorDuringCapture Changed, False -> True
+[2025.11.02-19.12.32:037][  1]LogViewport: Display: Viewport MouseLockMode Changed, LockOnCapture -> DoNotLock
+[2025.11.02-19.12.32:037][  1]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.11.02-19.12.32:037][  1]LogUIActionRouter: Display: [User 0] Focused desired target WBP_CAW_PressAnyKey_C_0
+[2025.11.02-19.12.33:271][  5]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_MainMenu_C_0]
+[2025.11.02-19.12.33:271][  5]LogUIActionRouter: Display: [User 0] Focused desired target Button_Story
+[2025.11.02-19.12.34:065][ 25]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_ConfirmScreen_C_0]
+[2025.11.02-19.12.34:065][ 26]LogUIActionRouter: Display: [User 0] Leaf-most node [WBP_CAW_ConfirmScreen_C_0] did not set focus through desired methods, but the currently focused widget is acceptable. Doing nothing, but this widget should be updated.
+[2025.11.02-19.12.36:097][ 95]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_MainMenu_C_0]
+[2025.11.02-19.12.36:097][ 95]LogUIActionRouter: Display: [User 0] Focused desired target Button_Story
+[2025.11.02-19.12.37:362][139]LogUIActionRouter: Display: Applying input config for leaf-most node [WBP_CAW_PressAnyKey_C_0]
+[2025.11.02-19.12.37:362][139]LogUIActionRouter: Display: [User 0] Focused desired target WBP_CAW_PressAnyKey_C_0
+[2025.11.02-19.12.39:048][197]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.11.02-19.12.39:048][197]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_FrontEndTestMap
+[2025.11.02-19.12.39:048][197]LogSlate: Window 'UE5_Frontend_UI Preview [NetMode: Standalone 0]  (64-bit/PC D3D SM6)' being destroyed
+[2025.11.02-19.12.39:125][197]LogWorld: UWorld::CleanupWorld for FrontEndTestMap, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.12.39:126][197]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.12.39:127][197]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.11.02-19.12.39:135][197]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.12.39:185][197]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.11.02-19.12.39:185][197]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2025.11.02-19.12.39:185][197]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7, StreamState=4
+[2025.11.02-19.12.39:188][197]LogAudioMixer: Display: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7, StreamState=2
+[2025.11.02-19.12.39:198][197]LogUObjectHash: Compacting FUObjectHashTables data took   2.49ms
+[2025.11.02-19.12.39:248][198]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2025.11.02-19.12.44:271][441]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.12.44:271][441]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.12.44:283][441]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.12.44:283][441]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.12.44:359][441]LogUObjectHash: Compacting FUObjectHashTables data took   1.91ms
+[2025.11.02-19.12.44:626][453]LogWorld: UWorld::CleanupWorld for World_30, bSessionEnded=true, bCleanupResources=true
+[2025.11.02-19.12.44:627][453]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.11.02-19.12.44:702][453]LogUObjectHash: Compacting FUObjectHashTables data took   1.87ms
+[2025.11.02-19.12.50:741][791]LogUObjectHash: Compacting FUObjectHashTables data took   1.96ms
