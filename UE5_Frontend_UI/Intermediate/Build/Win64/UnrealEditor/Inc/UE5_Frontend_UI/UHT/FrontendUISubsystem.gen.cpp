@@ -14,11 +14,66 @@ void EmptyLinkFunctionForGeneratedCodeFrontendUISubsystem() {}
 
 // ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_UGameInstanceSubsystem();
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendUISubsystem();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendUISubsystem_NoRegister();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_PrimaryLayout_NoRegister();
+UE5_FRONTEND_UI_API UFunction* Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature();
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
 // ********** End Cross Module References **********************************************************
+
+// ********** Begin Delegate FOnButtonDescriptionTextUpdatedDelegate *******************************
+struct Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics
+{
+	struct _Script_UE5_Frontend_UI_eventOnButtonDescriptionTextUpdatedDelegate_Parms
+	{
+		UFrontendCommonButtonBase* BroadcastingButton;
+		FText DescriptionText;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Subsystems/FrontendUISubsystem.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BroadcastingButton_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_BroadcastingButton;
+	static const UECodeGen_Private::FTextPropertyParams NewProp_DescriptionText;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FDelegateFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::NewProp_BroadcastingButton = { "BroadcastingButton", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_UE5_Frontend_UI_eventOnButtonDescriptionTextUpdatedDelegate_Parms, BroadcastingButton), Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BroadcastingButton_MetaData), NewProp_BroadcastingButton_MetaData) };
+const UECodeGen_Private::FTextPropertyParams Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::NewProp_DescriptionText = { "DescriptionText", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(_Script_UE5_Frontend_UI_eventOnButtonDescriptionTextUpdatedDelegate_Parms, DescriptionText), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::NewProp_BroadcastingButton,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::NewProp_DescriptionText,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FDelegateFunctionParams Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UPackage__Script_UE5_Frontend_UI, nullptr, "OnButtonDescriptionTextUpdatedDelegate__DelegateSignature", Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::PropPointers), sizeof(Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::_Script_UE5_Frontend_UI_eventOnButtonDescriptionTextUpdatedDelegate_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00130000, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::Function_MetaDataParams), Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::_Script_UE5_Frontend_UI_eventOnButtonDescriptionTextUpdatedDelegate_Parms) < MAX_uint16);
+UFunction* Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUDelegateFunction(&ReturnFunction, Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+void FOnButtonDescriptionTextUpdatedDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnButtonDescriptionTextUpdatedDelegate, UFrontendCommonButtonBase* BroadcastingButton, const FText& DescriptionText)
+{
+	struct _Script_UE5_Frontend_UI_eventOnButtonDescriptionTextUpdatedDelegate_Parms
+	{
+		UFrontendCommonButtonBase* BroadcastingButton;
+		FText DescriptionText;
+	};
+	_Script_UE5_Frontend_UI_eventOnButtonDescriptionTextUpdatedDelegate_Parms Parms;
+	Parms.BroadcastingButton=BroadcastingButton;
+	Parms.DescriptionText=DescriptionText;
+	OnButtonDescriptionTextUpdatedDelegate.ProcessMulticastDelegate<UObject>(&Parms);
+}
+// ********** End Delegate FOnButtonDescriptionTextUpdatedDelegate *********************************
 
 // ********** Begin Class UFrontendUISubsystem Function RegisterCreatedPrimaryLayoutWidget *********
 struct Z_Construct_UFunction_UFrontendUISubsystem_RegisterCreatedPrimaryLayoutWidget_Statics
@@ -110,11 +165,15 @@ struct Z_Construct_UClass_UFrontendUISubsystem_Statics
 		{ "IncludePath", "Subsystems/FrontendUISubsystem.h" },
 		{ "ModuleRelativePath", "Public/Subsystems/FrontendUISubsystem.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OnButtonDescriptionTextUpdated_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Subsystems/FrontendUISubsystem.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CreatedPrimaryLayout_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Subsystems/FrontendUISubsystem.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FMulticastDelegatePropertyParams NewProp_OnButtonDescriptionTextUpdated;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CreatedPrimaryLayout;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -127,8 +186,10 @@ struct Z_Construct_UClass_UFrontendUISubsystem_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FMulticastDelegatePropertyParams Z_Construct_UClass_UFrontendUISubsystem_Statics::NewProp_OnButtonDescriptionTextUpdated = { "OnButtonDescriptionTextUpdated", nullptr, (EPropertyFlags)0x0010000010080000, UECodeGen_Private::EPropertyGenFlags::InlineMulticastDelegate, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendUISubsystem, OnButtonDescriptionTextUpdated), Z_Construct_UDelegateFunction_UE5_Frontend_UI_OnButtonDescriptionTextUpdatedDelegate__DelegateSignature, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OnButtonDescriptionTextUpdated_MetaData), NewProp_OnButtonDescriptionTextUpdated_MetaData) }; // 62303026
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UFrontendUISubsystem_Statics::NewProp_CreatedPrimaryLayout = { "CreatedPrimaryLayout", nullptr, (EPropertyFlags)0x0144000000082008, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendUISubsystem, CreatedPrimaryLayout), Z_Construct_UClass_UWidget_PrimaryLayout_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CreatedPrimaryLayout_MetaData), NewProp_CreatedPrimaryLayout_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UFrontendUISubsystem_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendUISubsystem_Statics::NewProp_OnButtonDescriptionTextUpdated,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendUISubsystem_Statics::NewProp_CreatedPrimaryLayout,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UFrontendUISubsystem_Statics::PropPointers) < 2048);
@@ -169,10 +230,10 @@ UFrontendUISubsystem::~UFrontendUISubsystem() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFrontendUISubsystem, UFrontendUISubsystem::StaticClass, TEXT("UFrontendUISubsystem"), &Z_Registration_Info_UClass_UFrontendUISubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendUISubsystem), 2573548195U) },
+		{ Z_Construct_UClass_UFrontendUISubsystem, UFrontendUISubsystem::StaticClass, TEXT("UFrontendUISubsystem"), &Z_Registration_Info_UClass_UFrontendUISubsystem, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendUISubsystem), 229212570U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h__Script_UE5_Frontend_UI_4031603717(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h__Script_UE5_Frontend_UI_3124967531(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendUISubsystem_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
