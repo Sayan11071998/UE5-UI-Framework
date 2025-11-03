@@ -11,11 +11,12 @@
 			"FrontendPlayerController.gen.cpp.obj",
 			"FrontendTabListWidgetBase.gen.cpp.obj",
 			"FrontendUISubsystem.gen.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
 			"Widget_OptionsScreen.gen.cpp.obj",
-			"Widget_PrimaryLayout.gen.cpp.obj"
+			"Widget_PrimaryLayout.gen.cpp.obj",
+			"ListDataObject_Base.gen.cpp.obj",
+			"UE5_Frontend_UI.init.gen.cpp.obj"
 		]
 	}
 }
