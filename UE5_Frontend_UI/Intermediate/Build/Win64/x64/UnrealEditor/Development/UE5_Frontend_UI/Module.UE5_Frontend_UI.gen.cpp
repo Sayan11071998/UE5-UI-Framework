@@ -9,4 +9,5 @@
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/UnrealEditor/Inc/UE5_Frontend_UI/UHT/FrontendUISubsystem.gen.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/UnrealEditor/Inc/UE5_Frontend_UI/UHT/Widget_ActivatableBase.gen.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/UnrealEditor/Inc/UE5_Frontend_UI/UHT/Widget_ConfirmScreen.gen.cpp"
+#include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/UnrealEditor/Inc/UE5_Frontend_UI/UHT/Widget_OptionsScreen.gen.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/UnrealEditor/Inc/UE5_Frontend_UI/UHT/Widget_PrimaryLayout.gen.cpp"
