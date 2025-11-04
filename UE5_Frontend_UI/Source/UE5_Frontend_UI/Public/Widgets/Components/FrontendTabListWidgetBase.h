@@ -11,6 +11,9 @@ class UE5_FRONTEND_UI_API UFrontendTabListWidgetBase : public UCommonTabListWidg
 {
 	GENERATED_BODY()
 
+public:
+	void RequestRegisterTab(const FName& InTabID, const FText& InTabDisplayName);
+
 private:
 #if WITH_EDITOR	
 	virtual void ValidateCompiledDefaults(class IWidgetCompilerLog& CompileLog) const override;
