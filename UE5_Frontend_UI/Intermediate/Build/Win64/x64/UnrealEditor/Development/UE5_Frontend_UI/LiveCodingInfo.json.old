@@ -1,7 +1,7 @@
 {
 	"RemapUnityFiles": 
 	{
-		"Module.UE5_Frontend_UI.gen.cpp.obj": [
+		"Module.UE5_Frontend_UI.cpp.obj": [
 			"AsyncAction_PushConfirmScreen.gen.cpp.obj",
 			"AsyncAction_PushSoftWidget.gen.cpp.obj",
 			"FrontendCommonButtonBase.gen.cpp.obj",
@@ -12,11 +12,29 @@
 			"FrontendTabListWidgetBase.gen.cpp.obj",
 			"FrontendUISubsystem.gen.cpp.obj",
 			"ListDataObject_Base.gen.cpp.obj",
+			"ListDataObject_Collection.gen.cpp.obj",
 			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
 			"Widget_OptionsScreen.gen.cpp.obj",
-			"Widget_PrimaryLayout.gen.cpp.obj"
+			"Widget_PrimaryLayout.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"AsyncAction_PushConfirmScreen.cpp.obj",
+			"AsyncAction_PushSoftWidget.cpp.obj",
+			"FrontendPlayerController.cpp.obj",
+			"FrontendFunctionLibrary.cpp.obj",
+			"FrontendGameplayTags.cpp.obj",
+			"FrontendDeveloperSettings.cpp.obj",
+			"FrontendUISubsystem.cpp.obj",
+			"FrontendCommonButtonBase.cpp.obj",
+			"FrontendTabListWidgetBase.cpp.obj",
+			"Widget_OptionsScreen.cpp.obj",
+			"Widget_ActivatableBase.cpp.obj",
+			"Widget_ConfirmScreen.cpp.obj",
+			"Widget_PrimaryLayout.cpp.obj",
+			"UE5_Frontend_UI.cpp.obj",
+			"ListDataObject_Base.cpp.obj",
+			"ListDataObject_Collection.cpp.obj"
 		]
 	}
 }
