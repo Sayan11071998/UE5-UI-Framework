@@ -25,13 +25,13 @@ void EmptyLinkFunctionForGeneratedCodeUE5_Frontend_UI_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xA2E15374,
-				0xC4755818,
+				0xF8EC76ED,
+				0x5EC2CFB8,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_UE5_Frontend_UI.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_UE5_Frontend_UI.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_UE5_Frontend_UI(Z_Construct_UPackage__Script_UE5_Frontend_UI, TEXT("/Script/UE5_Frontend_UI"), Z_Registration_Info_UPackage__Script_UE5_Frontend_UI, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xA2E15374, 0xC4755818));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_UE5_Frontend_UI(Z_Construct_UPackage__Script_UE5_Frontend_UI, TEXT("/Script/UE5_Frontend_UI"), Z_Registration_Info_UPackage__Script_UE5_Frontend_UI, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xF8EC76ED, 0x5EC2CFB8));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

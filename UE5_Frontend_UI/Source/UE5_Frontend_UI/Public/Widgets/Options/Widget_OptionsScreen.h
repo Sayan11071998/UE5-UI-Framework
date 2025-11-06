@@ -6,6 +6,7 @@
 
 class UFrontendTabListWidgetBase;
 class UOptionsDataRegistry;
+class UFrontendCommonListView;
 
 UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class UE5_FRONTEND_UI_API UWidget_OptionsScreen : public UWidget_ActivatableBase
@@ -31,6 +32,9 @@ private:
 
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UFrontendTabListWidgetBase> TabListWidget_OptionsTabs;
+
+	UPROPERTY(meta = (BindWidget))
+	TObjectPtr<UFrontendCommonListView> CommonListView_OptionsList;
 
 	UFUNCTION()
 	void OnOptionsTabSelected(FName TabID);
