@@ -31,4 +31,7 @@ private:
 
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UFrontendTabListWidgetBase> TabListWidget_OptionsTabs;
+
+	UFUNCTION()
+	void OnOptionsTabSelected(FName TabID);
 };

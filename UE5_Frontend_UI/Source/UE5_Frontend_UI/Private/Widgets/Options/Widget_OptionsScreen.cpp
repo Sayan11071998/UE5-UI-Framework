@@ -29,6 +29,8 @@ void UWidget_OptionsScreen::NativeOnInitialized()
 			FSimpleDelegate::CreateUObject(this, &UWidget_OptionsScreen::OnBackBoundActionTriggered)
 		)
 	);
+
+	TabListWidget_OptionsTabs->OnTabSelected.AddUniqueDynamic(this, &UWidget_OptionsScreen::OnOptionsTabSelected);
 }
 
 void UWidget_OptionsScreen::NativeOnActivated()
@@ -65,4 +67,9 @@ TObjectPtr<UOptionsDataRegistry> UWidget_OptionsScreen::GetOrCreateDataRegistry(
 	checkf(CreatedOwningDataRegistry, TEXT("Data Registry for Options Screen is not Valid"));
 
 	return CreatedOwningDataRegistry;
+}
+
+void UWidget_OptionsScreen::OnOptionsTabSelected(FName TabID)
+{
+	Debug::Print(TEXT("New Tab Selected. Tab ID: ") + TabID.ToString());
 }

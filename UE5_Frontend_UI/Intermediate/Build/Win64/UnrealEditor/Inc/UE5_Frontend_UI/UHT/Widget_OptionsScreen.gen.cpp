@@ -22,9 +22,56 @@ UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_OptionsScreen_NoRegister(
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
 // ********** End Cross Module References **********************************************************
 
+// ********** Begin Class UWidget_OptionsScreen Function OnOptionsTabSelected **********************
+struct Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics
+{
+	struct Widget_OptionsScreen_eventOnOptionsTabSelected_Parms
+	{
+		FName TabID;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Options/Widget_OptionsScreen.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FNamePropertyParams NewProp_TabID;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FNamePropertyParams Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::NewProp_TabID = { "TabID", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Widget_OptionsScreen_eventOnOptionsTabSelected_Parms, TabID), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::NewProp_TabID,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWidget_OptionsScreen, nullptr, "OnOptionsTabSelected", Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::Widget_OptionsScreen_eventOnOptionsTabSelected_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::Widget_OptionsScreen_eventOnOptionsTabSelected_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWidget_OptionsScreen::execOnOptionsTabSelected)
+{
+	P_GET_PROPERTY(FNameProperty,Z_Param_TabID);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnOptionsTabSelected(Z_Param_TabID);
+	P_NATIVE_END;
+}
+// ********** End Class UWidget_OptionsScreen Function OnOptionsTabSelected ************************
+
 // ********** Begin Class UWidget_OptionsScreen ****************************************************
 void UWidget_OptionsScreen::StaticRegisterNativesUWidget_OptionsScreen()
 {
+	UClass* Class = UWidget_OptionsScreen::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnOptionsTabSelected", &UWidget_OptionsScreen::execOnOptionsTabSelected },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 FClassRegistrationInfo Z_Registration_Info_UClass_UWidget_OptionsScreen;
 UClass* UWidget_OptionsScreen::GetPrivateStaticClass()
@@ -83,6 +130,10 @@ struct Z_Construct_UClass_UWidget_OptionsScreen_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TabListWidget_OptionsTabs;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWidget_OptionsScreen_OnOptionsTabSelected, "OnOptionsTabSelected" }, // 2860864959
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UWidget_OptionsScreen>::IsAbstract,
 	};
@@ -107,11 +158,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UWidget_OptionsScreen_S
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UWidget_OptionsScreen_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UWidget_OptionsScreen_Statics::PropPointers),
 	0,
 	0x00B010A1u,
@@ -134,10 +185,10 @@ UWidget_OptionsScreen::~UWidget_OptionsScreen() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_OptionsScreen_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_OptionsScreen, UWidget_OptionsScreen::StaticClass, TEXT("UWidget_OptionsScreen"), &Z_Registration_Info_UClass_UWidget_OptionsScreen, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_OptionsScreen), 3512698126U) },
+		{ Z_Construct_UClass_UWidget_OptionsScreen, UWidget_OptionsScreen::StaticClass, TEXT("UWidget_OptionsScreen"), &Z_Registration_Info_UClass_UWidget_OptionsScreen, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_OptionsScreen), 76900946U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_OptionsScreen_h__Script_UE5_Frontend_UI_3923705157(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_OptionsScreen_h__Script_UE5_Frontend_UI_3208902376(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_OptionsScreen_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_OptionsScreen_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
