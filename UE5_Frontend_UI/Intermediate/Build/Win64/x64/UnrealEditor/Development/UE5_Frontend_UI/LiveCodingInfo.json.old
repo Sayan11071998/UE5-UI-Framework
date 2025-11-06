@@ -13,6 +13,8 @@
 			"FrontendUISubsystem.gen.cpp.obj",
 			"ListDataObject_Base.gen.cpp.obj",
 			"ListDataObject_Collection.gen.cpp.obj",
+			"OptionsDataRegistry.gen.cpp.obj",
+			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
 			"Widget_OptionsScreen.gen.cpp.obj",
@@ -29,14 +31,12 @@
 			"FrontendTabListWidgetBase.cpp.obj",
 			"ListDataObject_Base.cpp.obj",
 			"ListDataObject_Collection.cpp.obj",
+			"OptionsDataRegistry.cpp.obj",
 			"Widget_OptionsScreen.cpp.obj",
 			"Widget_ActivatableBase.cpp.obj",
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
-			"UE5_Frontend_UI.cpp.obj",
-			"OptionsDataRegistry.gen.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj",
-			"OptionsDataRegistry.cpp.obj"
+			"UE5_Frontend_UI.cpp.obj"
 		]
 	}
 }

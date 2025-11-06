@@ -25,6 +25,7 @@
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendSettings/FrontendDeveloperSettings.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Subsystems/FrontendUISubsystem.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Components/FrontendCommonButtonBase.cpp"
+#include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Components/FrontendTabListWidgetBase.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/DataObjects/ListDataObject_Base.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/DataObjects/ListDataObject_Collection.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/OptionsDataRegistry.cpp"

@@ -37,7 +37,7 @@ void UWidget_OptionsScreen::NativeOnActivated()
 
 	for (UListDataObject_Collection* TabCollection : GetOrCreateDataRegistry()->GetRegisteredOptionsTabCollections())
 	{
-		if (TabCollection) continue;
+		if (!TabCollection) continue;
 		const FName TabID = TabCollection->GetDataID();
 		if (TabListWidget_OptionsTabs->GetTabButtonBaseByID(TabID) != nullptr) continue;
 		TabListWidget_OptionsTabs->RequestRegisterTab(TabID, TabCollection->GetDataDisplayName());
