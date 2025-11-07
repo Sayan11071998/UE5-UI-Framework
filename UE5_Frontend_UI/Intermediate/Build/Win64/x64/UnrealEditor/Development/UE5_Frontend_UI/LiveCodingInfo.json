@@ -6,6 +6,7 @@
 			"AsyncAction_PushSoftWidget.gen.cpp.obj",
 			"DataAsset_DataListEntryMapping.gen.cpp.obj",
 			"FrontendCommonButtonBase.gen.cpp.obj",
+			"FrontendCommonListView.gen.cpp.obj",
 			"FrontendDeveloperSettings.gen.cpp.obj",
 			"FrontendEnumTypes.gen.cpp.obj",
 			"FrontendFunctionLibrary.gen.cpp.obj",
@@ -44,9 +45,12 @@
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
 			"UE5_Frontend_UI.cpp.obj",
-			"FrontendCommonListView.gen.cpp.obj",
+			"FrontendCommonRotator.gen.cpp.obj",
 			"UE5_Frontend_UI.init.gen.cpp.obj",
-			"FrontendCommonListView.cpp.obj"
+			"Widget_ListEntry_String.gen.cpp.obj",
+			"FrontendCommonListView.cpp.obj",
+			"FrontendCommonRotator.cpp.obj",
+			"Widget_ListEntry_String.cpp.obj"
 		]
 	}
 }
