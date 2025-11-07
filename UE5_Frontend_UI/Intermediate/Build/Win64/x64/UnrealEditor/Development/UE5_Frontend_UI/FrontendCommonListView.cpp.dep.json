@@ -98,7 +98,18 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\listviewbase.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\listview.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonlistview.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonlistview.generated.h"
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonlistview.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\editor\\widgetcompilerlog.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\widgets\\options\\dataasset_datalistentrymapping.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\dataasset_datalistentrymapping.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\widgets\\options\\dataobjects\\listdataobject_base.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\listdataobject_base.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\widgets\\options\\listentries\\widget_listentry_base.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\source\\commonui\\public\\commonuserwidget.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\source\\commonui\\public\\input\\uiactionbindinghandle.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\uiactionbindinghandle.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonuserwidget.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\widget_listentry_base.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

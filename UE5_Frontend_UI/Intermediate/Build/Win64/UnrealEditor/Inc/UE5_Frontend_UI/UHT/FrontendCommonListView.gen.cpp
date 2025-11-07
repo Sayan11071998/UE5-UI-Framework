@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeFrontendCommonListView() {}
 
 // ********** Begin Cross Module References ********************************************************
 COMMONUI_API UClass* Z_Construct_UClass_UCommonListView();
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UDataAsset_DataListEntryMapping_NoRegister();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendCommonListView();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendCommonListView_NoRegister();
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
@@ -58,13 +59,24 @@ struct Z_Construct_UClass_UFrontendCommonListView_Statics
 		{ "IncludePath", "Widgets/Components/FrontendCommonListView.h" },
 		{ "ModuleRelativePath", "Public/Widgets/Components/FrontendCommonListView.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DataListEntryMapping_MetaData[] = {
+		{ "Category", "Frontend List View Settings" },
+		{ "ModuleRelativePath", "Public/Widgets/Components/FrontendCommonListView.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DataListEntryMapping;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UFrontendCommonListView>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UFrontendCommonListView_Statics::NewProp_DataListEntryMapping = { "DataListEntryMapping", nullptr, (EPropertyFlags)0x0144000000000001, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendCommonListView, DataListEntryMapping), Z_Construct_UClass_UDataAsset_DataListEntryMapping_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DataListEntryMapping_MetaData), NewProp_DataListEntryMapping_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UFrontendCommonListView_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendCommonListView_Statics::NewProp_DataListEntryMapping,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UFrontendCommonListView_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UFrontendCommonListView_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_UCommonListView,
 	(UObject* (*)())Z_Construct_UPackage__Script_UE5_Frontend_UI,
@@ -76,11 +88,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UFrontendCommonListView
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	nullptr,
+	Z_Construct_UClass_UFrontendCommonListView_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_UFrontendCommonListView_Statics::PropPointers),
 	0,
 	0x00B000A0u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_UFrontendCommonListView_Statics::Class_MetaDataParams), Z_Construct_UClass_UFrontendCommonListView_Statics::Class_MetaDataParams)
@@ -102,10 +114,10 @@ UFrontendCommonListView::~UFrontendCommonListView() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonListView_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFrontendCommonListView, UFrontendCommonListView::StaticClass, TEXT("UFrontendCommonListView"), &Z_Registration_Info_UClass_UFrontendCommonListView, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendCommonListView), 2164949557U) },
+		{ Z_Construct_UClass_UFrontendCommonListView, UFrontendCommonListView::StaticClass, TEXT("UFrontendCommonListView"), &Z_Registration_Info_UClass_UFrontendCommonListView, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendCommonListView), 1782002221U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonListView_h__Script_UE5_Frontend_UI_119735001(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonListView_h__Script_UE5_Frontend_UI_3818372008(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonListView_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonListView_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
