@@ -26,7 +26,7 @@ private: \
 	static UClass* GetPrivateStaticClass(); \
 	friend UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_Base_NoRegister(); \
 public: \
-	DECLARE_CLASS2(UListDataObject_Base, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UE5_Frontend_UI"), Z_Construct_UClass_UListDataObject_Base_NoRegister) \
+	DECLARE_CLASS2(UListDataObject_Base, UObject, COMPILED_IN_FLAGS(CLASS_Abstract), CASTCLASS_None, TEXT("/Script/UE5_Frontend_UI"), Z_Construct_UClass_UListDataObject_Base_NoRegister) \
 	DECLARE_SERIALIZER(UListDataObject_Base)
 
 
@@ -38,7 +38,7 @@ public: \
 	UListDataObject_Base(const UListDataObject_Base&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UListDataObject_Base); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UListDataObject_Base); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UListDataObject_Base) \
+	DEFINE_ABSTRACT_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UListDataObject_Base) \
 	NO_API virtual ~UListDataObject_Base();
 
 

@@ -7,7 +7,7 @@
 	FORCEINLINE DataType Get##PropertyName() const { return PropertyName; } \
 	void Set##PropertyName(DataType In##PropertyName) { PropertyName = In##PropertyName; }
 
-UCLASS()
+UCLASS(Abstract)
 class UE5_FRONTEND_UI_API UListDataObject_Base : public UObject
 {
 	GENERATED_BODY()
