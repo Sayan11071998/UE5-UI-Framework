@@ -14,11 +14,11 @@ class UE5_FRONTEND_UI_API UWidget_ListEntry_String : public UWidget_ListEntry_Ba
 
 private:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
-	TObjectPtr<UFrontendCommonButtonBase> CommonButton_Decrease;
+	TObjectPtr<UFrontendCommonButtonBase> CommonButton_PreviousOption;
 
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
 	TObjectPtr<UFrontendCommonRotator> CommonRotator_AvailableOptions;
 
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
-	TObjectPtr<UFrontendCommonButtonBase> CommonButton_Increase;
+	TObjectPtr<UFrontendCommonButtonBase> CommonButton_NextOption;
 };

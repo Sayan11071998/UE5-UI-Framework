@@ -62,7 +62,7 @@ struct Z_Construct_UClass_UWidget_ListEntry_String_Statics
 		{ "IncludePath", "Widgets/Options/ListEntries/Widget_ListEntry_String.h" },
 		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_String.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CommonButton_Decrease_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CommonButton_PreviousOption_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "BindWidget", "" },
 		{ "Category", "Widget_ListEntry_String" },
@@ -76,7 +76,7 @@ struct Z_Construct_UClass_UWidget_ListEntry_String_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_String.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CommonButton_Increase_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CommonButton_NextOption_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "BindWidget", "" },
 		{ "Category", "Widget_ListEntry_String" },
@@ -84,9 +84,9 @@ struct Z_Construct_UClass_UWidget_ListEntry_String_Statics
 		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_String.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonButton_Decrease;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonButton_PreviousOption;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonRotator_AvailableOptions;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonButton_Increase;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonButton_NextOption;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -94,13 +94,13 @@ struct Z_Construct_UClass_UWidget_ListEntry_String_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_Decrease = { "CommonButton_Decrease", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_String, CommonButton_Decrease), Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonButton_Decrease_MetaData), NewProp_CommonButton_Decrease_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_PreviousOption = { "CommonButton_PreviousOption", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_String, CommonButton_PreviousOption), Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonButton_PreviousOption_MetaData), NewProp_CommonButton_PreviousOption_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonRotator_AvailableOptions = { "CommonRotator_AvailableOptions", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_String, CommonRotator_AvailableOptions), Z_Construct_UClass_UFrontendCommonRotator_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonRotator_AvailableOptions_MetaData), NewProp_CommonRotator_AvailableOptions_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_Increase = { "CommonButton_Increase", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_String, CommonButton_Increase), Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonButton_Increase_MetaData), NewProp_CommonButton_Increase_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_NextOption = { "CommonButton_NextOption", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_String, CommonButton_NextOption), Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonButton_NextOption_MetaData), NewProp_CommonButton_NextOption_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWidget_ListEntry_String_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_Decrease,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_PreviousOption,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonRotator_AvailableOptions,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_Increase,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_String_Statics::NewProp_CommonButton_NextOption,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWidget_ListEntry_String_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UWidget_ListEntry_String_Statics::DependentSingletons[])() = {
@@ -140,10 +140,10 @@ UWidget_ListEntry_String::~UWidget_ListEntry_String() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_String_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_ListEntry_String, UWidget_ListEntry_String::StaticClass, TEXT("UWidget_ListEntry_String"), &Z_Registration_Info_UClass_UWidget_ListEntry_String, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_String), 1138061857U) },
+		{ Z_Construct_UClass_UWidget_ListEntry_String, UWidget_ListEntry_String::StaticClass, TEXT("UWidget_ListEntry_String"), &Z_Registration_Info_UClass_UWidget_ListEntry_String, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_String), 1971835494U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_String_h__Script_UE5_Frontend_UI_4125805971(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_String_h__Script_UE5_Frontend_UI_4029253885(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_String_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_String_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
