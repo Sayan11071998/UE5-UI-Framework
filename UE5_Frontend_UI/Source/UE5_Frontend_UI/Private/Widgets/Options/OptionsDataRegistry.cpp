@@ -31,16 +31,20 @@ void UOptionsDataRegistry::InitGameplayCollectionTab()
 {
 	UListDataObject_Collection* GameplayTabCollection = NewObject<UListDataObject_Collection>();
 	GameplayTabCollection->SetDataID(FName("GameplayTabCollection"));
-	GameplayTabCollection->SetDataDisplayName(FText::FromString("Gameplay"));
+	GameplayTabCollection->SetDataDisplayName(FText::FromString(TEXT("Gameplay")));
 
 	UListDataObject_String* GameDifficulty = NewObject<UListDataObject_String>();
 	GameDifficulty->SetDataID(FName("GameDifficulty"));
-	GameDifficulty->SetDataDisplayName(FText::FromString("Difficulty"));
+	GameDifficulty->SetDataDisplayName(FText::FromString(TEXT("Difficulty")));
+	GameDifficulty->AddDynamicOption(TEXT("Easy"), FText::FromString(TEXT("Easy")));
+	GameDifficulty->AddDynamicOption(TEXT("Normal"), FText::FromString(TEXT("Normal")));
+	GameDifficulty->AddDynamicOption(TEXT("Hard"), FText::FromString(TEXT("Hard")));
+	GameDifficulty->AddDynamicOption(TEXT("Very Hard"), FText::FromString(TEXT("Very Hard")));
 	GameplayTabCollection->AddChildListData(GameDifficulty);
 
 	UListDataObject_String* TestItem = NewObject<UListDataObject_String>();
 	TestItem->SetDataID(FName("TestItem"));
-	TestItem->SetDataDisplayName(FText::FromString("Test Item"));
+	TestItem->SetDataDisplayName(FText::FromString(TEXT("Test Item")));
 	GameplayTabCollection->AddChildListData(TestItem);
 	
 	RegisteredOptionsTabCollections.Add(GameplayTabCollection);
@@ -50,7 +54,7 @@ void UOptionsDataRegistry::InitAudioCollectionTab()
 {
 	UListDataObject_Collection* AudioTabCollection = NewObject<UListDataObject_Collection>();
 	AudioTabCollection->SetDataID(FName("AudioTabCollection"));
-	AudioTabCollection->SetDataDisplayName(FText::FromString("Audio"));
+	AudioTabCollection->SetDataDisplayName(FText::FromString(TEXT("Audio")));
 	
 	RegisteredOptionsTabCollections.Add(AudioTabCollection);
 }
@@ -59,7 +63,7 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 {
 	UListDataObject_Collection* VideoTabCollection = NewObject<UListDataObject_Collection>();
 	VideoTabCollection->SetDataID(FName("VideoTabCollection"));
-	VideoTabCollection->SetDataDisplayName(FText::FromString("Video"));
+	VideoTabCollection->SetDataDisplayName(FText::FromString(TEXT("Video")));
 	
 	RegisteredOptionsTabCollections.Add(VideoTabCollection);
 }
@@ -68,7 +72,7 @@ void UOptionsDataRegistry::InitControlCollectionTab()
 {
 	UListDataObject_Collection* ControlTabCollection = NewObject<UListDataObject_Collection>();
 	ControlTabCollection->SetDataID(FName("ControlTabCollection"));
-	ControlTabCollection->SetDataDisplayName(FText::FromString("Control"));
+	ControlTabCollection->SetDataDisplayName(FText::FromString(TEXT("Control")));
 	
 	RegisteredOptionsTabCollections.Add(ControlTabCollection);
 }
