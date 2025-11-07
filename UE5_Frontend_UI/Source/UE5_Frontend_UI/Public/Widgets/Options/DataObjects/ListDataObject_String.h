@@ -13,6 +13,9 @@ public:
 	void AddDynamicOption(const FString& InStringValue, const FText& InDisplayText);
 
 protected:
+	virtual void OnDataObjectInitialized() override;
+	bool TrySetDisplayTextFromStringValue(const FString& InStringValue);
+	
 	FString CurrentStringValue;
 	FText CurrentDisplayText;
 	TArray<FString> AvailableOptionsStringArray;
