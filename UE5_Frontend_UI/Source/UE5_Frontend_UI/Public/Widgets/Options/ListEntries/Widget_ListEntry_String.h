@@ -14,9 +14,13 @@ class UE5_FRONTEND_UI_API UWidget_ListEntry_String : public UWidget_ListEntry_Ba
 	GENERATED_BODY()
 
 protected:
+	virtual void NativeOnInitialized() override;
 	virtual void OnOwningListDataObjectSet(TObjectPtr<UListDataObject_Base> InOwningListDataObject) override;
 
 private:
+	void OnPreviousOptionButtonClicked();
+	void OnNextOptionButtonClicked();
+	
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
 	TObjectPtr<UFrontendCommonButtonBase> CommonButton_PreviousOption;
 

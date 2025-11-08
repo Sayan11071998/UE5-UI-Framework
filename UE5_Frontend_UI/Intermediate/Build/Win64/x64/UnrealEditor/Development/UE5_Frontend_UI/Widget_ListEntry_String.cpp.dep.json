@@ -130,7 +130,10 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commoninput\\uht\\commoninputbasetypes.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonbuttonbase.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonrotator.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonrotator.generated.h"
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonrotator.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\widgets\\components\\frontendcommonbuttonbase.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonbuttonbase.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontenddebughelper.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
