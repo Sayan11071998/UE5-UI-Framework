@@ -116,7 +116,13 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commoninput\\uht\\commoninputbasetypes.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonbuttonbase.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonrotator.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonrotator.generated.h"
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonrotator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\source\\commonui\\public\\commontextblock.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\textblock.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\textwidgettypes.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textwidgettypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commontextblock.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
