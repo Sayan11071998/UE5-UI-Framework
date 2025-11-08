@@ -11,6 +11,8 @@ class UE5_FRONTEND_UI_API UListDataObject_String : public UListDataObject_Value
 
 public:
 	void AddDynamicOption(const FString& InStringValue, const FText& InDisplayText);
+	void AdvanceToNextOption();
+	void BackToPreviousOption();
 
 protected:
 	virtual void OnDataObjectInitialized() override;

@@ -3,8 +3,6 @@
 #include "Widgets/Components/FrontendCommonRotator.h"
 #include "Widgets/Components/FrontendCommonButtonBase.h"
 
-#include "FrontendDebugHelper.h"
-
 void UWidget_ListEntry_String::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
@@ -24,10 +22,16 @@ void UWidget_ListEntry_String::OnOwningListDataObjectSet(TObjectPtr<UListDataObj
 
 void UWidget_ListEntry_String::OnPreviousOptionButtonClicked()
 {
-	Debug::Print(TEXT("Previous Option Button Clicked"));
+	if (CachedOwningStringDataObject)
+	{
+		CachedOwningStringDataObject->BackToPreviousOption();
+	}
 }
 
 void UWidget_ListEntry_String::OnNextOptionButtonClicked()
 {
-	Debug::Print(TEXT("Next Option Button Clicked"));
+	if (CachedOwningStringDataObject)
+	{
+		CachedOwningStringDataObject->AdvanceToNextOption();
+	}
 }
