@@ -31,6 +31,7 @@
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendFunctionLibrary.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendGameplayTags.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendSettings/FrontendDeveloperSettings.cpp"
+#include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendSettings/FrontendGameUserSettings.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Subsystems/FrontendUISubsystem.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Components/FrontendCommonButtonBase.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Components/FrontendCommonListView.cpp"
