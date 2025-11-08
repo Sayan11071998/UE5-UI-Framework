@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "CommonUserWidget.h"
 #include "Blueprint/IUserObjectListEntry.h"
+#include "FrontendTypes/FrontendEnumTypes.h"
 #include "Widget_ListEntry_Base.generated.h"
 
 class UListDataObject_Base;
@@ -16,6 +17,7 @@ class UE5_FRONTEND_UI_API UWidget_ListEntry_Base : public UCommonUserWidget, pub
 protected:
 	virtual void NativeOnListItemObjectSet(UObject* ListItemObject) override;
 	virtual void OnOwningListDataObjectSet(TObjectPtr<UListDataObject_Base> InOwningListDataObject);
+	virtual void OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData, EOptionsListDataModifyReason ModifyReason);
 
 private:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidgetOptional, AllowPrivateAccess = "true"))

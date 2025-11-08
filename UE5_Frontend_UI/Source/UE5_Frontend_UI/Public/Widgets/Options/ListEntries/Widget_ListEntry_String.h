@@ -16,6 +16,7 @@ class UE5_FRONTEND_UI_API UWidget_ListEntry_String : public UWidget_ListEntry_Ba
 protected:
 	virtual void NativeOnInitialized() override;
 	virtual void OnOwningListDataObjectSet(TObjectPtr<UListDataObject_Base> InOwningListDataObject) override;
+	virtual void OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData, EOptionsListDataModifyReason ModifyReason) override;
 
 private:
 	void OnPreviousOptionButtonClicked();

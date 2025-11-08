@@ -44,4 +44,15 @@ template<> struct TIsUEnumClass<EConfirmScreenButtonType> { enum { Value = true 
 template<> UE5_FRONTEND_UI_API UEnum* StaticEnum<EConfirmScreenButtonType>();
 // ********** End Enum EConfirmScreenButtonType ****************************************************
 
+// ********** Begin Enum EOptionsListDataModifyReason **********************************************
+#define FOREACH_ENUM_EOPTIONSLISTDATAMODIFYREASON(op) \
+	op(EOptionsListDataModifyReason::DirectlyModified) \
+	op(EOptionsListDataModifyReason::DependencyModified) \
+	op(EOptionsListDataModifyReason::ResetToDefault) 
+
+enum class EOptionsListDataModifyReason : uint8;
+template<> struct TIsUEnumClass<EOptionsListDataModifyReason> { enum { Value = true }; };
+template<> UE5_FRONTEND_UI_API UEnum* StaticEnum<EOptionsListDataModifyReason>();
+// ********** End Enum EOptionsListDataModifyReason ************************************************
+
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
