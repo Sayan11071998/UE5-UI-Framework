@@ -12,6 +12,12 @@ class UE5_FRONTEND_UI_API UFrontendGameUserSettings : public UGameUserSettings
 public:
 	static TObjectPtr<UFrontendGameUserSettings> Get();
 
+	UFUNCTION()
+	FString GetCurrentGameDifficulty() const { return  CurrentGameDifficulty; }
+
+	UFUNCTION()
+	void SetCurrentGameDifficulty(const FString& InNewDifficulty) { CurrentGameDifficulty = InNewDifficulty; }
+
 private:
 	UPROPERTY(Config)
 	FString CurrentGameDifficulty;

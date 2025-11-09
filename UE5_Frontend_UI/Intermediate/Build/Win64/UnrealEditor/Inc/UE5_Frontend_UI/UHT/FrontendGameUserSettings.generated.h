@@ -17,6 +17,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UFrontendGameUserSettings ************************************************
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetCurrentGameDifficulty); \
+	DECLARE_FUNCTION(execGetCurrentGameDifficulty);
+
+
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendGameUserSettings_NoRegister();
 
 #define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_INCLASS_NO_PURE_DECLS \
@@ -46,6 +51,7 @@ public: \
 #define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_INCLASS_NO_PURE_DECLS \
 	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_ENHANCED_CONSTRUCTORS \
 private: \
