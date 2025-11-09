@@ -1,6 +1,11 @@
 #include "Widgets/Options/OptionsDataRegistry.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Options/DataObjects/ListDataObject_String.h"
+#include "Widgets/Options/OptionsDataInteractionHelper.h"
+#include "FrontendSettings/FrontendGameUserSettings.h"
+
+#define MAKE_OPTIONS_DATA_CONTROL(SetterOrGetterFuncName) \
+	MakeShared<FOptionsDataInteractionHelper>(GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, SetterOrGetterFuncName))
 
 void UOptionsDataRegistry::InitOptionsDataRegistry(TObjectPtr<ULocalPlayer> InOwningLocalPlayer)
 {
@@ -21,7 +26,6 @@ TArray<UListDataObject_Base*> UOptionsDataRegistry::GetListSourceItemsBySelected
 	);
 
 	checkf(FoundTabCollectionPtr, TEXT("No valid tab found under the ID %s"), *InSelectedTabID.ToString());
-
 	UListDataObject_Collection* FoundTabCollection = *FoundTabCollectionPtr;
 
 	return FoundTabCollection->GetAllChildListData();
@@ -32,7 +36,7 @@ void UOptionsDataRegistry::InitGameplayCollectionTab()
 	UListDataObject_Collection* GameplayTabCollection = NewObject<UListDataObject_Collection>();
 	GameplayTabCollection->SetDataID(FName("GameplayTabCollection"));
 	GameplayTabCollection->SetDataDisplayName(FText::FromString(TEXT("Gameplay")));
-
+	
 	UListDataObject_String* GameDifficulty = NewObject<UListDataObject_String>();
 	GameDifficulty->SetDataID(FName("GameDifficulty"));
 	GameDifficulty->SetDataDisplayName(FText::FromString(TEXT("Difficulty")));
@@ -40,6 +44,9 @@ void UOptionsDataRegistry::InitGameplayCollectionTab()
 	GameDifficulty->AddDynamicOption(TEXT("Normal"), FText::FromString(TEXT("Normal")));
 	GameDifficulty->AddDynamicOption(TEXT("Hard"), FText::FromString(TEXT("Hard")));
 	GameDifficulty->AddDynamicOption(TEXT("Very Hard"), FText::FromString(TEXT("Very Hard")));
+	GameDifficulty->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetCurrentGameDifficulty));
+	GameDifficulty->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetCurrentGameDifficulty));
+	
 	GameplayTabCollection->AddChildListData(GameDifficulty);
 
 	UListDataObject_String* TestItem = NewObject<UListDataObject_String>();
