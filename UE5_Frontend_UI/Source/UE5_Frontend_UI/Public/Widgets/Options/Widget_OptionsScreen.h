@@ -21,6 +21,8 @@ protected:
 private:
 	void OnResetBoundActionTriggered();
 	void OnBackBoundActionTriggered();
+	void OnListViewItemHovered(UObject* InHoveredItem, bool bWasHovered);
+	void OnListViewItemSelected(UObject* InSelectedItem);
 	TObjectPtr<UOptionsDataRegistry> GetOrCreateDataRegistry();
 
 	FUIActionBindingHandle ResetActionHandle;
