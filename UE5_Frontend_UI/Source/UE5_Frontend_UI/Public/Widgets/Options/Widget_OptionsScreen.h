@@ -16,6 +16,7 @@ class UE5_FRONTEND_UI_API UWidget_OptionsScreen : public UWidget_ActivatableBase
 protected:
 	virtual void NativeOnInitialized() override;
 	virtual void NativeOnActivated() override;
+	virtual void NativeOnDeactivated() override;
 
 private:
 	void OnResetBoundActionTriggered();

@@ -24,6 +24,7 @@ public:
 	LIST_DATA_ACCESSOR(TObjectPtr<UListDataObject_Base>, ParentData)
 
 	void InitDataObject();
+	void SetShouldApplySettingsImmediately(bool bShouldApplyRightAway) { bShouldApplyChangeImmediately = bShouldApplyRightAway; }
 
 	virtual TArray<UListDataObject_Base*> GetAllChildListData() const { return TArray<UListDataObject_Base*>(); }
 	virtual bool HasAnyChildListData() const { return false; }
@@ -40,6 +41,8 @@ private:
 	FText DescriptionRichText;
 	FText DisabledRichText;
 	TSoftObjectPtr<UTexture2D> SoftDescriptionImage;
+
+	bool bShouldApplyChangeImmediately = false;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UListDataObject_Base> ParentData;

@@ -5,6 +5,7 @@
 #include "Widgets/Components/FrontendTabListWidgetBase.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Collection.h"
 #include "Widgets/Components/FrontendCommonListView.h"
+#include "FrontendSettings/FrontendGameUserSettings.h"
 
 #include "FrontendDebugHelper.h"
 
@@ -45,6 +46,12 @@ void UWidget_OptionsScreen::NativeOnActivated()
 		if (TabListWidget_OptionsTabs->GetTabButtonBaseByID(TabID) != nullptr) continue;
 		TabListWidget_OptionsTabs->RequestRegisterTab(TabID, TabCollection->GetDataDisplayName());
 	}
+}
+
+void UWidget_OptionsScreen::NativeOnDeactivated()
+{
+	Super::NativeOnDeactivated();
+	UFrontendGameUserSettings::Get()->ApplySettings(true);
 }
 
 void UWidget_OptionsScreen::OnResetBoundActionTriggered()
