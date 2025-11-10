@@ -7,6 +7,7 @@
 #include "Widgets/Components/FrontendCommonListView.h"
 #include "FrontendSettings/FrontendGameUserSettings.h"
 #include "Widgets/Options/ListEntries/Widget_ListEntry_Base.h"
+#include "Widgets/Options/Widget_OptionsDetailsView.h"
 
 #include "FrontendDebugHelper.h"
 
@@ -75,11 +76,34 @@ void UWidget_OptionsScreen::OnListViewItemHovered(UObject* InHoveredItem, bool b
 	UWidget_ListEntry_Base* HoveredEntryWidget = CommonListView_OptionsList->GetEntryWidgetFromItem<UWidget_ListEntry_Base>(InHoveredItem);
 	check(HoveredEntryWidget);
 	HoveredEntryWidget->NativeOnListEntryWidgetHovered(bWasHovered);
+
+	if (bWasHovered)
+	{
+		DetailsView_ListEntryInfo->UpdateDetailsViewInfo(
+		CastChecked<UListDataObject_Base>(InHoveredItem),
+		TryGetEntryWidgetClassName(InHoveredItem)
+		);
+	}
+	else
+	{
+		if (UListDataObject_Base* SelectedItem = CommonListView_OptionsList->GetSelectedItem<UListDataObject_Base>())
+		{
+			DetailsView_ListEntryInfo->UpdateDetailsViewInfo(
+				SelectedItem,
+				TryGetEntryWidgetClassName(SelectedItem)
+			);
+		}
+	}
 }
 
 void UWidget_OptionsScreen::OnListViewItemSelected(UObject* InSelectedItem)
 {
 	if (!InSelectedItem) return;
+
+	DetailsView_ListEntryInfo->UpdateDetailsViewInfo(
+	CastChecked<UListDataObject_Base>(InSelectedItem),
+		TryGetEntryWidgetClassName(InSelectedItem)
+	);
 }
 
 TObjectPtr<UOptionsDataRegistry> UWidget_OptionsScreen::GetOrCreateDataRegistry()
@@ -93,6 +117,16 @@ TObjectPtr<UOptionsDataRegistry> UWidget_OptionsScreen::GetOrCreateDataRegistry(
 	checkf(CreatedOwningDataRegistry, TEXT("Data Registry for Options Screen is not Valid"));
 
 	return CreatedOwningDataRegistry;
+}
+
+FString UWidget_OptionsScreen::TryGetEntryWidgetClassName(TObjectPtr<UObject> InOwningListItem) const
+{
+	if (UUserWidget* FoundEntryWidget = CommonListView_OptionsList->GetEntryWidgetFromItem(InOwningListItem))
+	{
+		return FoundEntryWidget->GetClass()->GetName();
+	}
+
+	return TEXT("Entry Widget Not Valid");
 }
 
 void UWidget_OptionsScreen::OnOptionsTabSelected(FName TabID)
