@@ -40,6 +40,7 @@
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/DataAsset_DataListEntryMapping.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/DataObjects/ListDataObject_Base.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/DataObjects/ListDataObject_Collection.cpp"
+#include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/DataObjects/ListDataObject_String.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/DataObjects/ListDataObject_Value.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/ListEntries/Widget_ListEntry_String.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/OptionsDataInteractionHelper.cpp"
