@@ -16,6 +16,9 @@ public:
 
 protected:
 	virtual void OnDataObjectInitialized() override;
+	virtual bool CanResetBackToDefaultValue() const override;
+	virtual bool TryResetBackToDefaultValue() override;
+	
 	bool TrySetDisplayTextFromStringValue(const FString& InStringValue);
 	
 	FString CurrentStringValue;
