@@ -4,6 +4,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Widget_OptionsDetailsView.generated.h"
 
+class UListDataObject_Base;
 class UCommonTextBlock;
 class UCommonLazyImage;
 class UCommonRichTextBlock;
@@ -12,6 +13,13 @@ UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class UE5_FRONTEND_UI_API UWidget_OptionsDetailsView : public UUserWidget
 {
 	GENERATED_BODY()
+
+public:
+	void UpdateDetailsViewInfo(TObjectPtr<UListDataObject_Base> InDataObject, const FString& InEntryWidgetClassName = FString());
+	void ClearDetailsViewInfo();
+
+protected:
+	virtual void NativeOnInitialized() override;
 
 private:
 	UPROPERTY(meta = (BindWidget))
