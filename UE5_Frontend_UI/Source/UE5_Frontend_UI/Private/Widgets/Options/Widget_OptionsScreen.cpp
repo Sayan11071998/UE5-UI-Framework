@@ -11,8 +11,6 @@
 #include "Subsystems/FrontendUISubsystem.h"
 #include "Widgets/Components/FrontendCommonButtonBase.h"
 
-#include "FrontendDebugHelper.h"
-
 void UWidget_OptionsScreen::NativeOnInitialized()
 {
 	Super::NativeOnInitialized();
@@ -96,15 +94,8 @@ void UWidget_OptionsScreen::OnResetBoundActionTriggered()
 			{
 				if (!DataToReset) continue;
 
-				if (DataToReset->TryResetBackToDefaultValue())
-				{
-					Debug::Print(DataToReset->GetDataDisplayName().ToString() + TEXT(" was reset"));
-				}
-				else
-				{
-					bHasDataFailedToReset = true;
-					Debug::Print(DataToReset->GetDataDisplayName().ToString() + TEXT(" failed to reset"));
-				}
+				if (DataToReset->TryResetBackToDefaultValue()) {}
+				else { bHasDataFailedToReset = true; }
 			}
 
 			if (!bHasDataFailedToReset)
@@ -248,7 +239,7 @@ void UWidget_OptionsScreen::OnOptionsTabSelected(FName TabID)
 	}
 	else
 	{
-		if (GetActionBindings().Contains(ResetActionHandle))
+		if (!GetActionBindings().Contains(ResetActionHandle))
 		{
 			AddActionBinding(ResetActionHandle);
 		}
