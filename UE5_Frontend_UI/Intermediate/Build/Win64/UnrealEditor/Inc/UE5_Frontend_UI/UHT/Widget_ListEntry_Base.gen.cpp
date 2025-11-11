@@ -17,8 +17,61 @@ COMMONUI_API UClass* Z_Construct_UClass_UCommonUserWidget();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_Base();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_Base_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserObjectListEntry_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
 // ********** End Cross Module References **********************************************************
+
+// ********** Begin Class UWidget_ListEntry_Base Function BP_GetWidgetToFocusForGamepad ************
+struct Widget_ListEntry_Base_eventBP_GetWidgetToFocusForGamepad_Parms
+{
+	UWidget* ReturnValue;
+
+	/** Constructor, initializes return property only **/
+	Widget_ListEntry_Base_eventBP_GetWidgetToFocusForGamepad_Parms()
+		: ReturnValue(NULL)
+	{
+	}
+};
+static FName NAME_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad = FName(TEXT("BP_GetWidgetToFocusForGamepad"));
+UWidget* UWidget_ListEntry_Base::BP_GetWidgetToFocusForGamepad() const
+{
+	Widget_ListEntry_Base_eventBP_GetWidgetToFocusForGamepad_Parms Parms;
+	UFunction* Func = FindFunctionChecked(NAME_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad);
+		const_cast<UWidget_ListEntry_Base*>(this)->ProcessEvent(Func,&Parms);
+	return Parms.ReturnValue;
+}
+struct Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "DisplayName", "Get Widget To Focus For Gamepad" },
+		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_Base.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Widget_ListEntry_Base_eventBP_GetWidgetToFocusForGamepad_Parms, ReturnValue), Z_Construct_UClass_UWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWidget_ListEntry_Base, nullptr, "BP_GetWidgetToFocusForGamepad", Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::PropPointers), sizeof(Widget_ListEntry_Base_eventBP_GetWidgetToFocusForGamepad_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Widget_ListEntry_Base_eventBP_GetWidgetToFocusForGamepad_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// ********** End Class UWidget_ListEntry_Base Function BP_GetWidgetToFocusForGamepad **************
 
 // ********** Begin Class UWidget_ListEntry_Base Function BP_OnListEntryWidgetHovered **************
 struct Widget_ListEntry_Base_eventBP_OnListEntryWidgetHovered_Parms
@@ -132,6 +185,7 @@ struct Z_Construct_UClass_UWidget_ListEntry_Base_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad, "BP_GetWidgetToFocusForGamepad" }, // 3921388437
 		{ &Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnListEntryWidgetHovered, "BP_OnListEntryWidgetHovered" }, // 433502670
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -186,10 +240,10 @@ UWidget_ListEntry_Base::~UWidget_ListEntry_Base() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_ListEntry_Base, UWidget_ListEntry_Base::StaticClass, TEXT("UWidget_ListEntry_Base"), &Z_Registration_Info_UClass_UWidget_ListEntry_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Base), 4178534376U) },
+		{ Z_Construct_UClass_UWidget_ListEntry_Base, UWidget_ListEntry_Base::StaticClass, TEXT("UWidget_ListEntry_Base"), &Z_Registration_Info_UClass_UWidget_ListEntry_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Base), 4247214966U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_1138904468(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_1211376322(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
