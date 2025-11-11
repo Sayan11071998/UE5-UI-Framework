@@ -16,11 +16,13 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+class UTexture2D;
 class UWidget_ActivatableBase;
 struct FGameplayTag;
 
 // ********** Begin Class UFrontendFunctionLibrary *************************************************
 #define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendFunctionLibrary_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetOptionsSoftImageByTag); \
 	DECLARE_FUNCTION(execGetFrontendSoftWidgetClassByTag);
 
 

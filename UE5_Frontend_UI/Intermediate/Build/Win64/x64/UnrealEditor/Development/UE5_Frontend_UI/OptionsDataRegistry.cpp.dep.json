@@ -24,7 +24,16 @@
             "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontendsettings\\frontendgameusersettings.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gameusersettings.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameusersettings.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendgameusersettings.generated.h"
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendgameusersettings.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontendfunctionlibrary.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagcontainer.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendfunctionlibrary.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontendgameplaytags.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\public\\nativegameplaytags.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\gameplaytags\\classes\\gameplaytagsmanager.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagsmanager.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
