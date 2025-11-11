@@ -32,6 +32,7 @@ private:
 	FString TryGetEntryWidgetClassName(TObjectPtr<UObject> InOwningListItem) const;
 
 	FUIActionBindingHandle ResetActionHandle;
+	bool bIsResettingData = false;
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Frotend Options Screen", meta = (RowType = "/Script/CommonUI.CommonInputActionDataBase"))
 	FDataTableRowHandle ResetAction;
