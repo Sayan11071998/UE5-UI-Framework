@@ -8,8 +8,8 @@
 #include "FrontendSettings/FrontendGameUserSettings.h"
 #include "Widgets/Options/ListEntries/Widget_ListEntry_Base.h"
 #include "Widgets/Options/Widget_OptionsDetailsView.h"
-
-#include "FrontendDebugHelper.h"
+#include "Subsystems/FrontendUISubsystem.h"
+#include "Widgets/Components/FrontendCommonButtonBase.h"
 
 void UWidget_OptionsScreen::NativeOnInitialized()
 {
@@ -61,7 +61,19 @@ void UWidget_OptionsScreen::NativeOnDeactivated()
 
 void UWidget_OptionsScreen::OnResetBoundActionTriggered()
 {
-	Debug::Print(TEXT("Reset Bound Action Triggered"));
+	if (ResettableDataArray.IsEmpty()) return;
+
+	UCommonButtonBase* SelectedTabButton = TabListWidget_OptionsTabs->GetTabButtonBaseByID(TabListWidget_OptionsTabs->GetActiveTab());
+	const FString SelectedTabButtonName = CastChecked<UFrontendCommonButtonBase>(SelectedTabButton)->GetButtonDisplayText().ToString();
+	
+	UFrontendUISubsystem::Get(this)->PushConfirmScreenToModelStackAsync(
+		EConfirmScreenType::YesNo,
+		FText::FromString(TEXT("Reset")),
+		FText::FromString(TEXT("Are you sure you want to reset all the settings under the ") + SelectedTabButtonName + TEXT(" tab.")),
+		[](EConfirmScreenButtonType ClickedButtonType)
+		{
+		}
+	);
 }
 
 void UWidget_OptionsScreen::OnBackBoundActionTriggered()

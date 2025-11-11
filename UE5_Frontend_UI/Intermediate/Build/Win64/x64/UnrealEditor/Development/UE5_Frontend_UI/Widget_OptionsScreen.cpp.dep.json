@@ -172,7 +172,20 @@
             "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\widget_listentry_base.generated.h",
             "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\widgets\\options\\widget_optionsdetailsview.h",
             "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\widget_optionsdetailsview.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontenddebughelper.h"
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\subsystems\\frontenduisubsystem.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontenduisubsystem.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\widgets\\components\\frontendcommonbuttonbase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\source\\commonui\\public\\commonbuttonbase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\binding\\states\\widgetstateregistration.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetstateregistration.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\button.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\components\\contentwidget.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\contentwidget.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\button.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\umg\\public\\fieldnotification\\widgeteventfield.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgeteventfield.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonbuttonbase.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendcommonbuttonbase.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -19,6 +19,47 @@ UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendCommonButtonBase_NoRegis
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
 // ********** End Cross Module References **********************************************************
 
+// ********** Begin Class UFrontendCommonButtonBase Function GetButtonDisplayText ******************
+struct Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics
+{
+	struct FrontendCommonButtonBase_eventGetButtonDisplayText_Parms
+	{
+		FText ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Components/FrontendCommonButtonBase.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FTextPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FTextPropertyParams Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FrontendCommonButtonBase_eventGetButtonDisplayText_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UFrontendCommonButtonBase, nullptr, "GetButtonDisplayText", Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::FrontendCommonButtonBase_eventGetButtonDisplayText_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::FrontendCommonButtonBase_eventGetButtonDisplayText_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFrontendCommonButtonBase::execGetButtonDisplayText)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(FText*)Z_Param__Result=P_THIS->GetButtonDisplayText();
+	P_NATIVE_END;
+}
+// ********** End Class UFrontendCommonButtonBase Function GetButtonDisplayText ********************
+
 // ********** Begin Class UFrontendCommonButtonBase Function SetButtonText *************************
 struct Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonText_Statics
 {
@@ -66,6 +107,7 @@ void UFrontendCommonButtonBase::StaticRegisterNativesUFrontendCommonButtonBase()
 {
 	UClass* Class = UFrontendCommonButtonBase::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "GetButtonDisplayText", &UFrontendCommonButtonBase::execGetButtonDisplayText },
 		{ "SetButtonText", &UFrontendCommonButtonBase::execSetButtonText },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -137,6 +179,7 @@ struct Z_Construct_UClass_UFrontendCommonButtonBase_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText, "GetButtonDisplayText" }, // 3884191940
 		{ &Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonText, "SetButtonText" }, // 2500916970
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -197,10 +240,10 @@ UFrontendCommonButtonBase::~UFrontendCommonButtonBase() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFrontendCommonButtonBase, UFrontendCommonButtonBase::StaticClass, TEXT("UFrontendCommonButtonBase"), &Z_Registration_Info_UClass_UFrontendCommonButtonBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendCommonButtonBase), 1512898695U) },
+		{ Z_Construct_UClass_UFrontendCommonButtonBase, UFrontendCommonButtonBase::StaticClass, TEXT("UFrontendCommonButtonBase"), &Z_Registration_Info_UClass_UFrontendCommonButtonBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendCommonButtonBase), 2291480459U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_1388337741(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_2205082861(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
