@@ -53,6 +53,12 @@ FReply UWidget_ListEntry_Base::NativeOnFocusReceived(const FGeometry& InGeometry
 	return Super::NativeOnFocusReceived(InGeometry, InFocusEvent);
 }
 
+void UWidget_ListEntry_Base::NativeOnEntryReleased()
+{
+	IUserObjectListEntry::NativeOnEntryReleased();
+	NativeOnListEntryWidgetHovered(false);
+}
+
 void UWidget_ListEntry_Base::SelectThisEntryWidget()
 {
 	CastChecked<UListView>(GetOwningListView())->SetSelectedItem(GetListItem());
