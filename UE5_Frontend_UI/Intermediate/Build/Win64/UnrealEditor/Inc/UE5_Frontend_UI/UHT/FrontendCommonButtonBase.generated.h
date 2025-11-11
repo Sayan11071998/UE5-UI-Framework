@@ -18,6 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UFrontendCommonButtonBase ************************************************
 #define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execGetButtonDisplayText); \
 	DECLARE_FUNCTION(execSetButtonText);
 
 

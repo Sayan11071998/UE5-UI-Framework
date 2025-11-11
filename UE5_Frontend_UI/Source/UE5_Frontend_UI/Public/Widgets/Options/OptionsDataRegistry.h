@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "OptionsDataRegistry.generated.h"
 
+class UListDataObject_Base;
 class UListDataObject_Collection;
 
 UCLASS()
@@ -14,6 +15,8 @@ public:
 	void InitOptionsDataRegistry(TObjectPtr<ULocalPlayer> InOwningLocalPlayer);
 	const TArray<UListDataObject_Collection*>& GetRegisteredOptionsTabCollections() const { return RegisteredOptionsTabCollections; }
 
+	TArray<UListDataObject_Base*> GetListSourceItemsBySelectedTabID(const FName& InSelectedTabID) const;
+	
 private:
 	void InitGameplayCollectionTab();
 	void InitAudioCollectionTab();

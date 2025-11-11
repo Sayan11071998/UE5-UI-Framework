@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeFrontendFunctionLibrary() {}
 
 // ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
 GAMEPLAYTAGS_API UScriptStruct* Z_Construct_UScriptStruct_FGameplayTag();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendFunctionLibrary();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendFunctionLibrary_NoRegister();
@@ -71,12 +72,63 @@ DEFINE_FUNCTION(UFrontendFunctionLibrary::execGetFrontendSoftWidgetClassByTag)
 }
 // ********** End Class UFrontendFunctionLibrary Function GetFrontendSoftWidgetClassByTag **********
 
+// ********** Begin Class UFrontendFunctionLibrary Function GetOptionsSoftImageByTag ***************
+struct Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics
+{
+	struct FrontendFunctionLibrary_eventGetOptionsSoftImageByTag_Parms
+	{
+		FGameplayTag InImageTag;
+		TSoftObjectPtr<UTexture2D> ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Frontend Function Library" },
+		{ "ModuleRelativePath", "Public/FrontendFunctionLibrary.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InImageTag_MetaData[] = {
+		{ "Categories", "Frontend.Image" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InImageTag;
+	static const UECodeGen_Private::FSoftObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::NewProp_InImageTag = { "InImageTag", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FrontendFunctionLibrary_eventGetOptionsSoftImageByTag_Parms, InImageTag), Z_Construct_UScriptStruct_FGameplayTag, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InImageTag_MetaData), NewProp_InImageTag_MetaData) }; // 133831994
+const UECodeGen_Private::FSoftObjectPropertyParams Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0014000000000580, UECodeGen_Private::EPropertyGenFlags::SoftObject, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FrontendFunctionLibrary_eventGetOptionsSoftImageByTag_Parms, ReturnValue), Z_Construct_UClass_UTexture2D_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::NewProp_InImageTag,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UFrontendFunctionLibrary, nullptr, "GetOptionsSoftImageByTag", Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::FrontendFunctionLibrary_eventGetOptionsSoftImageByTag_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x14022401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::FrontendFunctionLibrary_eventGetOptionsSoftImageByTag_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFrontendFunctionLibrary::execGetOptionsSoftImageByTag)
+{
+	P_GET_STRUCT(FGameplayTag,Z_Param_InImageTag);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(TSoftObjectPtr<UTexture2D>*)Z_Param__Result=UFrontendFunctionLibrary::GetOptionsSoftImageByTag(Z_Param_InImageTag);
+	P_NATIVE_END;
+}
+// ********** End Class UFrontendFunctionLibrary Function GetOptionsSoftImageByTag *****************
+
 // ********** Begin Class UFrontendFunctionLibrary *************************************************
 void UFrontendFunctionLibrary::StaticRegisterNativesUFrontendFunctionLibrary()
 {
 	UClass* Class = UFrontendFunctionLibrary::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetFrontendSoftWidgetClassByTag", &UFrontendFunctionLibrary::execGetFrontendSoftWidgetClassByTag },
+		{ "GetOptionsSoftImageByTag", &UFrontendFunctionLibrary::execGetOptionsSoftImageByTag },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -120,6 +172,7 @@ struct Z_Construct_UClass_UFrontendFunctionLibrary_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UFrontendFunctionLibrary_GetFrontendSoftWidgetClassByTag, "GetFrontendSoftWidgetClassByTag" }, // 379192538
+		{ &Z_Construct_UFunction_UFrontendFunctionLibrary_GetOptionsSoftImageByTag, "GetOptionsSoftImageByTag" }, // 4081140436
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -164,10 +217,10 @@ UFrontendFunctionLibrary::~UFrontendFunctionLibrary() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendFunctionLibrary_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFrontendFunctionLibrary, UFrontendFunctionLibrary::StaticClass, TEXT("UFrontendFunctionLibrary"), &Z_Registration_Info_UClass_UFrontendFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendFunctionLibrary), 2310948778U) },
+		{ Z_Construct_UClass_UFrontendFunctionLibrary, UFrontendFunctionLibrary::StaticClass, TEXT("UFrontendFunctionLibrary"), &Z_Registration_Info_UClass_UFrontendFunctionLibrary, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendFunctionLibrary), 1874768879U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendFunctionLibrary_h__Script_UE5_Frontend_UI_1064030877(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendFunctionLibrary_h__Script_UE5_Frontend_UI_1065192770(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendFunctionLibrary_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendFunctionLibrary_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
