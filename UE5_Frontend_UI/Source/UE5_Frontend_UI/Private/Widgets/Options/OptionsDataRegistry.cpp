@@ -74,6 +74,11 @@ void UOptionsDataRegistry::InitAudioCollectionTab()
 	VolumeCategoryCollection->SetDataID(FName("VolumeCategoryCollection"));
 	VolumeCategoryCollection->SetDataDisplayName(FText::FromString(TEXT("Volume")));
 	AudioTabCollection->AddChildListData(VolumeCategoryCollection);
+
+	UListDataObject_String* TestItem = NewObject<UListDataObject_String>();
+	TestItem->SetDataID(FName("TestItem"));
+	TestItem->SetDataDisplayName(FText::FromString(TEXT("TestItem")));
+	VolumeCategoryCollection->AddChildListData(TestItem);
 	
 	RegisteredOptionsTabCollections.Add(AudioTabCollection);
 }
