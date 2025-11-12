@@ -18,6 +18,8 @@ public:
 	TArray<UListDataObject_Base*> GetListSourceItemsBySelectedTabID(const FName& InSelectedTabID) const;
 	
 private:
+	void FindChildListDataRecursively(TObjectPtr<UListDataObject_Base> InParentData, TArray<UListDataObject_Base*>& OutFoundChildListData) const;
+
 	void InitGameplayCollectionTab();
 	void InitAudioCollectionTab();
 	void InitVideoCollectionTab();
