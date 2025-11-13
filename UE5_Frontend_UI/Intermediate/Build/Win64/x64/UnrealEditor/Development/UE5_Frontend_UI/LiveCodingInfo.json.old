@@ -38,7 +38,6 @@
 			"FrontendGameUserSettings.cpp.obj",
 			"FrontendUISubsystem.cpp.obj",
 			"FrontendCommonButtonBase.cpp.obj",
-			"FrontendCommonListView.cpp.obj",
 			"FrontendCommonRotator.cpp.obj",
 			"FrontendTabListWidgetBase.cpp.obj",
 			"DataAsset_DataListEntryMapping.cpp.obj",
@@ -55,7 +54,8 @@
 			"Widget_ActivatableBase.cpp.obj",
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
-			"UE5_Frontend_UI.cpp.obj"
+			"UE5_Frontend_UI.cpp.obj",
+			"FrontendCommonListView.cpp.obj"
 		]
 	}
 }
