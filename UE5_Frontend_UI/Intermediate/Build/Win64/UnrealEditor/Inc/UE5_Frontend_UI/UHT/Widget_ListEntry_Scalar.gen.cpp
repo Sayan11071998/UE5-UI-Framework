@@ -21,9 +21,56 @@ UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_Scalar_NoRegist
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
 // ********** End Cross Module References **********************************************************
 
+// ********** Begin Class UWidget_ListEntry_Scalar Function OnSliderValueChanged *******************
+struct Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics
+{
+	struct Widget_ListEntry_Scalar_eventOnSliderValueChanged_Parms
+	{
+		float Value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_Scalar.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_Value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::NewProp_Value = { "Value", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Widget_ListEntry_Scalar_eventOnSliderValueChanged_Parms, Value), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::NewProp_Value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWidget_ListEntry_Scalar, nullptr, "OnSliderValueChanged", Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::PropPointers), sizeof(Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::Widget_ListEntry_Scalar_eventOnSliderValueChanged_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::Widget_ListEntry_Scalar_eventOnSliderValueChanged_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWidget_ListEntry_Scalar::execOnSliderValueChanged)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_Value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSliderValueChanged(Z_Param_Value);
+	P_NATIVE_END;
+}
+// ********** End Class UWidget_ListEntry_Scalar Function OnSliderValueChanged *********************
+
 // ********** Begin Class UWidget_ListEntry_Scalar *************************************************
 void UWidget_ListEntry_Scalar::StaticRegisterNativesUWidget_ListEntry_Scalar()
 {
+	UClass* Class = UWidget_ListEntry_Scalar::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnSliderValueChanged", &UWidget_ListEntry_Scalar::execOnSliderValueChanged },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 FClassRegistrationInfo Z_Registration_Info_UClass_UWidget_ListEntry_Scalar;
 UClass* UWidget_ListEntry_Scalar::GetPrivateStaticClass()
@@ -86,6 +133,10 @@ struct Z_Construct_UClass_UWidget_ListEntry_Scalar_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CachedOwningScalarDataObject;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged, "OnSliderValueChanged" }, // 28719599
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UWidget_ListEntry_Scalar>::IsAbstract,
 	};
@@ -110,11 +161,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UWidget_ListEntry_Scala
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UWidget_ListEntry_Scalar_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UWidget_ListEntry_Scalar_Statics::PropPointers),
 	0,
 	0x00B010A1u,
@@ -137,10 +188,10 @@ UWidget_ListEntry_Scalar::~UWidget_ListEntry_Scalar() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_ListEntry_Scalar, UWidget_ListEntry_Scalar::StaticClass, TEXT("UWidget_ListEntry_Scalar"), &Z_Registration_Info_UClass_UWidget_ListEntry_Scalar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Scalar), 2461034264U) },
+		{ Z_Construct_UClass_UWidget_ListEntry_Scalar, UWidget_ListEntry_Scalar::StaticClass, TEXT("UWidget_ListEntry_Scalar"), &Z_Registration_Info_UClass_UWidget_ListEntry_Scalar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Scalar), 1666196078U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_2146614328(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_372625790(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
