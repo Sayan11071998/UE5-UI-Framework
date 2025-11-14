@@ -21,6 +21,35 @@ UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_Scalar_NoRegist
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
 // ********** End Cross Module References **********************************************************
 
+// ********** Begin Class UWidget_ListEntry_Scalar Function OnSliderMouseCaptureBegin **************
+struct Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderMouseCaptureBegin_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_Scalar.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderMouseCaptureBegin_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWidget_ListEntry_Scalar, nullptr, "OnSliderMouseCaptureBegin", nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderMouseCaptureBegin_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderMouseCaptureBegin_Statics::Function_MetaDataParams)},  };
+UFunction* Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderMouseCaptureBegin()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderMouseCaptureBegin_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UWidget_ListEntry_Scalar::execOnSliderMouseCaptureBegin)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnSliderMouseCaptureBegin();
+	P_NATIVE_END;
+}
+// ********** End Class UWidget_ListEntry_Scalar Function OnSliderMouseCaptureBegin ****************
+
 // ********** Begin Class UWidget_ListEntry_Scalar Function OnSliderValueChanged *******************
 struct Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged_Statics
 {
@@ -68,6 +97,7 @@ void UWidget_ListEntry_Scalar::StaticRegisterNativesUWidget_ListEntry_Scalar()
 {
 	UClass* Class = UWidget_ListEntry_Scalar::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "OnSliderMouseCaptureBegin", &UWidget_ListEntry_Scalar::execOnSliderMouseCaptureBegin },
 		{ "OnSliderValueChanged", &UWidget_ListEntry_Scalar::execOnSliderValueChanged },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -134,6 +164,7 @@ struct Z_Construct_UClass_UWidget_ListEntry_Scalar_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderMouseCaptureBegin, "OnSliderMouseCaptureBegin" }, // 2946104650
 		{ &Z_Construct_UFunction_UWidget_ListEntry_Scalar_OnSliderValueChanged, "OnSliderValueChanged" }, // 28719599
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -188,10 +219,10 @@ UWidget_ListEntry_Scalar::~UWidget_ListEntry_Scalar() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_ListEntry_Scalar, UWidget_ListEntry_Scalar::StaticClass, TEXT("UWidget_ListEntry_Scalar"), &Z_Registration_Info_UClass_UWidget_ListEntry_Scalar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Scalar), 1666196078U) },
+		{ Z_Construct_UClass_UWidget_ListEntry_Scalar, UWidget_ListEntry_Scalar::StaticClass, TEXT("UWidget_ListEntry_Scalar"), &Z_Registration_Info_UClass_UWidget_ListEntry_Scalar, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Scalar), 4247159609U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_372625790(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_3243511924(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Scalar_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
