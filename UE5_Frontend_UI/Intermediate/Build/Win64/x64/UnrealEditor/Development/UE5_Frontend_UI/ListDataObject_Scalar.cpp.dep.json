@@ -37,7 +37,11 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\textblock.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commontextblock.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commonui\\uht\\commonnumerictextblock.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\listdataobject_scalar.generated.h"
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\listdataobject_scalar.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\widgets\\options\\optionsdatainteractionhelper.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\propertypath\\public\\propertypathhelpers.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\propertypath\\public\\propertytypecompatibility.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\propertypath\\uht\\propertypathhelpers.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

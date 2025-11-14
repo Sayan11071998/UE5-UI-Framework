@@ -6,6 +6,7 @@
 
 class UCommonNumericTextBlock;
 class UAnalogSlider;
+class UListDataObject_Scalar;
 
 UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class UE5_FRONTEND_UI_API UWidget_ListEntry_Scalar : public UWidget_ListEntry_Base
@@ -23,4 +24,7 @@ private:
 
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
 	TObjectPtr<UAnalogSlider> AnalogSlider_SettingSlider;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UListDataObject_Scalar> CachedOwningScalarDataObject;
 };
