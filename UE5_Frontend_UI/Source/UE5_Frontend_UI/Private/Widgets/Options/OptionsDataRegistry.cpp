@@ -122,6 +122,21 @@ void UOptionsDataRegistry::InitAudioCollectionTab()
 	OverallVolume->SetShouldApplySettingsImmediately(true);
 	VolumeCategoryCollection->AddChildListData(OverallVolume);
 
+	UListDataObject_Scalar* MusicVolume = NewObject<UListDataObject_Scalar>();
+	MusicVolume->SetDataID(FName("MusicVolume"));
+	MusicVolume->SetDataDisplayName(FText::FromString(TEXT("Music Volume")));
+	MusicVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Music Volume")));
+	MusicVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
+	MusicVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
+	MusicVolume->SetSliderStepSize(0.01f);
+	MusicVolume->SetDefaultValueFromString(LexToString(1.f));
+	MusicVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
+	MusicVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
+	MusicVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetMusicVolume));
+	MusicVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetMusicVolume));
+	MusicVolume->SetShouldApplySettingsImmediately(true);
+	VolumeCategoryCollection->AddChildListData(MusicVolume);
+
 	UListDataObject_String* TestItem = NewObject<UListDataObject_String>();
 	TestItem->SetDataID(FName("TestItem"));
 	TestItem->SetDataDisplayName(FText::FromString(TEXT("Test Image Item")));

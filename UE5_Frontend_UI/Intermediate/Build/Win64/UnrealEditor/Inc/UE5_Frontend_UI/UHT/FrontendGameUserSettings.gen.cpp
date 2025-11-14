@@ -59,6 +59,47 @@ DEFINE_FUNCTION(UFrontendGameUserSettings::execGetCurrentGameDifficulty)
 }
 // ********** End Class UFrontendGameUserSettings Function GetCurrentGameDifficulty ****************
 
+// ********** Begin Class UFrontendGameUserSettings Function GetMusicVolume ************************
+struct Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics
+{
+	struct FrontendGameUserSettings_eventGetMusicVolume_Parms
+	{
+		float ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FrontendGameUserSettings_eventGetMusicVolume_Parms, ReturnValue), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UFrontendGameUserSettings, nullptr, "GetMusicVolume", Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::FrontendGameUserSettings_eventGetMusicVolume_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x40020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::FrontendGameUserSettings_eventGetMusicVolume_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFrontendGameUserSettings::execGetMusicVolume)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(float*)Z_Param__Result=P_THIS->GetMusicVolume();
+	P_NATIVE_END;
+}
+// ********** End Class UFrontendGameUserSettings Function GetMusicVolume **************************
+
 // ********** Begin Class UFrontendGameUserSettings Function GetOverallVolume **********************
 struct Z_Construct_UFunction_UFrontendGameUserSettings_GetOverallVolume_Statics
 {
@@ -145,6 +186,48 @@ DEFINE_FUNCTION(UFrontendGameUserSettings::execSetCurrentGameDifficulty)
 }
 // ********** End Class UFrontendGameUserSettings Function SetCurrentGameDifficulty ****************
 
+// ********** Begin Class UFrontendGameUserSettings Function SetMusicVolume ************************
+struct Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics
+{
+	struct FrontendGameUserSettings_eventSetMusicVolume_Parms
+	{
+		float InVolume;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_InVolume;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::NewProp_InVolume = { "InVolume", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FrontendGameUserSettings_eventSetMusicVolume_Parms, InVolume), METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::NewProp_InVolume,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UFrontendGameUserSettings, nullptr, "SetMusicVolume", Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::FrontendGameUserSettings_eventSetMusicVolume_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::FrontendGameUserSettings_eventSetMusicVolume_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFrontendGameUserSettings::execSetMusicVolume)
+{
+	P_GET_PROPERTY(FFloatProperty,Z_Param_InVolume);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMusicVolume(Z_Param_InVolume);
+	P_NATIVE_END;
+}
+// ********** End Class UFrontendGameUserSettings Function SetMusicVolume **************************
+
 // ********** Begin Class UFrontendGameUserSettings Function SetOverallVolume **********************
 struct Z_Construct_UFunction_UFrontendGameUserSettings_SetOverallVolume_Statics
 {
@@ -193,8 +276,10 @@ void UFrontendGameUserSettings::StaticRegisterNativesUFrontendGameUserSettings()
 	UClass* Class = UFrontendGameUserSettings::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetCurrentGameDifficulty", &UFrontendGameUserSettings::execGetCurrentGameDifficulty },
+		{ "GetMusicVolume", &UFrontendGameUserSettings::execGetMusicVolume },
 		{ "GetOverallVolume", &UFrontendGameUserSettings::execGetOverallVolume },
 		{ "SetCurrentGameDifficulty", &UFrontendGameUserSettings::execSetCurrentGameDifficulty },
+		{ "SetMusicVolume", &UFrontendGameUserSettings::execSetMusicVolume },
 		{ "SetOverallVolume", &UFrontendGameUserSettings::execSetOverallVolume },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -241,15 +326,21 @@ struct Z_Construct_UClass_UFrontendGameUserSettings_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OverallVolume_MetaData[] = {
 		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MusicVolume_MetaData[] = {
+		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_CurrentGameDifficulty;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_OverallVolume;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_MusicVolume;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_GetCurrentGameDifficulty, "GetCurrentGameDifficulty" }, // 3349195548
+		{ &Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume, "GetMusicVolume" }, // 753866146
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_GetOverallVolume, "GetOverallVolume" }, // 2444868058
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetCurrentGameDifficulty, "SetCurrentGameDifficulty" }, // 1119434494
+		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume, "SetMusicVolume" }, // 447121628
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetOverallVolume, "SetOverallVolume" }, // 1321045787
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -260,9 +351,11 @@ struct Z_Construct_UClass_UFrontendGameUserSettings_Statics
 };
 const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_CurrentGameDifficulty = { "CurrentGameDifficulty", nullptr, (EPropertyFlags)0x0040000000004000, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendGameUserSettings, CurrentGameDifficulty), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentGameDifficulty_MetaData), NewProp_CurrentGameDifficulty_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_OverallVolume = { "OverallVolume", nullptr, (EPropertyFlags)0x0040000000004000, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendGameUserSettings, OverallVolume), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OverallVolume_MetaData), NewProp_OverallVolume_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_MusicVolume = { "MusicVolume", nullptr, (EPropertyFlags)0x0040000000004000, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendGameUserSettings, MusicVolume), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MusicVolume_MetaData), NewProp_MusicVolume_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UFrontendGameUserSettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_CurrentGameDifficulty,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_OverallVolume,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_MusicVolume,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UFrontendGameUserSettings_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UFrontendGameUserSettings_Statics::DependentSingletons[])() = {
@@ -301,10 +394,10 @@ UFrontendGameUserSettings::~UFrontendGameUserSettings() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFrontendGameUserSettings, UFrontendGameUserSettings::StaticClass, TEXT("UFrontendGameUserSettings"), &Z_Registration_Info_UClass_UFrontendGameUserSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendGameUserSettings), 1711999043U) },
+		{ Z_Construct_UClass_UFrontendGameUserSettings, UFrontendGameUserSettings::StaticClass, TEXT("UFrontendGameUserSettings"), &Z_Registration_Info_UClass_UFrontendGameUserSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendGameUserSettings), 3338801221U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_976405718(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_3843986905(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

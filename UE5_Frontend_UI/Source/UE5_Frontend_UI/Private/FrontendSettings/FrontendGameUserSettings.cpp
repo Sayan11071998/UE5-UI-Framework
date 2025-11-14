@@ -1,6 +1,7 @@
 #include "FrontendSettings/FrontendGameUserSettings.h"
 
-UFrontendGameUserSettings::UFrontendGameUserSettings() : OverallVolume(1.f)
+UFrontendGameUserSettings::UFrontendGameUserSettings()
+	: OverallVolume(1.f), MusicVolume(1.f)
 {
 }
 
@@ -17,4 +18,9 @@ TObjectPtr<UFrontendGameUserSettings> UFrontendGameUserSettings::Get()
 void UFrontendGameUserSettings::SetOverallVolume(float InVolume)
 {
 	OverallVolume = InVolume;
+}
+
+void UFrontendGameUserSettings::SetMusicVolume(float InVolume)
+{
+	MusicVolume = InVolume;
 }
