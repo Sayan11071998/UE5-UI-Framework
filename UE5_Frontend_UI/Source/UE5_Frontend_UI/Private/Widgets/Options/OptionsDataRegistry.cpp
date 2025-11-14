@@ -5,6 +5,7 @@
 #include "FrontendSettings/FrontendGameUserSettings.h"
 #include "FrontendFunctionLibrary.h"
 #include "FrontendGameplayTags.h"
+#include "Widgets/Options/DataObjects/ListDataObject_Scalar.h"
 
 #define MAKE_OPTIONS_DATA_CONTROL(SetterOrGetterFuncName) \
 	MakeShared<FOptionsDataInteractionHelper>(GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, SetterOrGetterFuncName))
@@ -106,10 +107,17 @@ void UOptionsDataRegistry::InitAudioCollectionTab()
 	VolumeCategoryCollection->SetDataDisplayName(FText::FromString(TEXT("Volume")));
 	AudioTabCollection->AddChildListData(VolumeCategoryCollection);
 
-	UListDataObject_String* TestItem = NewObject<UListDataObject_String>();
-	TestItem->SetDataID(FName("TestItem"));
-	TestItem->SetDataDisplayName(FText::FromString(TEXT("TestItem")));
-	VolumeCategoryCollection->AddChildListData(TestItem);
+	UListDataObject_Scalar* OverallVolume = NewObject<UListDataObject_Scalar>();
+	OverallVolume->SetDataID(FName("OverallVolume"));
+	OverallVolume->SetDataDisplayName(FText::FromString(TEXT("Overall Volume")));
+	OverallVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Overall Volume")));
+	OverallVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
+	OverallVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
+	OverallVolume->SetSliderStepSize(0.01f);
+	OverallVolume->SetDefaultValueFromString(LexToString(1.f));
+	OverallVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
+	OverallVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
+	VolumeCategoryCollection->AddChildListData(OverallVolume);
 	
 	RegisteredOptionsTabCollections.Add(AudioTabCollection);
 }
