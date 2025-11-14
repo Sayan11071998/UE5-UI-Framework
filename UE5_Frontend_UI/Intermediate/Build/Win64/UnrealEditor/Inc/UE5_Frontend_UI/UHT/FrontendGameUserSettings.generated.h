@@ -18,6 +18,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UFrontendGameUserSettings ************************************************
 #define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetOverallVolume); \
+	DECLARE_FUNCTION(execGetOverallVolume); \
 	DECLARE_FUNCTION(execSetCurrentGameDifficulty); \
 	DECLARE_FUNCTION(execGetCurrentGameDifficulty);
 
@@ -36,14 +38,12 @@ public: \
 
 
 #define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UFrontendGameUserSettings(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	UFrontendGameUserSettings(UFrontendGameUserSettings&&) = delete; \
 	UFrontendGameUserSettings(const UFrontendGameUserSettings&) = delete; \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UFrontendGameUserSettings); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UFrontendGameUserSettings); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UFrontendGameUserSettings) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UFrontendGameUserSettings) \
 	NO_API virtual ~UFrontendGameUserSettings();
 
 

@@ -21,11 +21,9 @@
 			"ListDataObject_String.gen.cpp.obj",
 			"ListDataObject_Value.gen.cpp.obj",
 			"OptionsDataRegistry.gen.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
 			"Widget_ListEntry_Base.gen.cpp.obj",
-			"Widget_ListEntry_Scalar.gen.cpp.obj",
 			"Widget_ListEntry_String.gen.cpp.obj",
 			"Widget_OptionsDetailsView.gen.cpp.obj",
 			"Widget_OptionsScreen.gen.cpp.obj",
@@ -58,6 +56,8 @@
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
 			"UE5_Frontend_UI.cpp.obj",
+			"UE5_Frontend_UI.init.gen.cpp.obj",
+			"Widget_ListEntry_Scalar.gen.cpp.obj",
 			"ListDataObject_Scalar.cpp.obj",
 			"Widget_ListEntry_Scalar.cpp.obj"
 		]
