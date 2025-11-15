@@ -228,6 +228,52 @@ DEFINE_FUNCTION(UFrontendGameUserSettings::execGetSoundFXVolume)
 }
 // ********** End Class UFrontendGameUserSettings Function GetSoundFXVolume ************************
 
+// ********** Begin Class UFrontendGameUserSettings Function GetUseHDRAudioMode ********************
+struct Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics
+{
+	struct FrontendGameUserSettings_eventGetUseHDRAudioMode_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((FrontendGameUserSettings_eventGetUseHDRAudioMode_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FrontendGameUserSettings_eventGetUseHDRAudioMode_Parms), &Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UFrontendGameUserSettings, nullptr, "GetUseHDRAudioMode", Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::FrontendGameUserSettings_eventGetUseHDRAudioMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x40020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::FrontendGameUserSettings_eventGetUseHDRAudioMode_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFrontendGameUserSettings::execGetUseHDRAudioMode)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->GetUseHDRAudioMode();
+	P_NATIVE_END;
+}
+// ********** End Class UFrontendGameUserSettings Function GetUseHDRAudioMode **********************
+
 // ********** Begin Class UFrontendGameUserSettings Function SetAllowBackgroundAudio ***************
 struct Z_Construct_UFunction_UFrontendGameUserSettings_SetAllowBackgroundAudio_Statics
 {
@@ -446,6 +492,53 @@ DEFINE_FUNCTION(UFrontendGameUserSettings::execSetSoundFXVolume)
 }
 // ********** End Class UFrontendGameUserSettings Function SetSoundFXVolume ************************
 
+// ********** Begin Class UFrontendGameUserSettings Function SetUseHDRAudioMode ********************
+struct Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics
+{
+	struct FrontendGameUserSettings_eventSetUseHDRAudioMode_Parms
+	{
+		bool bIsAllowed;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_bIsAllowed_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsAllowed;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::NewProp_bIsAllowed_SetBit(void* Obj)
+{
+	((FrontendGameUserSettings_eventSetUseHDRAudioMode_Parms*)Obj)->bIsAllowed = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::NewProp_bIsAllowed = { "bIsAllowed", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(FrontendGameUserSettings_eventSetUseHDRAudioMode_Parms), &Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::NewProp_bIsAllowed_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::NewProp_bIsAllowed,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UFrontendGameUserSettings, nullptr, "SetUseHDRAudioMode", Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::FrontendGameUserSettings_eventSetUseHDRAudioMode_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::FrontendGameUserSettings_eventSetUseHDRAudioMode_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFrontendGameUserSettings::execSetUseHDRAudioMode)
+{
+	P_GET_UBOOL(Z_Param_bIsAllowed);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetUseHDRAudioMode(Z_Param_bIsAllowed);
+	P_NATIVE_END;
+}
+// ********** End Class UFrontendGameUserSettings Function SetUseHDRAudioMode **********************
+
 // ********** Begin Class UFrontendGameUserSettings ************************************************
 void UFrontendGameUserSettings::StaticRegisterNativesUFrontendGameUserSettings()
 {
@@ -456,11 +549,13 @@ void UFrontendGameUserSettings::StaticRegisterNativesUFrontendGameUserSettings()
 		{ "GetMusicVolume", &UFrontendGameUserSettings::execGetMusicVolume },
 		{ "GetOverallVolume", &UFrontendGameUserSettings::execGetOverallVolume },
 		{ "GetSoundFXVolume", &UFrontendGameUserSettings::execGetSoundFXVolume },
+		{ "GetUseHDRAudioMode", &UFrontendGameUserSettings::execGetUseHDRAudioMode },
 		{ "SetAllowBackgroundAudio", &UFrontendGameUserSettings::execSetAllowBackgroundAudio },
 		{ "SetCurrentGameDifficulty", &UFrontendGameUserSettings::execSetCurrentGameDifficulty },
 		{ "SetMusicVolume", &UFrontendGameUserSettings::execSetMusicVolume },
 		{ "SetOverallVolume", &UFrontendGameUserSettings::execSetOverallVolume },
 		{ "SetSoundFXVolume", &UFrontendGameUserSettings::execSetSoundFXVolume },
+		{ "SetUseHDRAudioMode", &UFrontendGameUserSettings::execSetUseHDRAudioMode },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -515,6 +610,9 @@ struct Z_Construct_UClass_UFrontendGameUserSettings_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bAllowBackgroundAudio_MetaData[] = {
 		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bUseHDRAudioMode_MetaData[] = {
+		{ "ModuleRelativePath", "Public/FrontendSettings/FrontendGameUserSettings.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStrPropertyParams NewProp_CurrentGameDifficulty;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_OverallVolume;
@@ -522,6 +620,8 @@ struct Z_Construct_UClass_UFrontendGameUserSettings_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SoundFXVolume;
 	static void NewProp_bAllowBackgroundAudio_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bAllowBackgroundAudio;
+	static void NewProp_bUseHDRAudioMode_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseHDRAudioMode;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -530,11 +630,13 @@ struct Z_Construct_UClass_UFrontendGameUserSettings_Statics
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_GetMusicVolume, "GetMusicVolume" }, // 753866146
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_GetOverallVolume, "GetOverallVolume" }, // 2444868058
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_GetSoundFXVolume, "GetSoundFXVolume" }, // 458251907
+		{ &Z_Construct_UFunction_UFrontendGameUserSettings_GetUseHDRAudioMode, "GetUseHDRAudioMode" }, // 2391156906
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetAllowBackgroundAudio, "SetAllowBackgroundAudio" }, // 979635055
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetCurrentGameDifficulty, "SetCurrentGameDifficulty" }, // 1119434494
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetMusicVolume, "SetMusicVolume" }, // 447121628
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetOverallVolume, "SetOverallVolume" }, // 1321045787
 		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetSoundFXVolume, "SetSoundFXVolume" }, // 2985861323
+		{ &Z_Construct_UFunction_UFrontendGameUserSettings_SetUseHDRAudioMode, "SetUseHDRAudioMode" }, // 3978047177
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -551,12 +653,18 @@ void Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bAllowBackgro
 	((UFrontendGameUserSettings*)Obj)->bAllowBackgroundAudio = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bAllowBackgroundAudio = { "bAllowBackgroundAudio", nullptr, (EPropertyFlags)0x0040000000004000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UFrontendGameUserSettings), &Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bAllowBackgroundAudio_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bAllowBackgroundAudio_MetaData), NewProp_bAllowBackgroundAudio_MetaData) };
+void Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bUseHDRAudioMode_SetBit(void* Obj)
+{
+	((UFrontendGameUserSettings*)Obj)->bUseHDRAudioMode = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bUseHDRAudioMode = { "bUseHDRAudioMode", nullptr, (EPropertyFlags)0x0040000000004000, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UFrontendGameUserSettings), &Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bUseHDRAudioMode_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bUseHDRAudioMode_MetaData), NewProp_bUseHDRAudioMode_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UFrontendGameUserSettings_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_CurrentGameDifficulty,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_OverallVolume,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_MusicVolume,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_SoundFXVolume,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bAllowBackgroundAudio,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendGameUserSettings_Statics::NewProp_bUseHDRAudioMode,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UFrontendGameUserSettings_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UFrontendGameUserSettings_Statics::DependentSingletons[])() = {
@@ -595,10 +703,10 @@ UFrontendGameUserSettings::~UFrontendGameUserSettings() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFrontendGameUserSettings, UFrontendGameUserSettings::StaticClass, TEXT("UFrontendGameUserSettings"), &Z_Registration_Info_UClass_UFrontendGameUserSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendGameUserSettings), 1172904109U) },
+		{ Z_Construct_UClass_UFrontendGameUserSettings, UFrontendGameUserSettings::StaticClass, TEXT("UFrontendGameUserSettings"), &Z_Registration_Info_UClass_UFrontendGameUserSettings, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendGameUserSettings), 625190583U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_2105432750(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_168346176(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

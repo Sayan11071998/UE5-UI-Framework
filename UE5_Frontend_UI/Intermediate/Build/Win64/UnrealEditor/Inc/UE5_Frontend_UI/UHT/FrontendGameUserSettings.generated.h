@@ -18,6 +18,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Class UFrontendGameUserSettings ************************************************
 #define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetUseHDRAudioMode); \
+	DECLARE_FUNCTION(execGetUseHDRAudioMode); \
 	DECLARE_FUNCTION(execSetAllowBackgroundAudio); \
 	DECLARE_FUNCTION(execGetAllowBackgroundAudio); \
 	DECLARE_FUNCTION(execSetSoundFXVolume); \

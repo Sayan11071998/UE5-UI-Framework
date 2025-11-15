@@ -44,6 +44,12 @@ public:
 	UFUNCTION()
 	void SetAllowBackgroundAudio(bool bIsAllowed);
 
+	UFUNCTION()
+	bool GetUseHDRAudioMode() const { return bUseHDRAudioMode; }
+
+	UFUNCTION()
+	void SetUseHDRAudioMode(bool bIsAllowed);
+
 private:
 	UPROPERTY(Config)
 	FString CurrentGameDifficulty;
@@ -59,4 +65,7 @@ private:
 
 	UPROPERTY(Config)
 	bool bAllowBackgroundAudio;
+
+	UPROPERTY(Config)
+	bool bUseHDRAudioMode;
 };
