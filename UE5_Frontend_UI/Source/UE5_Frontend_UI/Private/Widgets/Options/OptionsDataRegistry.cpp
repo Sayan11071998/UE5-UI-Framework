@@ -102,62 +102,77 @@ void UOptionsDataRegistry::InitAudioCollectionTab()
 	AudioTabCollection->SetDataID(FName("AudioTabCollection"));
 	AudioTabCollection->SetDataDisplayName(FText::FromString(TEXT("Audio")));
 
-	UListDataObject_Collection* VolumeCategoryCollection = NewObject<UListDataObject_Collection>();
-	VolumeCategoryCollection->SetDataID(FName("VolumeCategoryCollection"));
-	VolumeCategoryCollection->SetDataDisplayName(FText::FromString(TEXT("Volume")));
-	AudioTabCollection->AddChildListData(VolumeCategoryCollection);
+	// Volume Category
+	{
+		UListDataObject_Collection* VolumeCategoryCollection = NewObject<UListDataObject_Collection>();
+		VolumeCategoryCollection->SetDataID(FName("VolumeCategoryCollection"));
+		VolumeCategoryCollection->SetDataDisplayName(FText::FromString(TEXT("Volume")));
+		AudioTabCollection->AddChildListData(VolumeCategoryCollection);
 
-	UListDataObject_Scalar* OverallVolume = NewObject<UListDataObject_Scalar>();
-	OverallVolume->SetDataID(FName("OverallVolume"));
-	OverallVolume->SetDataDisplayName(FText::FromString(TEXT("Overall Volume")));
-	OverallVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Overall Volume")));
-	OverallVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
-	OverallVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
-	OverallVolume->SetSliderStepSize(0.01f);
-	OverallVolume->SetDefaultValueFromString(LexToString(1.f));
-	OverallVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
-	OverallVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
-	OverallVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetOverallVolume));
-	OverallVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetOverallVolume));
-	OverallVolume->SetShouldApplySettingsImmediately(true);
-	VolumeCategoryCollection->AddChildListData(OverallVolume);
+		UListDataObject_Scalar* OverallVolume = NewObject<UListDataObject_Scalar>();
+		OverallVolume->SetDataID(FName("OverallVolume"));
+		OverallVolume->SetDataDisplayName(FText::FromString(TEXT("Overall Volume")));
+		OverallVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Overall Volume")));
+		OverallVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
+		OverallVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
+		OverallVolume->SetSliderStepSize(0.01f);
+		OverallVolume->SetDefaultValueFromString(LexToString(1.f));
+		OverallVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
+		OverallVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
+		OverallVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetOverallVolume));
+		OverallVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetOverallVolume));
+		OverallVolume->SetShouldApplySettingsImmediately(true);
+		VolumeCategoryCollection->AddChildListData(OverallVolume);
 
-	UListDataObject_Scalar* MusicVolume = NewObject<UListDataObject_Scalar>();
-	MusicVolume->SetDataID(FName("MusicVolume"));
-	MusicVolume->SetDataDisplayName(FText::FromString(TEXT("Music Volume")));
-	MusicVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Music Volume")));
-	MusicVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
-	MusicVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
-	MusicVolume->SetSliderStepSize(0.01f);
-	MusicVolume->SetDefaultValueFromString(LexToString(1.f));
-	MusicVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
-	MusicVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
-	MusicVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetMusicVolume));
-	MusicVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetMusicVolume));
-	MusicVolume->SetShouldApplySettingsImmediately(true);
-	VolumeCategoryCollection->AddChildListData(MusicVolume);
+		UListDataObject_Scalar* MusicVolume = NewObject<UListDataObject_Scalar>();
+		MusicVolume->SetDataID(FName("MusicVolume"));
+		MusicVolume->SetDataDisplayName(FText::FromString(TEXT("Music Volume")));
+		MusicVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Music Volume")));
+		MusicVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
+		MusicVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
+		MusicVolume->SetSliderStepSize(0.01f);
+		MusicVolume->SetDefaultValueFromString(LexToString(1.f));
+		MusicVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
+		MusicVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
+		MusicVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetMusicVolume));
+		MusicVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetMusicVolume));
+		MusicVolume->SetShouldApplySettingsImmediately(true);
+		VolumeCategoryCollection->AddChildListData(MusicVolume);
 
-	UListDataObject_Scalar* SoundFXVolume = NewObject<UListDataObject_Scalar>();
-	SoundFXVolume->SetDataID(FName("SoundFXVolume"));
-	SoundFXVolume->SetDataDisplayName(FText::FromString(TEXT("Sound Effects Volume")));
-	SoundFXVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Sound Effects Volume")));
-	SoundFXVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
-	SoundFXVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
-	SoundFXVolume->SetSliderStepSize(0.01f);
-	SoundFXVolume->SetDefaultValueFromString(LexToString(1.f));
-	SoundFXVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
-	SoundFXVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
-	SoundFXVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetSoundFXVolume));
-	SoundFXVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetSoundFXVolume));
-	SoundFXVolume->SetShouldApplySettingsImmediately(true);
-	VolumeCategoryCollection->AddChildListData(SoundFXVolume);
+		UListDataObject_Scalar* SoundFXVolume = NewObject<UListDataObject_Scalar>();
+		SoundFXVolume->SetDataID(FName("SoundFXVolume"));
+		SoundFXVolume->SetDataDisplayName(FText::FromString(TEXT("Sound Effects Volume")));
+		SoundFXVolume->SetDescriptionRichText(FText::FromString(TEXT("This is description for Sound Effects Volume")));
+		SoundFXVolume->SetDisplayValueRange(TRange<float>(0.f, 1.f));
+		SoundFXVolume->SetOutputValueRange(TRange<float>(0.f, 2.f));
+		SoundFXVolume->SetSliderStepSize(0.01f);
+		SoundFXVolume->SetDefaultValueFromString(LexToString(1.f));
+		SoundFXVolume->SetDisplayNumericType(ECommonNumericType::Percentage);
+		SoundFXVolume->SetNumberFormattingOptions(UListDataObject_Scalar::NoDecimal());
+		SoundFXVolume->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetSoundFXVolume));
+		SoundFXVolume->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetSoundFXVolume));
+		SoundFXVolume->SetShouldApplySettingsImmediately(true);
+		VolumeCategoryCollection->AddChildListData(SoundFXVolume);
+	}
 
-	UListDataObject_String* TestItem = NewObject<UListDataObject_String>();
-	TestItem->SetDataID(FName("TestItem"));
-	TestItem->SetDataDisplayName(FText::FromString(TEXT("Test Image Item")));
-	TestItem->SetSoftDescriptionImage(UFrontendFunctionLibrary::GetOptionsSoftImageByTag(FrontendGameplayTags::Frontend_Image_TestImage));
-	TestItem->SetDescriptionRichText(FText::FromString(TEXT("The image to display can be specified from project settings. It can be anything the developer assigned in there")));
-	VolumeCategoryCollection->AddChildListData(TestItem);
+	// Sound Category
+	{
+		UListDataObject_Collection* SoundCategoryCollection = NewObject<UListDataObject_Collection>();
+		SoundCategoryCollection->SetDataID(FName("SoundCategoryCollection"));
+		SoundCategoryCollection->SetDataDisplayName(FText::FromString(TEXT("Sound")));
+		AudioTabCollection->AddChildListData(SoundCategoryCollection);
+
+		UListDataObject_StringBool* AllowBackgroundAudio = NewObject<UListDataObject_StringBool>();
+		AllowBackgroundAudio->SetDataID(FName("AllowBackgroundAudio"));
+		AllowBackgroundAudio->SetDataDisplayName(FText::FromString(TEXT("Allow Background Audio")));
+		AllowBackgroundAudio->OverrideTrueDisplayText(FText::FromString(TEXT("Enabled")));
+		AllowBackgroundAudio->OverrideFalseDisplayText(FText::FromString(TEXT("Disabled")));
+		AllowBackgroundAudio->SetFalseAsDefaultValue();
+		AllowBackgroundAudio->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetAllowBackgroundAudio));
+		AllowBackgroundAudio->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetAllowBackgroundAudio));
+		AllowBackgroundAudio->SetShouldApplySettingsImmediately(true);
+		SoundCategoryCollection->AddChildListData(AllowBackgroundAudio);
+	}
 	
 	RegisteredOptionsTabCollections.Add(AudioTabCollection);
 }
