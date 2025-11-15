@@ -32,6 +32,12 @@ public:
 	UFUNCTION()
 	void SetMusicVolume(float InVolume);
 
+	UFUNCTION()
+	float GetSoundFXVolume() const { return SoundFXVolume; }
+
+	UFUNCTION()
+	void SetSoundFXVolume(float InVolume);
+
 private:
 	UPROPERTY(Config)
 	FString CurrentGameDifficulty;
@@ -41,4 +47,7 @@ private:
 
 	UPROPERTY(Config)
 	float MusicVolume;
+
+	UPROPERTY(Config)
+	float SoundFXVolume;
 };
