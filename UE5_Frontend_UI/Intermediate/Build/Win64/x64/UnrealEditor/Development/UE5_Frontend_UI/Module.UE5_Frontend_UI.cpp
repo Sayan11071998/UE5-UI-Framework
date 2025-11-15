@@ -30,7 +30,6 @@
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UnrealEditor/Development/UE5_Frontend_UI/PerModuleInline.gen.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/AsyncActions/AsyncAction_PushConfirmScreen.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/AsyncActions/AsyncAction_PushSoftWidget.cpp"
-#include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Controllers/FrontendPlayerController.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendFunctionLibrary.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendGameplayTags.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/FrontendSettings/FrontendDeveloperSettings.cpp"

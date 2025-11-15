@@ -33,7 +33,6 @@
 			"PerModuleInline.gen.cpp.obj",
 			"AsyncAction_PushConfirmScreen.cpp.obj",
 			"AsyncAction_PushSoftWidget.cpp.obj",
-			"FrontendPlayerController.cpp.obj",
 			"FrontendFunctionLibrary.cpp.obj",
 			"FrontendGameplayTags.cpp.obj",
 			"FrontendDeveloperSettings.cpp.obj",
@@ -59,7 +58,8 @@
 			"Widget_ActivatableBase.cpp.obj",
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
-			"UE5_Frontend_UI.cpp.obj"
+			"UE5_Frontend_UI.cpp.obj",
+			"FrontendPlayerController.cpp.obj"
 		]
 	}
 }
