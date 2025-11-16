@@ -11,4 +11,7 @@ class UE5_FRONTEND_UI_API UListDataObject_StringResolution : public UListDataObj
 
 public:
 	void InitResolutionValues();
+
+protected:
+	virtual void OnDataObjectInitialized() override;
 };
