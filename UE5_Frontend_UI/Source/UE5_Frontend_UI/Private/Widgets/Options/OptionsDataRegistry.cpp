@@ -6,6 +6,7 @@
 #include "FrontendFunctionLibrary.h"
 #include "FrontendGameplayTags.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Scalar.h"
+#include "Widgets/Options/DataObjects/ListDataObject_StringResolution.h"
 
 #define MAKE_OPTIONS_DATA_CONTROL(SetterOrGetterFuncName) \
 	MakeShared<FOptionsDataInteractionHelper>(GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, SetterOrGetterFuncName))
@@ -201,10 +202,11 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 		DisplayCategoryCollection->SetDataDisplayName(FText::FromString(TEXT("Display")));
 		VideoTabCollection->AddChildListData(DisplayCategoryCollection);
 
+		// Window Mode
 		UListDataObject_StringEnum* WindowMode = NewObject<UListDataObject_StringEnum>();
 		WindowMode->SetDataID(FName("WindowMode"));
 		WindowMode->SetDataDisplayName(FText::FromString(TEXT("Window Mode")));
-		WindowMode->SetDescriptionRichText(FText::FromString(TEXT("This is description for window mode")));
+		WindowMode->SetDescriptionRichText(FText::FromString(TEXT("This is description for Window Mode")));
 		WindowMode->AddEnumOption(EWindowMode::Fullscreen, FText::FromString(TEXT("Fullscreen Mode")));
 		WindowMode->AddEnumOption(EWindowMode::WindowedFullscreen, FText::FromString(TEXT("Borderless Window")));
 		WindowMode->AddEnumOption(EWindowMode::Windowed, FText::FromString(TEXT("Windowed")));
@@ -213,6 +215,17 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 		WindowMode->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetFullscreenMode));
 		WindowMode->SetShouldApplySettingsImmediately(true);
 		DisplayCategoryCollection->AddChildListData(WindowMode);
+
+		// Screen Resolution
+		UListDataObject_StringResolution* ScreenResolution = NewObject<UListDataObject_StringResolution>();
+		ScreenResolution->SetDataID(FName("ScreenResolution"));
+		ScreenResolution->SetDataDisplayName(FText::FromString(TEXT("Screen Resolution")));
+		ScreenResolution->SetDescriptionRichText(FText::FromString(TEXT("This is description for Screen Resolution")));
+		ScreenResolution->InitResolutionValues();
+		ScreenResolution->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetScreenResolution));
+		ScreenResolution->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetScreenResolution));
+		ScreenResolution->SetShouldApplySettingsImmediately(true);
+		DisplayCategoryCollection->AddChildListData(ScreenResolution);
 	}
 	
 	RegisteredOptionsTabCollections.Add(VideoTabCollection);
