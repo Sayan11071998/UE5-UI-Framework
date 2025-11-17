@@ -26,6 +26,8 @@ void UWidget_ListEntry_Base::OnOwningListDataObjectSet(TObjectPtr<UListDataObjec
 	{
 		InOwningListDataObject->OnListDataModified.AddUObject(this, &UWidget_ListEntry_Base::OnOwningListDataObjectModified);
 	}
+
+	OnToggleEditableState(InOwningListDataObject->IsDataCurrentlyEditable());
 }
 
 void UWidget_ListEntry_Base::OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData,
@@ -55,6 +57,14 @@ void UWidget_ListEntry_Base::NativeOnEntryReleased()
 {
 	IUserObjectListEntry::NativeOnEntryReleased();
 	NativeOnListEntryWidgetHovered(false);
+}
+
+void UWidget_ListEntry_Base::OnToggleEditableState(bool bIsEditable)
+{
+	if (CommonText_SettingDisplayName)
+	{
+		CommonText_SettingDisplayName->SetIsEnabled(bIsEditable);
+	}
 }
 
 void UWidget_ListEntry_Base::SelectThisEntryWidget()

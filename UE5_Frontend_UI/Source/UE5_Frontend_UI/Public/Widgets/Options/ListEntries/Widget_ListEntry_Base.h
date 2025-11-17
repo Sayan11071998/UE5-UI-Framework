@@ -26,6 +26,7 @@ protected:
 	virtual void OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData, EOptionsListDataModifyReason ModifyReason);
 	virtual FReply NativeOnFocusReceived(const FGeometry& InGeometry, const FFocusEvent& InFocusEvent) override;
 	virtual void NativeOnEntryReleased() override;
+	virtual void OnToggleEditableState(bool bIsEditable);
 	
 	void SelectThisEntryWidget();
 

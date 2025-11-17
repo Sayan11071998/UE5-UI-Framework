@@ -17,7 +17,8 @@ protected:
 	virtual void NativeOnInitialized() override;
 	virtual void OnOwningListDataObjectSet(TObjectPtr<UListDataObject_Base> InOwningListDataObject) override;
 	virtual void OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData, EOptionsListDataModifyReason ModifyReason) override;
-
+	virtual void OnToggleEditableState(bool bIsEditable) override;
+	
 private:
 	void OnPreviousOptionButtonClicked();
 	void OnNextOptionButtonClicked();
