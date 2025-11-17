@@ -20,4 +20,7 @@ private:
 	FText ResToDisplayText(const FIntPoint& InResolution) const;
 
 	FString MaximumAllowResolution;
+
+public:
+	FORCEINLINE FString GetMaximumAllowResolution() const { return MaximumAllowResolution; }
 };

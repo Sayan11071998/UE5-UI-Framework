@@ -1,7 +1,7 @@
 UE5_Frontend_UI/Binaries/Win64/D3D12/x64/D3D12Core.dll	2025-10-27T18:17:22.672Z
 UE5_Frontend_UI/Binaries/Win64/D3D12/x64/d3d12SDKLayers.dll	2025-10-27T18:17:23.469Z
 UE5_Frontend_UI/Binaries/Win64/DML/x64/DirectML.dll	2025-10-27T18:42:32.884Z
-UE5_Frontend_UI/Binaries/Win64/UE5_Frontend_UI.exe	2025-11-17T18:11:23.987Z
+UE5_Frontend_UI/Binaries/Win64/UE5_Frontend_UI.exe	2025-11-17T18:45:21.395Z
 UE5_Frontend_UI/Binaries/Win64/tbb12.dll	2025-10-27T18:42:43.010Z
 UE5_Frontend_UI/Binaries/Win64/tbbmalloc.dll	2025-10-27T18:42:43.011Z
 Engine/Extras/Redist/en-us/vc_redist.x64.exe	2025-10-27T18:26:03.547Z
@@ -17,7 +17,7 @@ Engine/Binaries/ThirdParty/Windows/XAudio2_9/x64/xaudio2_9redist.dll	2025-10-27T
 Engine/Content/Renderer/TessellationTable.bin	2025-10-27T18:22:26.889Z
 Engine/Content/Slate/Cursor/invisible.cur	2025-10-27T18:22:26.943Z
 Engine/Plugins/NNE/NNERuntimeORT/Binaries/ThirdParty/Onnxruntime/Win64/onnxruntime.dll	2025-10-27T18:37:46.675Z
-Engine/Config/StagedBuild_UE5_Frontend_UI.ini	2025-11-17T18:13:03.855Z
+Engine/Config/StagedBuild_UE5_Frontend_UI.ini	2025-11-17T18:47:03.095Z
 Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_api_dump.dll	2025-10-27T18:17:20.798Z
 Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_api_dump.json	2025-10-27T18:17:20.799Z
 Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_crash_diagnostic.dll	2025-10-27T18:17:20.814Z
@@ -32,4 +32,4 @@ Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_synchronization2.dll	202
 Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_synchronization2.json	2025-10-27T18:17:21.404Z
 Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_validation.dll	2025-10-27T18:17:22.341Z
 Engine/Binaries/ThirdParty/Vulkan/Win64/VkLayer_khronos_validation.json	2025-10-27T18:17:22.342Z
-UE5_Frontend_UI.exe	2025-11-17T18:13:03.826Z
+UE5_Frontend_UI.exe	2025-11-17T18:47:03.076Z
