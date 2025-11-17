@@ -14,6 +14,7 @@ void EmptyLinkFunctionForGeneratedCodeWidget_ListEntry_Base() {}
 // ********** Begin Cross Module References ********************************************************
 COMMONUI_API UClass* Z_Construct_UClass_UCommonTextBlock_NoRegister();
 COMMONUI_API UClass* Z_Construct_UClass_UCommonUserWidget();
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_Base_NoRegister();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_Base();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_Base_NoRegister();
 UMG_API UClass* Z_Construct_UClass_UUserObjectListEntry_NoRegister();
@@ -180,8 +181,12 @@ struct Z_Construct_UClass_UWidget_ListEntry_Base_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_Base.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CachedOwningDataObject_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_Base.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonText_SettingDisplayName;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CachedOwningDataObject;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -196,8 +201,10 @@ struct Z_Construct_UClass_UWidget_ListEntry_Base_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_Base_Statics::NewProp_CommonText_SettingDisplayName = { "CommonText_SettingDisplayName", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_Base, CommonText_SettingDisplayName), Z_Construct_UClass_UCommonTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonText_SettingDisplayName_MetaData), NewProp_CommonText_SettingDisplayName_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_Base_Statics::NewProp_CachedOwningDataObject = { "CachedOwningDataObject", nullptr, (EPropertyFlags)0x0144000000002000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_Base, CachedOwningDataObject), Z_Construct_UClass_UListDataObject_Base_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CachedOwningDataObject_MetaData), NewProp_CachedOwningDataObject_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWidget_ListEntry_Base_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_Base_Statics::NewProp_CommonText_SettingDisplayName,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_Base_Statics::NewProp_CachedOwningDataObject,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWidget_ListEntry_Base_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UWidget_ListEntry_Base_Statics::DependentSingletons[])() = {
@@ -240,10 +247,10 @@ UWidget_ListEntry_Base::~UWidget_ListEntry_Base() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_ListEntry_Base, UWidget_ListEntry_Base::StaticClass, TEXT("UWidget_ListEntry_Base"), &Z_Registration_Info_UClass_UWidget_ListEntry_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Base), 4247214966U) },
+		{ Z_Construct_UClass_UWidget_ListEntry_Base, UWidget_ListEntry_Base::StaticClass, TEXT("UWidget_ListEntry_Base"), &Z_Registration_Info_UClass_UWidget_ListEntry_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Base), 3063966649U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_1211376322(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_1422439041(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

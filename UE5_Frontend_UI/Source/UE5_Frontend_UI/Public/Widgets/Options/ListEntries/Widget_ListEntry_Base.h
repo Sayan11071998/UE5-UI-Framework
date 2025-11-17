@@ -27,6 +27,7 @@ protected:
 	virtual FReply NativeOnFocusReceived(const FGeometry& InGeometry, const FFocusEvent& InFocusEvent) override;
 	virtual void NativeOnEntryReleased() override;
 	virtual void OnToggleEditableState(bool bIsEditable);
+	virtual void OnOwningDependencyDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedDependencyData, EOptionsListDataModifyReason ModifyReason);
 	
 	void SelectThisEntryWidget();
 
@@ -36,4 +37,7 @@ protected:
 private:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidgetOptional, AllowPrivateAccess = "true"))
 	TObjectPtr<UCommonTextBlock> CommonText_SettingDisplayName;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UListDataObject_Base> CachedOwningDataObject;
 };
