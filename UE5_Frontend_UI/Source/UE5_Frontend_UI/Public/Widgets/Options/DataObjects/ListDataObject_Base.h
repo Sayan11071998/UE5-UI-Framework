@@ -32,6 +32,9 @@ public:
 
 	void InitDataObject();
 	void SetShouldApplySettingsImmediately(bool bShouldApplyRightAway) { bShouldApplyChangeImmediately = bShouldApplyRightAway; }
+
+	void AddEditCondition(const FOptionsDataEditConditionDescriptor& InEditCondition);
+	bool IsDataCurrentlyEditable();
 	
 	FOnListDataModifiedDelegate OnListDataModified;
 
@@ -39,6 +42,9 @@ protected:
 	virtual void OnDataObjectInitialized();
 	virtual void NotifyListDataModified(TObjectPtr<UListDataObject_Base> ModifiedData, EOptionsListDataModifyReason ModifyReason = EOptionsListDataModifyReason::DirectlyModified);
 
+	virtual bool CanSetToForcedStringValue(const FString& InForcedValue) const { return false; }
+	virtual void OnSetToForcedStringValue(const FString& InForcedValue) {}
+	
 private:
 	FName DataID;
 	FText DataDisplayName;
@@ -50,4 +56,7 @@ private:
 
 	UPROPERTY(Transient)
 	TObjectPtr<UListDataObject_Base> ParentData;
+
+	UPROPERTY(Transient)
+	TArray<FOptionsDataEditConditionDescriptor> EditConditionDescArray;
 };

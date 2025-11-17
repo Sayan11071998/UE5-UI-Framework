@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Widgets/Options/DataObjects/ListDataObject_Base.h"
+#include "FrontendTypes/FrontendStructTypes.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -15,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeListDataObject_Base() {}
 COREUOBJECT_API UClass* Z_Construct_UClass_UObject();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_Base();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_Base_NoRegister();
+UE5_FRONTEND_UI_API UScriptStruct* Z_Construct_UScriptStruct_FOptionsDataEditConditionDescriptor();
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
 // ********** End Cross Module References **********************************************************
 
@@ -61,8 +63,13 @@ struct Z_Construct_UClass_UListDataObject_Base_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ParentData_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Widgets/Options/DataObjects/ListDataObject_Base.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EditConditionDescArray_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Options/DataObjects/ListDataObject_Base.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ParentData;
+	static const UECodeGen_Private::FStructPropertyParams NewProp_EditConditionDescArray_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_EditConditionDescArray;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -71,8 +78,12 @@ struct Z_Construct_UClass_UListDataObject_Base_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UListDataObject_Base_Statics::NewProp_ParentData = { "ParentData", nullptr, (EPropertyFlags)0x0144000000002000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UListDataObject_Base, ParentData), Z_Construct_UClass_UListDataObject_Base_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ParentData_MetaData), NewProp_ParentData_MetaData) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UListDataObject_Base_Statics::NewProp_EditConditionDescArray_Inner = { "EditConditionDescArray", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UScriptStruct_FOptionsDataEditConditionDescriptor, METADATA_PARAMS(0, nullptr) }; // 2917203478
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UListDataObject_Base_Statics::NewProp_EditConditionDescArray = { "EditConditionDescArray", nullptr, (EPropertyFlags)0x0040000000002000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UListDataObject_Base, EditConditionDescArray), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EditConditionDescArray_MetaData), NewProp_EditConditionDescArray_MetaData) }; // 2917203478
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UListDataObject_Base_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UListDataObject_Base_Statics::NewProp_ParentData,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UListDataObject_Base_Statics::NewProp_EditConditionDescArray_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UListDataObject_Base_Statics::NewProp_EditConditionDescArray,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UListDataObject_Base_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UListDataObject_Base_Statics::DependentSingletons[])() = {
@@ -112,10 +123,10 @@ UListDataObject_Base::~UListDataObject_Base() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_Base_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UListDataObject_Base, UListDataObject_Base::StaticClass, TEXT("UListDataObject_Base"), &Z_Registration_Info_UClass_UListDataObject_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UListDataObject_Base), 3982232807U) },
+		{ Z_Construct_UClass_UListDataObject_Base, UListDataObject_Base::StaticClass, TEXT("UListDataObject_Base"), &Z_Registration_Info_UClass_UListDataObject_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UListDataObject_Base), 155332769U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_Base_h__Script_UE5_Frontend_UI_1583148638(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_Base_h__Script_UE5_Frontend_UI_3372921845(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
