@@ -16,6 +16,9 @@ class UE5_FRONTEND_UI_API UListDataObject_Base : public UObject
 
 public:
 	DECLARE_MULTICAST_DELEGATE_TwoParams(FOnListDataModifiedDelegate, TObjectPtr<UListDataObject_Base>, EOptionsListDataModifyReason)
+
+	FOnListDataModifiedDelegate OnListDataModified;
+	FOnListDataModifiedDelegate OnDependencyDataModified;
 	
 	LIST_DATA_ACCESSOR(FName, DataID)
 	LIST_DATA_ACCESSOR(FText, DataDisplayName)
@@ -34,9 +37,8 @@ public:
 	void SetShouldApplySettingsImmediately(bool bShouldApplyRightAway) { bShouldApplyChangeImmediately = bShouldApplyRightAway; }
 
 	void AddEditCondition(const FOptionsDataEditConditionDescriptor& InEditCondition);
+	void AddEditDependencyData(TObjectPtr<UListDataObject_Base> InDependencyData);
 	bool IsDataCurrentlyEditable();
-	
-	FOnListDataModifiedDelegate OnListDataModified;
 
 protected:
 	virtual void OnDataObjectInitialized();
@@ -44,6 +46,7 @@ protected:
 
 	virtual bool CanSetToForcedStringValue(const FString& InForcedValue) const { return false; }
 	virtual void OnSetToForcedStringValue(const FString& InForcedValue) {}
+	virtual void OnEditDependencyDataModified(TObjectPtr<UListDataObject_Base> ModifiedDependencyData, EOptionsListDataModifyReason ModifyReason);
 	
 private:
 	FName DataID;
