@@ -87,3 +87,16 @@ public:
 		SetDefaultValueFromString(ConvertedEnumString);
 	}
 };
+
+UCLASS()
+class UE5_FRONTEND_UI_API UListDataObject_StringInteger : public UListDataObject_String
+{
+	GENERATED_BODY()
+
+public:
+	void AddIntegerOption(int32 InIntegerValue, const FText& InDisplayText);
+
+protected:
+	virtual void OnDataObjectInitialized() override;
+	virtual void OnEditDependencyDataModified(TObjectPtr<UListDataObject_Base> ModifiedDependencyData, EOptionsListDataModifyReason ModifyReason) override;
+};
