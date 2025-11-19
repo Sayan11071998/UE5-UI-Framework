@@ -233,6 +233,8 @@ void UListDataObject_StringInteger::OnEditDependencyDataModified(
 {
 	if (DataDynamicGetter)
 	{
+		if (CurrentStringValue == DataDynamicGetter->GetValueAsString()) return;
+		
 		CurrentStringValue = DataDynamicGetter->GetValueAsString();
 		
 		if (!TrySetDisplayTextFromStringValue(CurrentStringValue))
