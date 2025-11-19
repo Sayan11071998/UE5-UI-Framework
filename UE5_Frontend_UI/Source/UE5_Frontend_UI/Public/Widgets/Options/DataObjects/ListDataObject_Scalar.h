@@ -26,6 +26,7 @@ public:
 private:
 	virtual bool CanResetBackToDefaultValue() const override;
 	virtual bool TryResetBackToDefaultValue() override;
+	virtual void OnEditDependencyDataModified(TObjectPtr<UListDataObject_Base> ModifiedDependencyData, EOptionsListDataModifyReason ModifyReason) override;
 	
 	float StringToFloat(const FString& InString) const;
 	

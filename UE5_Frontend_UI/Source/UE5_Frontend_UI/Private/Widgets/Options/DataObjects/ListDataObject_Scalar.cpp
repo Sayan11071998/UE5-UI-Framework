@@ -70,6 +70,13 @@ bool UListDataObject_Scalar::TryResetBackToDefaultValue()
 	return false;
 }
 
+void UListDataObject_Scalar::OnEditDependencyDataModified(TObjectPtr<UListDataObject_Base> ModifiedDependencyData,
+	EOptionsListDataModifyReason ModifyReason)
+{
+	NotifyListDataModified(this, EOptionsListDataModifyReason::DependencyModified);
+	Super::OnEditDependencyDataModified(ModifiedDependencyData, ModifyReason);
+}
+
 float UListDataObject_Scalar::StringToFloat(const FString& InString) const
 {
 	float OutConvertedValue = 0.f;
