@@ -52,7 +52,6 @@
 			"ListDataObject_String.cpp.obj",
 			"ListDataObject_StringResolution.cpp.obj",
 			"ListDataObject_Value.cpp.obj",
-			"Widget_ListEntry_Base.cpp.obj",
 			"Widget_ListEntry_Scalar.cpp.obj",
 			"Widget_ListEntry_String.cpp.obj",
 			"OptionsDataInteractionHelper.cpp.obj",
@@ -62,7 +61,8 @@
 			"Widget_ActivatableBase.cpp.obj",
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
-			"UE5_Frontend_UI.cpp.obj"
+			"UE5_Frontend_UI.cpp.obj",
+			"Widget_ListEntry_Base.cpp.obj"
 		]
 	}
 }
