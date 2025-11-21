@@ -1,0 +1,76 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "FrontendSettings/FrontendGameUserSettings.h"
+
+#ifdef UE5_FRONTEND_UI_FrontendGameUserSettings_generated_h
+#error "FrontendGameUserSettings.generated.h already included, missing '#pragma once' in FrontendGameUserSettings.h"
+#endif
+#define UE5_FRONTEND_UI_FrontendGameUserSettings_generated_h
+
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+
+// ********** Begin Class UFrontendGameUserSettings ************************************************
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execSetUseHDRAudioMode); \
+	DECLARE_FUNCTION(execGetUseHDRAudioMode); \
+	DECLARE_FUNCTION(execSetAllowBackgroundAudio); \
+	DECLARE_FUNCTION(execGetAllowBackgroundAudio); \
+	DECLARE_FUNCTION(execSetSoundFXVolume); \
+	DECLARE_FUNCTION(execGetSoundFXVolume); \
+	DECLARE_FUNCTION(execSetMusicVolume); \
+	DECLARE_FUNCTION(execGetMusicVolume); \
+	DECLARE_FUNCTION(execSetOverallVolume); \
+	DECLARE_FUNCTION(execGetOverallVolume); \
+	DECLARE_FUNCTION(execSetCurrentGameDifficulty); \
+	DECLARE_FUNCTION(execGetCurrentGameDifficulty);
+
+
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendGameUserSettings_NoRegister();
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUFrontendGameUserSettings(); \
+	friend struct Z_Construct_UClass_UFrontendGameUserSettings_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendGameUserSettings_NoRegister(); \
+public: \
+	DECLARE_CLASS2(UFrontendGameUserSettings, UGameUserSettings, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/UE5_Frontend_UI"), Z_Construct_UClass_UFrontendGameUserSettings_NoRegister) \
+	DECLARE_SERIALIZER(UFrontendGameUserSettings)
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_ENHANCED_CONSTRUCTORS \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UFrontendGameUserSettings(UFrontendGameUserSettings&&) = delete; \
+	UFrontendGameUserSettings(const UFrontendGameUserSettings&) = delete; \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UFrontendGameUserSettings); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UFrontendGameUserSettings); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UFrontendGameUserSettings) \
+	NO_API virtual ~UFrontendGameUserSettings();
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_7_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h_10_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+class UFrontendGameUserSettings;
+
+// ********** End Class UFrontendGameUserSettings **************************************************
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_FrontendSettings_FrontendGameUserSettings_h
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

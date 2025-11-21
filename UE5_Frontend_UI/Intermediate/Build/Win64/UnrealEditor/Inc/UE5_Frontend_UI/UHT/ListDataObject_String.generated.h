@@ -59,7 +59,7 @@ class UListDataObject_String;
 // ********** Begin Class UListDataObject_StringBool ***********************************************
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_StringBool_NoRegister();
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_38_INCLASS_NO_PURE_DECLS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_40_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUListDataObject_StringBool(); \
 	friend struct Z_Construct_UClass_UListDataObject_StringBool_Statics; \
@@ -70,7 +70,7 @@ public: \
 	DECLARE_SERIALIZER(UListDataObject_StringBool)
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_38_ENHANCED_CONSTRUCTORS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_40_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UListDataObject_StringBool(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -82,12 +82,12 @@ public: \
 	NO_API virtual ~UListDataObject_StringBool();
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_35_PROLOG
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_38_GENERATED_BODY \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_37_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_40_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_38_INCLASS_NO_PURE_DECLS \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_38_ENHANCED_CONSTRUCTORS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_40_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_40_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -95,6 +95,86 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 class UListDataObject_StringBool;
 
 // ********** End Class UListDataObject_StringBool *************************************************
+
+// ********** Begin Class UListDataObject_StringEnum ***********************************************
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_StringEnum_NoRegister();
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_61_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUListDataObject_StringEnum(); \
+	friend struct Z_Construct_UClass_UListDataObject_StringEnum_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_StringEnum_NoRegister(); \
+public: \
+	DECLARE_CLASS2(UListDataObject_StringEnum, UListDataObject_String, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UE5_Frontend_UI"), Z_Construct_UClass_UListDataObject_StringEnum_NoRegister) \
+	DECLARE_SERIALIZER(UListDataObject_StringEnum)
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_61_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UListDataObject_StringEnum(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UListDataObject_StringEnum(UListDataObject_StringEnum&&) = delete; \
+	UListDataObject_StringEnum(const UListDataObject_StringEnum&) = delete; \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UListDataObject_StringEnum); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UListDataObject_StringEnum); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UListDataObject_StringEnum) \
+	NO_API virtual ~UListDataObject_StringEnum();
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_58_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_61_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_61_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_61_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+class UListDataObject_StringEnum;
+
+// ********** End Class UListDataObject_StringEnum *************************************************
+
+// ********** Begin Class UListDataObject_StringInteger ********************************************
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_StringInteger_NoRegister();
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_94_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesUListDataObject_StringInteger(); \
+	friend struct Z_Construct_UClass_UListDataObject_StringInteger_Statics; \
+	static UClass* GetPrivateStaticClass(); \
+	friend UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_StringInteger_NoRegister(); \
+public: \
+	DECLARE_CLASS2(UListDataObject_StringInteger, UListDataObject_String, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/UE5_Frontend_UI"), Z_Construct_UClass_UListDataObject_StringInteger_NoRegister) \
+	DECLARE_SERIALIZER(UListDataObject_StringInteger)
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_94_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API UListDataObject_StringInteger(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	/** Deleted move- and copy-constructors, should never be used */ \
+	UListDataObject_StringInteger(UListDataObject_StringInteger&&) = delete; \
+	UListDataObject_StringInteger(const UListDataObject_StringInteger&) = delete; \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UListDataObject_StringInteger); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UListDataObject_StringInteger); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UListDataObject_StringInteger) \
+	NO_API virtual ~UListDataObject_StringInteger();
+
+
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_91_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_94_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_94_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h_94_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+class UListDataObject_StringInteger;
+
+// ********** End Class UListDataObject_StringInteger **********************************************
 
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_DataObjects_ListDataObject_String_h
