@@ -335,6 +335,44 @@ void UOptionsDataRegistry::InitVideoCollectionTab()
 			GlobalIlluminationQuality->AddEditDependencyData(CreatedOverallQuality);
 			CreatedOverallQuality->AddEditDependencyData(GlobalIlluminationQuality);
 		}
+
+		// Shadow Quality
+		{
+			UListDataObject_StringInteger* ShadowQuality = NewObject<UListDataObject_StringInteger>();
+			ShadowQuality->SetDataID(FName("ShadowQuality"));
+			ShadowQuality->SetDataDisplayName(FText::FromString(TEXT("Shadow Quality")));
+			ShadowQuality->SetDescriptionRichText(FText::FromString(TEXT("This is description for Shadow Quality.")));
+			ShadowQuality->AddIntegerOption(0, FText::FromString(TEXT("Low")));
+			ShadowQuality->AddIntegerOption(1, FText::FromString(TEXT("Normal")));
+			ShadowQuality->AddIntegerOption(2, FText::FromString(TEXT("High")));
+			ShadowQuality->AddIntegerOption(3, FText::FromString(TEXT("Epic")));
+			ShadowQuality->AddIntegerOption(4, FText::FromString(TEXT("Cinematic")));
+			ShadowQuality->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetShadowQuality));
+			ShadowQuality->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetShadowQuality));
+			ShadowQuality->SetShouldApplySettingsImmediately(true);
+			GraphicsCategoryCollection->AddChildListData(ShadowQuality);
+			ShadowQuality->AddEditDependencyData(CreatedOverallQuality);
+			CreatedOverallQuality->AddEditDependencyData(ShadowQuality);
+		}
+
+		// Anti Aliasing Quality
+		{
+			UListDataObject_StringInteger* AntiAliasingQuality = NewObject<UListDataObject_StringInteger>();
+			AntiAliasingQuality->SetDataID(FName("AntiAliasingQuality"));
+			AntiAliasingQuality->SetDataDisplayName(FText::FromString(TEXT("Anti Aliasing Quality")));
+			AntiAliasingQuality->SetDescriptionRichText(FText::FromString(TEXT("This is description for Anti Aliasing Quality.")));
+			AntiAliasingQuality->AddIntegerOption(0, FText::FromString(TEXT("Low")));
+			AntiAliasingQuality->AddIntegerOption(1, FText::FromString(TEXT("Normal")));
+			AntiAliasingQuality->AddIntegerOption(2, FText::FromString(TEXT("High")));
+			AntiAliasingQuality->AddIntegerOption(3, FText::FromString(TEXT("Epic")));
+			AntiAliasingQuality->AddIntegerOption(4, FText::FromString(TEXT("Cinematic")));
+			AntiAliasingQuality->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetAntiAliasingQuality));
+			AntiAliasingQuality->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetAntiAliasingQuality));
+			AntiAliasingQuality->SetShouldApplySettingsImmediately(true);
+			GraphicsCategoryCollection->AddChildListData(AntiAliasingQuality);
+			AntiAliasingQuality->AddEditDependencyData(CreatedOverallQuality);
+			CreatedOverallQuality->AddEditDependencyData(AntiAliasingQuality);
+		}
 	}
 	
 	RegisteredOptionsTabCollections.Add(VideoTabCollection);
