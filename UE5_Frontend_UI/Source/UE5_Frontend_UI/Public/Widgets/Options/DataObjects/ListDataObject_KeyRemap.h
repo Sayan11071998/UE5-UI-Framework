@@ -22,6 +22,8 @@ private:
 	ECommonInputType CachedDesiredInputKeyType;
 	EPlayerMappableKeySlot CachedOwningMappableKeySlot;
 	FName CachedOwningMappingName;
+
+	FPlayerKeyMapping* GetOwningKeyMapping() const;
 	
 	UPROPERTY(Transient)
 	TObjectPtr<UEnhancedInputUserSettings> CachedOwningInputUserSettings;

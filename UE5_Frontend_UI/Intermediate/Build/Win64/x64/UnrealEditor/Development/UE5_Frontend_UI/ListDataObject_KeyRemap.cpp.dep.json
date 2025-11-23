@@ -32,7 +32,22 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\core\\public\\misc\\comparisonutility.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\gameplaytags\\uht\\gameplaytagcontainer.generated.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputusersettings.generated.h",
-            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\listdataobject_keyremap.generated.h"
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\listdataobject_keyremap.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\source\\commoninput\\public\\commoninputbasetypes.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\userdefinedenum.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\userdefinedenum.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputaction.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputmodifiers.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputmodifiers.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputtriggers.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputtriggers.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputaction.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commoninput\\uht\\commoninputbasetypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\source\\commoninput\\public\\commoninputsubsystem.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\plugins\\runtime\\commonui\\intermediate\\build\\win64\\unrealeditor\\inc\\commoninput\\uht\\commoninputsubsystem.generated.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontenddebughelper.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
