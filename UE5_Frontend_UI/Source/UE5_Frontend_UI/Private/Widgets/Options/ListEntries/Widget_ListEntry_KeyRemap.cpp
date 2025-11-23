@@ -1,1 +1,20 @@
 #include "Widgets/Options/ListEntries/Widget_ListEntry_KeyRemap.h"
+#include "Widgets/Options/DataObjects/ListDataObject_KeyRemap.h"
+#include "Widgets/Components/FrontendCommonButtonBase.h"
+
+void UWidget_ListEntry_KeyRemap::OnOwningListDataObjectSet(TObjectPtr<UListDataObject_Base> InOwningListDataObject)
+{
+	Super::OnOwningListDataObjectSet(InOwningListDataObject);
+
+	CachedOwningKeyRemapDataObject = CastChecked<UListDataObject_KeyRemap>(InOwningListDataObject);
+	CommonButtonBase_RemapKey->SetButtonDisplayImage(CachedOwningKeyRemapDataObject->GetIconFromCurrentKey());
+}
+
+void UWidget_ListEntry_KeyRemap::OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData,
+	EOptionsListDataModifyReason ModifyReason)
+{
+	if (CachedOwningKeyRemapDataObject)
+	{
+		CommonButtonBase_RemapKey->SetButtonDisplayImage(CachedOwningKeyRemapDataObject->GetIconFromCurrentKey());
+	}
+}

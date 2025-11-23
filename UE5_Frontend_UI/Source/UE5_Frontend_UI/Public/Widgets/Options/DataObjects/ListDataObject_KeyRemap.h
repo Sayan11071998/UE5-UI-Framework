@@ -16,7 +16,8 @@ class UE5_FRONTEND_UI_API UListDataObject_KeyRemap : public UListDataObject_Base
 
 public:
 	void InitKeyRemapData(TObjectPtr<UEnhancedInputUserSettings> InOwningInputUserSettings, TObjectPtr<UEnhancedPlayerMappableKeyProfile> InKeyProfile, ECommonInputType InDesiredInputKeyType, const FPlayerKeyMapping& InOwningPlayerKeyMapping);
-
+	FSlateBrush GetIconFromCurrentKey() const;
+	
 private:
 	ECommonInputType CachedDesiredInputKeyType;
 	EPlayerMappableKeySlot CachedOwningMappableKeySlot;

@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeWidget_ListEntry_KeyRemap() {}
 
 // ********** Begin Cross Module References ********************************************************
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister();
+UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UListDataObject_KeyRemap_NoRegister();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_Base();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_KeyRemap();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_ListEntry_KeyRemap_NoRegister();
@@ -75,9 +76,13 @@ struct Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_KeyRemap.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CachedOwningKeyRemapDataObject_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_KeyRemap.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonButtonBase_RemapKey;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonButtonBase_ResetKeyBinding;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CachedOwningKeyRemapDataObject;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -87,9 +92,11 @@ struct Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::NewProp_CommonButtonBase_RemapKey = { "CommonButtonBase_RemapKey", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_KeyRemap, CommonButtonBase_RemapKey), Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonButtonBase_RemapKey_MetaData), NewProp_CommonButtonBase_RemapKey_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::NewProp_CommonButtonBase_ResetKeyBinding = { "CommonButtonBase_ResetKeyBinding", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_KeyRemap, CommonButtonBase_ResetKeyBinding), Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonButtonBase_ResetKeyBinding_MetaData), NewProp_CommonButtonBase_ResetKeyBinding_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::NewProp_CachedOwningKeyRemapDataObject = { "CachedOwningKeyRemapDataObject", nullptr, (EPropertyFlags)0x0144000000002000, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UWidget_ListEntry_KeyRemap, CachedOwningKeyRemapDataObject), Z_Construct_UClass_UListDataObject_KeyRemap_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CachedOwningKeyRemapDataObject_MetaData), NewProp_CachedOwningKeyRemapDataObject_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::NewProp_CommonButtonBase_RemapKey,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::NewProp_CommonButtonBase_ResetKeyBinding,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::NewProp_CachedOwningKeyRemapDataObject,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UWidget_ListEntry_KeyRemap_Statics::DependentSingletons[])() = {
@@ -129,10 +136,10 @@ UWidget_ListEntry_KeyRemap::~UWidget_ListEntry_KeyRemap() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_KeyRemap_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_ListEntry_KeyRemap, UWidget_ListEntry_KeyRemap::StaticClass, TEXT("UWidget_ListEntry_KeyRemap"), &Z_Registration_Info_UClass_UWidget_ListEntry_KeyRemap, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_KeyRemap), 43932179U) },
+		{ Z_Construct_UClass_UWidget_ListEntry_KeyRemap, UWidget_ListEntry_KeyRemap::StaticClass, TEXT("UWidget_ListEntry_KeyRemap"), &Z_Registration_Info_UClass_UWidget_ListEntry_KeyRemap, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_KeyRemap), 1581079331U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_KeyRemap_h__Script_UE5_Frontend_UI_1389394111(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_KeyRemap_h__Script_UE5_Frontend_UI_1763897104(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_KeyRemap_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_KeyRemap_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

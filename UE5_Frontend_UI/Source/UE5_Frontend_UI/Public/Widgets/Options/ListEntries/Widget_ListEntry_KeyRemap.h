@@ -5,11 +5,16 @@
 #include "Widget_ListEntry_KeyRemap.generated.h"
 
 class UFrontendCommonButtonBase;
+class UListDataObject_KeyRemap;
 
 UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class UE5_FRONTEND_UI_API UWidget_ListEntry_KeyRemap : public UWidget_ListEntry_Base
 {
 	GENERATED_BODY()
+
+protected:
+	virtual void OnOwningListDataObjectSet(TObjectPtr<UListDataObject_Base> InOwningListDataObject) override;
+	virtual void OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData, EOptionsListDataModifyReason ModifyReason) override;
 
 private:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
@@ -17,4 +22,7 @@ private:
 
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
 	TObjectPtr<UFrontendCommonButtonBase> CommonButtonBase_ResetKeyBinding;
+
+	UPROPERTY(Transient)
+	TObjectPtr<UListDataObject_KeyRemap> CachedOwningKeyRemapDataObject;
 };
