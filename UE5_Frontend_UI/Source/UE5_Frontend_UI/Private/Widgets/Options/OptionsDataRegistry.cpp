@@ -10,8 +10,7 @@
 #include "Internationalization/StringTableRegistry.h"
 #include "EnhancedInputSubsystems.h"
 #include "UserSettings/EnhancedInputUserSettings.h"
-
-#include "FrontendDebugHelper.h"
+#include "Widgets/Options/DataObjects/ListDataObject_KeyRemap.h"
 
 #define MAKE_OPTIONS_DATA_CONTROL(SetterOrGetterFuncName) \
 	MakeShared<FOptionsDataInteractionHelper>(GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, SetterOrGetterFuncName))
@@ -578,11 +577,11 @@ void UOptionsDataRegistry::InitControlCollectionTab(TObjectPtr<ULocalPlayer> InO
 					{
 						if (MappableKeyProfile->DoesMappingPassQueryOptions(KeyMapping, KeyboardMouseOnly))
 						{
-							Debug::Print(
-								TEXT(" Mapping ID: ") + KeyMapping.GetMappingName().ToString() +
-								TEXT(" Display Name: ") + KeyMapping.GetDisplayName().ToString() +
-								TEXT(" Bound Key: ") + KeyMapping.GetCurrentKey().GetDisplayName().ToString()
-							);
+							UListDataObject_KeyRemap* KeyRemapDataObject = NewObject<UListDataObject_KeyRemap>();
+							KeyRemapDataObject->SetDataID(FName(KeyMapping.GetMappingName()));
+							KeyRemapDataObject->SetDataDisplayName(KeyMapping.GetDisplayName());
+							KeyRemapDataObject->InitKeyRemapData(EIUserSettings, MappableKeyProfile, ECommonInputType::MouseAndKeyboard, KeyMapping);
+							KeyboardMouseCategoryCollection->AddChildListData(KeyRemapDataObject);
 						}
 					}
 				}

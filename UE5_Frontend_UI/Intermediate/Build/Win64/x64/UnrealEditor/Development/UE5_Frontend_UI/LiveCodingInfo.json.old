@@ -18,6 +18,7 @@
 			"FrontendUISubsystem.gen.cpp.obj",
 			"ListDataObject_Base.gen.cpp.obj",
 			"ListDataObject_Collection.gen.cpp.obj",
+			"ListDataObject_KeyRemap.gen.cpp.obj",
 			"ListDataObject_Scalar.gen.cpp.obj",
 			"ListDataObject_String.gen.cpp.obj",
 			"ListDataObject_StringResolution.gen.cpp.obj",
@@ -62,7 +63,8 @@
 			"Widget_ActivatableBase.cpp.obj",
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
-			"UE5_Frontend_UI.cpp.obj"
+			"UE5_Frontend_UI.cpp.obj",
+			"ListDataObject_KeyRemap.cpp.obj"
 		]
 	}
 }
