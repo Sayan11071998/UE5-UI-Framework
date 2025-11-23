@@ -6,6 +6,7 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "Widgets/Components/FrontendCommonButtonBase.h"
+#include "Styling/SlateBrush.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
@@ -13,7 +14,9 @@ void EmptyLinkFunctionForGeneratedCodeFrontendCommonButtonBase() {}
 
 // ********** Begin Cross Module References ********************************************************
 COMMONUI_API UClass* Z_Construct_UClass_UCommonButtonBase();
+COMMONUI_API UClass* Z_Construct_UClass_UCommonLazyImage_NoRegister();
 COMMONUI_API UClass* Z_Construct_UClass_UCommonTextBlock_NoRegister();
+SLATECORE_API UScriptStruct* Z_Construct_UScriptStruct_FSlateBrush();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendCommonButtonBase();
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendCommonButtonBase_NoRegister();
 UPackage* Z_Construct_UPackage__Script_UE5_Frontend_UI();
@@ -59,6 +62,51 @@ DEFINE_FUNCTION(UFrontendCommonButtonBase::execGetButtonDisplayText)
 	P_NATIVE_END;
 }
 // ********** End Class UFrontendCommonButtonBase Function GetButtonDisplayText ********************
+
+// ********** Begin Class UFrontendCommonButtonBase Function SetButtonDisplayImage *****************
+struct Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics
+{
+	struct FrontendCommonButtonBase_eventSetButtonDisplayImage_Parms
+	{
+		FSlateBrush InBrush;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Widgets/Components/FrontendCommonButtonBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InBrush_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_InBrush;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::NewProp_InBrush = { "InBrush", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(FrontendCommonButtonBase_eventSetButtonDisplayImage_Parms, InBrush), Z_Construct_UScriptStruct_FSlateBrush, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InBrush_MetaData), NewProp_InBrush_MetaData) }; // 963227394
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::NewProp_InBrush,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UFrontendCommonButtonBase, nullptr, "SetButtonDisplayImage", Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::PropPointers), sizeof(Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::FrontendCommonButtonBase_eventSetButtonDisplayImage_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::Function_MetaDataParams), Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::FrontendCommonButtonBase_eventSetButtonDisplayImage_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UFrontendCommonButtonBase::execSetButtonDisplayImage)
+{
+	P_GET_STRUCT_REF(FSlateBrush,Z_Param_Out_InBrush);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetButtonDisplayImage(Z_Param_Out_InBrush);
+	P_NATIVE_END;
+}
+// ********** End Class UFrontendCommonButtonBase Function SetButtonDisplayImage *******************
 
 // ********** Begin Class UFrontendCommonButtonBase Function SetButtonText *************************
 struct Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonText_Statics
@@ -108,6 +156,7 @@ void UFrontendCommonButtonBase::StaticRegisterNativesUFrontendCommonButtonBase()
 	UClass* Class = UFrontendCommonButtonBase::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "GetButtonDisplayText", &UFrontendCommonButtonBase::execGetButtonDisplayText },
+		{ "SetButtonDisplayImage", &UFrontendCommonButtonBase::execSetButtonDisplayImage },
 		{ "SetButtonText", &UFrontendCommonButtonBase::execSetButtonText },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
@@ -155,6 +204,13 @@ struct Z_Construct_UClass_UFrontendCommonButtonBase_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Widgets/Components/FrontendCommonButtonBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CommonLazyImage_ButtonImage_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "BindWidgetOptional", "" },
+		{ "Category", "FrontendCommonButtonBase" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Widgets/Components/FrontendCommonButtonBase.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ButtonDisplayText_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Frontend Button" },
@@ -172,6 +228,7 @@ struct Z_Construct_UClass_UFrontendCommonButtonBase_Statics
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonTextBlock_ButtonText;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_CommonLazyImage_ButtonImage;
 	static const UECodeGen_Private::FTextPropertyParams NewProp_ButtonDisplayText;
 	static void NewProp_bUseUpperCaseForButtonText_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseUpperCaseForButtonText;
@@ -180,6 +237,7 @@ struct Z_Construct_UClass_UFrontendCommonButtonBase_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UFrontendCommonButtonBase_GetButtonDisplayText, "GetButtonDisplayText" }, // 3884191940
+		{ &Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonDisplayImage, "SetButtonDisplayImage" }, // 1999850034
 		{ &Z_Construct_UFunction_UFrontendCommonButtonBase_SetButtonText, "SetButtonText" }, // 2500916970
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
@@ -189,6 +247,7 @@ struct Z_Construct_UClass_UFrontendCommonButtonBase_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_CommonTextBlock_ButtonText = { "CommonTextBlock_ButtonText", nullptr, (EPropertyFlags)0x0144000000080008, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendCommonButtonBase, CommonTextBlock_ButtonText), Z_Construct_UClass_UCommonTextBlock_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonTextBlock_ButtonText_MetaData), NewProp_CommonTextBlock_ButtonText_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_CommonLazyImage_ButtonImage = { "CommonLazyImage_ButtonImage", nullptr, (EPropertyFlags)0x014400000008001c, UECodeGen_Private::EPropertyGenFlags::Object | UECodeGen_Private::EPropertyGenFlags::ObjectPtr, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendCommonButtonBase, CommonLazyImage_ButtonImage), Z_Construct_UClass_UCommonLazyImage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CommonLazyImage_ButtonImage_MetaData), NewProp_CommonLazyImage_ButtonImage_MetaData) };
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_ButtonDisplayText = { "ButtonDisplayText", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendCommonButtonBase, ButtonDisplayText), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ButtonDisplayText_MetaData), NewProp_ButtonDisplayText_MetaData) };
 void Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_bUseUpperCaseForButtonText_SetBit(void* Obj)
 {
@@ -198,6 +257,7 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UFrontendCommonB
 const UECodeGen_Private::FTextPropertyParams Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_ButtonDescriptionText = { "ButtonDescriptionText", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Text, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UFrontendCommonButtonBase, ButtonDescriptionText), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ButtonDescriptionText_MetaData), NewProp_ButtonDescriptionText_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UFrontendCommonButtonBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_CommonTextBlock_ButtonText,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_CommonLazyImage_ButtonImage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_ButtonDisplayText,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_bUseUpperCaseForButtonText,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFrontendCommonButtonBase_Statics::NewProp_ButtonDescriptionText,
@@ -240,10 +300,10 @@ UFrontendCommonButtonBase::~UFrontendCommonButtonBase() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UFrontendCommonButtonBase, UFrontendCommonButtonBase::StaticClass, TEXT("UFrontendCommonButtonBase"), &Z_Registration_Info_UClass_UFrontendCommonButtonBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendCommonButtonBase), 2291480459U) },
+		{ Z_Construct_UClass_UFrontendCommonButtonBase, UFrontendCommonButtonBase::StaticClass, TEXT("UFrontendCommonButtonBase"), &Z_Registration_Info_UClass_UFrontendCommonButtonBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UFrontendCommonButtonBase), 2090349857U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_2205082861(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_3529049105(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Components_FrontendCommonButtonBase_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
