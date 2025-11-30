@@ -132,6 +132,54 @@ UFunction* Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnListEntryWidgetHove
 }
 // ********** End Class UWidget_ListEntry_Base Function BP_OnListEntryWidgetHovered ****************
 
+// ********** Begin Class UWidget_ListEntry_Base Function BP_OnToggleEntryWidgetHighlightState *****
+struct Widget_ListEntry_Base_eventBP_OnToggleEntryWidgetHighlightState_Parms
+{
+	bool bShouldHighlight;
+};
+static FName NAME_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState = FName(TEXT("BP_OnToggleEntryWidgetHighlightState"));
+void UWidget_ListEntry_Base::BP_OnToggleEntryWidgetHighlightState(bool bShouldHighlight) const
+{
+	Widget_ListEntry_Base_eventBP_OnToggleEntryWidgetHighlightState_Parms Parms;
+	Parms.bShouldHighlight=bShouldHighlight ? true : false;
+	UFunction* Func = FindFunctionChecked(NAME_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState);
+		const_cast<UWidget_ListEntry_Base*>(this)->ProcessEvent(Func,&Parms);
+}
+struct Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "DisplayName", "On Toggle Entry Widget Highlight State" },
+		{ "ModuleRelativePath", "Public/Widgets/Options/ListEntries/Widget_ListEntry_Base.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_bShouldHighlight_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bShouldHighlight;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::NewProp_bShouldHighlight_SetBit(void* Obj)
+{
+	((Widget_ListEntry_Base_eventBP_OnToggleEntryWidgetHighlightState_Parms*)Obj)->bShouldHighlight = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::NewProp_bShouldHighlight = { "bShouldHighlight", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(Widget_ListEntry_Base_eventBP_OnToggleEntryWidgetHighlightState_Parms), &Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::NewProp_bShouldHighlight_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::NewProp_bShouldHighlight,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UWidget_ListEntry_Base, nullptr, "BP_OnToggleEntryWidgetHighlightState", Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::PropPointers), sizeof(Widget_ListEntry_Base_eventBP_OnToggleEntryWidgetHighlightState_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x48080800, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::Function_MetaDataParams), Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::Function_MetaDataParams)},  };
+static_assert(sizeof(Widget_ListEntry_Base_eventBP_OnToggleEntryWidgetHighlightState_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+// ********** End Class UWidget_ListEntry_Base Function BP_OnToggleEntryWidgetHighlightState *******
+
 // ********** Begin Class UWidget_ListEntry_Base ***************************************************
 void UWidget_ListEntry_Base::StaticRegisterNativesUWidget_ListEntry_Base()
 {
@@ -192,6 +240,7 @@ struct Z_Construct_UClass_UWidget_ListEntry_Base_Statics
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_UWidget_ListEntry_Base_BP_GetWidgetToFocusForGamepad, "BP_GetWidgetToFocusForGamepad" }, // 3921388437
 		{ &Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnListEntryWidgetHovered, "BP_OnListEntryWidgetHovered" }, // 433502670
+		{ &Z_Construct_UFunction_UWidget_ListEntry_Base_BP_OnToggleEntryWidgetHighlightState, "BP_OnToggleEntryWidgetHighlightState" }, // 3584538212
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -247,10 +296,10 @@ UWidget_ListEntry_Base::~UWidget_ListEntry_Base() {}
 struct Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UWidget_ListEntry_Base, UWidget_ListEntry_Base::StaticClass, TEXT("UWidget_ListEntry_Base"), &Z_Registration_Info_UClass_UWidget_ListEntry_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Base), 3063966649U) },
+		{ Z_Construct_UClass_UWidget_ListEntry_Base, UWidget_ListEntry_Base::StaticClass, TEXT("UWidget_ListEntry_Base"), &Z_Registration_Info_UClass_UWidget_ListEntry_Base, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UWidget_ListEntry_Base), 4039110626U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_1422439041(TEXT("/Script/UE5_Frontend_UI"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_811592889(TEXT("/Script/UE5_Frontend_UI"),
 	Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_ListEntries_Widget_ListEntry_Base_h__Script_UE5_Frontend_UI_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

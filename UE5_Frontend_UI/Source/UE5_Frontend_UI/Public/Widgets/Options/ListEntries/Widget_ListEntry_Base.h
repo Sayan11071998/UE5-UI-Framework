@@ -28,11 +28,15 @@ protected:
 	virtual void NativeOnEntryReleased() override;
 	virtual void OnToggleEditableState(bool bIsEditable);
 	virtual void OnOwningDependencyDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedDependencyData, EOptionsListDataModifyReason ModifyReason);
+	virtual void NativeOnItemSelectionChanged(bool bIsSelected) override;
 	
 	void SelectThisEntryWidget();
 
 	UFUNCTION(BlueprintImplementableEvent, meta = (DisplayName = "Get Widget To Focus For Gamepad"))
 	UWidget* BP_GetWidgetToFocusForGamepad() const;
+
+	UFUNCTION(BlueprintImplementableEvent, meta = (DisplayName = "On Toggle Entry Widget Highlight State"))
+	void BP_OnToggleEntryWidgetHighlightState(bool bShouldHighlight) const;
 	
 private:
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidgetOptional, AllowPrivateAccess = "true"))
