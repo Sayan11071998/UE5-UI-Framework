@@ -13,15 +13,19 @@ class UE5_FRONTEND_UI_API UWidget_ListEntry_KeyRemap : public UWidget_ListEntry_
 	GENERATED_BODY()
 
 protected:
+	virtual void NativeOnInitialized() override;
 	virtual void OnOwningListDataObjectSet(TObjectPtr<UListDataObject_Base> InOwningListDataObject) override;
 	virtual void OnOwningListDataObjectModified(TObjectPtr<UListDataObject_Base> OwningModifiedData, EOptionsListDataModifyReason ModifyReason) override;
 
 private:
+	void OnRemapKeyButtonClicked();
+	void OnResetKeyBindingButtonClicked();
+	
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
-	TObjectPtr<UFrontendCommonButtonBase> CommonButtonBase_RemapKey;
+	TObjectPtr<UFrontendCommonButtonBase> CommonButton_RemapKey;
 
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
-	TObjectPtr<UFrontendCommonButtonBase> CommonButtonBase_ResetKeyBinding;
+	TObjectPtr<UFrontendCommonButtonBase> CommonButton_ResetKeyBinding;
 
 	UPROPERTY(Transient)
 	TObjectPtr<UListDataObject_KeyRemap> CachedOwningKeyRemapDataObject;
