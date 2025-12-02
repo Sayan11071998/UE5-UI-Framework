@@ -5,6 +5,7 @@
 #include "Widget_KeyRemapScreen.generated.h"
 
 class UCommonRichTextBlock;
+class FKeyRemapScreenInputPreprocessor;
 
 UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class UE5_FRONTEND_UI_API UWidget_KeyRemapScreen : public UWidget_ActivatableBase
@@ -16,6 +17,8 @@ protected:
 	virtual void NativeOnDeactivated() override;
 
 private:
+	TSharedPtr<FKeyRemapScreenInputPreprocessor> CachedInputPreprocessor;
+	
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UCommonRichTextBlock> CommonRichText_RemapMessage;
 };

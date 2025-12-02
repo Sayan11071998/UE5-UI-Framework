@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class UWidget_KeyRemapScreen ***************************************************
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UWidget_KeyRemapScreen_NoRegister();
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUWidget_KeyRemapScreen(); \
 	friend struct Z_Construct_UClass_UWidget_KeyRemapScreen_Statics; \
@@ -30,7 +30,7 @@ public: \
 	DECLARE_SERIALIZER(UWidget_KeyRemapScreen)
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_13_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UWidget_KeyRemapScreen(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	/** Deleted move- and copy-constructors, should never be used */ \
@@ -42,12 +42,12 @@ public: \
 	NO_API virtual ~UWidget_KeyRemapScreen();
 
 
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_9_PROLOG
-#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_12_GENERATED_BODY \
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_10_PROLOG
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_13_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_12_INCLASS_NO_PURE_DECLS \
-	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_12_ENHANCED_CONSTRUCTORS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_13_INCLASS_NO_PURE_DECLS \
+	FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Widgets_Options_Widget_KeyRemapScreen_h_13_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
