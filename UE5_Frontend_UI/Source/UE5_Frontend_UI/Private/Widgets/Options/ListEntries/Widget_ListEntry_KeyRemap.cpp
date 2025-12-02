@@ -4,6 +4,7 @@
 #include "Subsystems/FrontendUISubsystem.h"
 #include "FrontendGameplayTags.h"
 #include "FrontendFunctionLibrary.h"
+#include "Widgets/Options/Widget_KeyRemapScreen.h"
 
 #include "FrontendDebugHelper.h"
 
@@ -37,9 +38,17 @@ void UWidget_ListEntry_KeyRemap::OnRemapKeyButtonClicked()
 	UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
 		FrontendGameplayTags::Frontend_WidgetStack_Modal,
 		UFrontendFunctionLibrary::GetFrontendSoftWidgetClassByTag(FrontendGameplayTags::Frontend_Widget_KeyRemapScreen),
-		[](EAsyncPushWidgetState PushState, UWidget_ActivatableBase* PushedWidget)
+		[this](EAsyncPushWidgetState PushState, UWidget_ActivatableBase* PushedWidget)
 		{
-			
+			if (PushState == EAsyncPushWidgetState::OnCreatedBeforePush)
+			{
+				UWidget_KeyRemapScreen* CreatedKeyRemapScreen = CastChecked<UWidget_KeyRemapScreen>(PushedWidget);
+				
+				if (CachedOwningKeyRemapDataObject)
+				{
+					CreatedKeyRemapScreen->SetDesiredInputTypeToFilter(CachedOwningKeyRemapDataObject->GetDesiredInputKeyType());
+				}
+			}
 		}
 	);
 }

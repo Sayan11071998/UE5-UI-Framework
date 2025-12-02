@@ -30,4 +30,7 @@ private:
 
 	UPROPERTY(Transient)
 	TObjectPtr<UEnhancedPlayerMappableKeyProfile> CachedOwningKeyProfile;
+
+public:
+	FORCEINLINE ECommonInputType GetDesiredInputKeyType() const { return CachedDesiredInputKeyType; }
 };
