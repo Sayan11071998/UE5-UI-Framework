@@ -24,9 +24,12 @@
 			"ListDataObject_StringResolution.gen.cpp.obj",
 			"ListDataObject_Value.gen.cpp.obj",
 			"OptionsDataRegistry.gen.cpp.obj",
+			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
+			"Widget_KeyRemapScreen.gen.cpp.obj",
 			"Widget_ListEntry_Base.gen.cpp.obj",
+			"Widget_ListEntry_KeyRemap.gen.cpp.obj",
 			"Widget_ListEntry_Scalar.gen.cpp.obj",
 			"Widget_ListEntry_String.gen.cpp.obj",
 			"Widget_OptionsDetailsView.gen.cpp.obj",
@@ -37,7 +40,6 @@
 			"AsyncAction_PushSoftWidget.cpp.obj",
 			"FrontendPlayerController.cpp.obj",
 			"FrontendFunctionLibrary.cpp.obj",
-			"FrontendGameplayTags.cpp.obj",
 			"FrontendDeveloperSettings.cpp.obj",
 			"FrontendGameUserSettings.cpp.obj",
 			"FrontendUISubsystem.cpp.obj",
@@ -54,6 +56,7 @@
 			"ListDataObject_StringResolution.cpp.obj",
 			"ListDataObject_Value.cpp.obj",
 			"Widget_ListEntry_Base.cpp.obj",
+			"Widget_ListEntry_KeyRemap.cpp.obj",
 			"Widget_ListEntry_Scalar.cpp.obj",
 			"Widget_ListEntry_String.cpp.obj",
 			"OptionsDataInteractionHelper.cpp.obj",
@@ -64,9 +67,8 @@
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
 			"UE5_Frontend_UI.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj",
-			"Widget_ListEntry_KeyRemap.gen.cpp.obj",
-			"Widget_ListEntry_KeyRemap.cpp.obj"
+			"FrontendGameplayTags.cpp.obj",
+			"Widget_KeyRemapScreen.cpp.obj"
 		]
 	}
 }
