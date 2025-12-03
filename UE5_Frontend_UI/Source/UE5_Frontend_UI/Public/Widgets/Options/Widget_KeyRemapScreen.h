@@ -14,6 +14,12 @@ class UE5_FRONTEND_UI_API UWidget_KeyRemapScreen : public UWidget_ActivatableBas
 	GENERATED_BODY()
 
 public:
+	DECLARE_DELEGATE_OneParam(FOnKeyRemapScreenKeyPressedDelegate, const FKey& /*PressedKey*/);
+	FOnKeyRemapScreenKeyPressedDelegate OnKeyRemapScreenKeyPressed;
+
+	DECLARE_DELEGATE_OneParam(FOnKeyRemapScreenKeySelectCanceledDelegate, const FString& /*Canceled Reason*/)
+	FOnKeyRemapScreenKeySelectCanceledDelegate OnKeyRemapScreenKeySelectCanceled;
+	
 	void SetDesiredInputTypeToFilter(ECommonInputType InDesiredInputType);
 
 protected:
@@ -23,6 +29,8 @@ protected:
 private:
 	void OnValidKeyPressedDetected(const FKey& PressedKey);
 	void OnKeySelectCanceled(const FString& CanceledReason);
+
+	void RequestDeactivateWidget(TFunction<void()> PreDeactivateCallback);
 	
 	TSharedPtr<FKeyRemapScreenInputPreprocessor> CachedInputPreprocessor;
 	ECommonInputType CachedDesiredInputType;
