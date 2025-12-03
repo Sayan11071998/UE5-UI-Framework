@@ -20,6 +20,8 @@ protected:
 private:
 	void OnRemapKeyButtonClicked();
 	void OnResetKeyBindingButtonClicked();
+	void OnKeyToRemapPressed(const FKey& PressedKey);
+	void OnKeyRemapCanceled(const FString& CanceledReason);
 	
 	UPROPERTY(BlueprintReadOnly, meta = (BindWidget, AllowPrivateAccess = "true"))
 	TObjectPtr<UFrontendCommonButtonBase> CommonButton_RemapKey;
