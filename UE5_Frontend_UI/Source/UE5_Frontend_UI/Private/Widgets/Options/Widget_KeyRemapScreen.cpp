@@ -2,8 +2,6 @@
 #include "CommonRichTextBlock.h"
 #include "Framework/Application/IInputProcessor.h"
 
-#include "FrontendDebugHelper.h"
-
 class FKeyRemapScreenInputPreprocessor : public IInputProcessor
 {
 public:
