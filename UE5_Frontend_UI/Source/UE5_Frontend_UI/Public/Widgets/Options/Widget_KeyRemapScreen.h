@@ -21,6 +21,9 @@ protected:
 	virtual void NativeOnDeactivated() override;
 
 private:
+	void OnValidKeyPressedDetected(const FKey& PressedKey);
+	void OnKeySelectCanceled(const FString& CanceledReason);
+	
 	TSharedPtr<FKeyRemapScreenInputPreprocessor> CachedInputPreprocessor;
 	ECommonInputType CachedDesiredInputType;
 	
