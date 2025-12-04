@@ -61,6 +61,5 @@
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/Widget_OptionsDetailsView.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Options/Widget_OptionsScreen.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Widget_ActivatableBase.cpp"
-#include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Widget_ConfirmScreen.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Private/Widgets/Widget_PrimaryLayout.cpp"
 #include "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/UE5_Frontend_UI.cpp"
