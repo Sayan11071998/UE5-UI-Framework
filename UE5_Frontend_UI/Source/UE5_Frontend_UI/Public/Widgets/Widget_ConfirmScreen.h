@@ -48,6 +48,9 @@ class UE5_FRONTEND_UI_API UWidget_ConfirmScreen : public UWidget_ActivatableBase
 public:
 	void InitConfirmScreen(TObjectPtr<UConfirmScreenInfoObject> InScreenInfoObject, TFunction<void(EConfirmScreenButtonType)> ClickedButtonCallback);
 
+protected:
+	virtual UWidget* NativeGetDesiredFocusTarget() const override;
+
 private:
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UCommonTextBlock> CommonTextBlock_Title;

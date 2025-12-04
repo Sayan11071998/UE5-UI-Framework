@@ -1719,6 +1719,7 @@ ConfigSystem.<Editor>.Engine:DevOptions.Shaders:NumUnusedShaderCompilingThreads:
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:NumUnusedShaderCompilingThreadsDuringGame:0=4
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:ProcessGameThreadTargetTime:0=.01
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:ShaderCompilerCoreCountThreshold:0=12
+ConfigSystem.<Editor>.Engine:DevOptions.Shaders:WorkerProcessPriority:0=-1
 ConfigSystem.<Editor>.Engine:DevOptions.Shaders:WorkerTimeToLive:0=20
 ConfigSystem.<Editor>.Engine:Engine.ErrorHandling:bPromptForRemoteDebugging:0=false
 ConfigSystem.<Editor>.Engine:Engine.ErrorHandling:bPromptForRemoteDebugOnEnsure:0=false
@@ -1763,6 +1764,7 @@ ConfigSystem.<Editor>.Engine:Kismet:bOptimizeAdjacentStates:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bOptimizeExecutionFlowStack:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bPersistentUberGraphFrame:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bTurnOffEditorConstructionScript:0=false
+ConfigSystem.<Editor>.Engine:Kismet:bUseLegacyAnimBlueprintThreadSafetyChecks:0=true
 ConfigSystem.<Editor>.Engine:Kismet:bUseLocalGraphVariables:0=false
 ConfigSystem.<Editor>.Engine:LogFiles:LogTimes:0=True
 ConfigSystem.<Editor>.Engine:LogFiles:MaxLogFilesOnDisk:0=10
@@ -1923,7 +1925,7 @@ ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:ApplocalPre
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bBuildHttpChunkInstallData:0=False
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bChunkHardReferencesOnly:0=False
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bCompressed:0=True
-ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bCookAll:0=False
+ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bCookAll:0=True
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bCookMapsOnly:0=False
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bDeterministicShaderCodeOrder:0=False
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bExcludeMonolithicEngineHeadersInNativizedCode:0=False
@@ -1950,6 +1952,7 @@ ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bWritePlugi
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:CulturesToStage:0=en
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:CustomStageCopyHandler:0=
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:DirectoriesToAlwaysCook:0=(Path="/NNEDenoiser")
+ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:DirectoriesToAlwaysCook:1=(Path="/Game/Blueprints/UI/StringTable")
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:EarlyDownloaderPakFileFiles:0=...\Content\Internationalization\...\*.icu
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:EarlyDownloaderPakFileFiles:1=...\Content\Internationalization\...\*.brk
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:EarlyDownloaderPakFileFiles:2=...\Content\Internationalization\...\*.res

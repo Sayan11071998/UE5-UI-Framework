@@ -17,7 +17,8 @@ public class UE5_Frontend_UI : ModuleRules
 			"GameplayTags",
 			"UMG",
 			"CommonInput",
-			"PropertyPath"
+			"PropertyPath",
+			"EnhancedInput"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

@@ -15,6 +15,7 @@ namespace FrontendGameplayTags
 	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_MainMenuScreen);
 	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_OptionsScreen);
 	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_ConfirmScreen);
+	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Widget_KeyRemapScreen);
 
 	// Frontend Options Image
 	UE5_FRONTEND_UI_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Frontend_Image_TestImage);

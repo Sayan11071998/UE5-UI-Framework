@@ -87,6 +87,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "C6380E26948F1D9BDAC2BDF56959A82496B7B0FA",
+			"Assets": [
+				"/Game/Assets/Materials/M_CircularThrobber"
+			]
+		},
+		{
 			"ShaderMapHash": "2C0645264EFCA89DC45B478326292E4AF85ABE7D",
 			"Assets": [
 				"/InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Blend_DS"
@@ -303,6 +309,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "8796B178069A6BC273AD931D50357160124D75DB",
+			"Assets": [
+				"/Game/Assets/Materials/M_CircularProgress"
+			]
+		},
+		{
 			"ShaderMapHash": "03D6037F28318E325F3F889970A73731B7E8E877",
 			"Assets": [
 				"/CameraCalibrationCore/Materials/M_DefaultEvenSquare"
@@ -462,6 +474,12 @@
 			]
 		},
 		{
+			"ShaderMapHash": "F1F202C020D1701CA2D047153CB2638700338497",
+			"Assets": [
+				"/Game/Assets/LevelVisuals/Characters/Mannequin_UE4/Materials/M_MannequinUE4_ChestLogo"
+			]
+		},
+		{
 			"ShaderMapHash": "212FFCC0E743209FEEB36960CFA74CB3A4BB875A",
 			"Assets": [
 				"/Engine/EngineMaterials/RemoveSurfaceMaterial"
@@ -522,9 +540,16 @@
 			]
 		},
 		{
+			"ShaderMapHash": "D9F955DBEC54B4B036228C603F52E2EE91C02A45",
+			"Assets": [
+				"/Game/Assets/LevelVisuals/Characters/Mannequin_UE4/Materials/M_MannequinUE4_Body"
+			]
+		},
+		{
 			"ShaderMapHash": "3AF6C4DDB7E9187E210D4C95FC64CB37CF082A04",
 			"Assets": [
-				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/Instances/Manny/MI_Manny_02"
+				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/Instances/Manny/MI_Manny_02",
+				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/Instances/Quinn/MI_Quinn_02"
 			]
 		},
 		{
