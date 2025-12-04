@@ -20,11 +20,15 @@ public:
 	FSlateBrush GetIconFromCurrentKey() const;
 	
 private:
+	virtual bool HasDefaultValue() const override;
+	virtual bool CanResetBackToDefaultValue() const override;
+	virtual bool TryResetBackToDefaultValue() override;
+
+	FPlayerKeyMapping* GetOwningKeyMapping() const;
+	
 	ECommonInputType CachedDesiredInputKeyType;
 	EPlayerMappableKeySlot CachedOwningMappableKeySlot;
 	FName CachedOwningMappingName;
-
-	FPlayerKeyMapping* GetOwningKeyMapping() const;
 	
 	UPROPERTY(Transient)
 	TObjectPtr<UEnhancedInputUserSettings> CachedOwningInputUserSettings;

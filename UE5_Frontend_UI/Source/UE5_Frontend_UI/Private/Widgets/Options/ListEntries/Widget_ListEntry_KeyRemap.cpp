@@ -35,6 +35,8 @@ void UWidget_ListEntry_KeyRemap::OnOwningListDataObjectModified(TObjectPtr<UList
 
 void UWidget_ListEntry_KeyRemap::OnRemapKeyButtonClicked()
 {
+	SelectThisEntryWidget();
+	
 	UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
 		FrontendGameplayTags::Frontend_WidgetStack_Modal,
 		UFrontendFunctionLibrary::GetFrontendSoftWidgetClassByTag(FrontendGameplayTags::Frontend_Widget_KeyRemapScreen),
@@ -57,7 +59,9 @@ void UWidget_ListEntry_KeyRemap::OnRemapKeyButtonClicked()
 
 void UWidget_ListEntry_KeyRemap::OnResetKeyBindingButtonClicked()
 {
-	Debug::Print(TEXT("Reset Key Binding Button Clicked"));
+	SelectThisEntryWidget();
+
+	
 }
 
 void UWidget_ListEntry_KeyRemap::OnKeyToRemapPressed(const FKey& PressedKey)
