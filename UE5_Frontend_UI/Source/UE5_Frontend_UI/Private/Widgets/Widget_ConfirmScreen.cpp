@@ -2,7 +2,6 @@
 #include "CommonTextBlock.h"
 #include "Components/DynamicEntryBox.h"
 #include "Widgets/Components/FrontendCommonButtonBase.h"
-#include "ICommonInputModule.h"
 
 TObjectPtr<UConfirmScreenInfoObject> UConfirmScreenInfoObject::CreateOKScreen(const FText& InScreenTitle,
                                                                               const FText& InScreenMessage)
@@ -94,9 +93,14 @@ void UWidget_ConfirmScreen::InitConfirmScreen(TObjectPtr<UConfirmScreenInfoObjec
 			}
 		);
 	}
+}
 
+UWidget* UWidget_ConfirmScreen::NativeGetDesiredFocusTarget() const
+{
 	if (DynamicEntryBox_Buttons->GetNumEntries() != 0)
 	{
 		DynamicEntryBox_Buttons->GetAllEntries().Last()->SetFocus();
 	}
+
+	return Super::NativeGetDesiredFocusTarget();
 }
