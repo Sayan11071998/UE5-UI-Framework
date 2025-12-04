@@ -18,12 +18,12 @@ public:
 	void InitKeyRemapData(TObjectPtr<UEnhancedInputUserSettings> InOwningInputUserSettings, TObjectPtr<UEnhancedPlayerMappableKeyProfile> InKeyProfile, ECommonInputType InDesiredInputKeyType, const FPlayerKeyMapping& InOwningPlayerKeyMapping);
 	void BindNewInputKey(const FKey& InNewKey);
 	FSlateBrush GetIconFromCurrentKey() const;
-	
-private:
+
 	virtual bool HasDefaultValue() const override;
 	virtual bool CanResetBackToDefaultValue() const override;
 	virtual bool TryResetBackToDefaultValue() override;
-
+	
+private:
 	FPlayerKeyMapping* GetOwningKeyMapping() const;
 	
 	ECommonInputType CachedDesiredInputKeyType;
