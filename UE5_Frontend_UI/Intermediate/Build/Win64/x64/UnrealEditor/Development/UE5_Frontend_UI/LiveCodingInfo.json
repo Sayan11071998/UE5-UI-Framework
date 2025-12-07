@@ -24,7 +24,6 @@
 			"ListDataObject_StringResolution.gen.cpp.obj",
 			"ListDataObject_Value.gen.cpp.obj",
 			"OptionsDataRegistry.gen.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
 			"Widget_KeyRemapScreen.gen.cpp.obj",
@@ -62,13 +61,16 @@
 			"Widget_ListEntry_String.cpp.obj",
 			"OptionsDataInteractionHelper.cpp.obj",
 			"OptionsDataRegistry.cpp.obj",
+			"Widget_KeyRemapScreen.cpp.obj",
 			"Widget_OptionsDetailsView.cpp.obj",
 			"Widget_OptionsScreen.cpp.obj",
 			"Widget_ActivatableBase.cpp.obj",
+			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
 			"UE5_Frontend_UI.cpp.obj",
-			"Widget_KeyRemapScreen.cpp.obj",
-			"Widget_ConfirmScreen.cpp.obj"
+			"FrontendLoadingScreenSettings.gen.cpp.obj",
+			"UE5_Frontend_UI.init.gen.cpp.obj",
+			"FrontendLoadingScreenSettings.cpp.obj"
 		]
 	}
 }
