@@ -24,6 +24,7 @@ private:
 	void OnMapPostLoaded(UWorld* LoadedWorld);
 
 	void TryUpdateLoadingScreen();
+	bool IsPreLoadScreenActive() const;
 
 	bool bIsCurrentlyLoadingMap = false;
 };
