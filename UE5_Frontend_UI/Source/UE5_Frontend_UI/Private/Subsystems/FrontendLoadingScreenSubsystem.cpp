@@ -1,5 +1,6 @@
 #include "Subsystems/FrontendLoadingScreenSubsystem.h"
 #include "PreLoadScreenManager.h"
+#include "FrontendSettings/FrontendLoadingScreenSettings.h"
 
 bool UFrontendLoadingScreenSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 {
@@ -82,7 +83,7 @@ void UFrontendLoadingScreenSubsystem::TryUpdateLoadingScreen()
 {
 	if (IsPreLoadScreenActive()) return;
 	
-	if (true)
+	if (ShouldShowLoadingScreen())
 	{
 		
 	}
@@ -99,5 +100,45 @@ bool UFrontendLoadingScreenSubsystem::IsPreLoadScreenActive() const
 		return PreLoadScreenManager->HasValidActivePreLoadScreen();
 	}
 
+	return false;
+}
+
+bool UFrontendLoadingScreenSubsystem::ShouldShowLoadingScreen()
+{
+	const UFrontendLoadingScreenSettings* LoadingScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+
+	if (GIsEditor && !LoadingScreenSettings->bShouldLoadingScreenInEditor)
+	{
+		return false;
+	}
+
+	if (CheckTheNeedToShowLoadingScreen())
+	{
+		GetGameInstance()->GetGameViewportClient()->bDisableWorldRendering = true;
+
+		return true;
+	}
+
+	GetGameInstance()->GetGameViewportClient()->bDisableWorldRendering = false;
+
+	const float CurrentTime = FPlatformTime::Seconds();
+
+	if (HoldLoadingScreenStartupTime < 0.f)
+	{
+		HoldLoadingScreenStartupTime = CurrentTime;
+	}
+
+	const float ElapsedTime = CurrentTime - HoldLoadingScreenStartupTime;
+
+	if (ElapsedTime < LoadingScreenSettings->HoldLoadingScreenExtraSeconds)
+	{
+		return true;
+	}
+	
+	return false;
+}
+
+bool UFrontendLoadingScreenSubsystem::CheckTheNeedToShowLoadingScreen()
+{
 	return false;
 }

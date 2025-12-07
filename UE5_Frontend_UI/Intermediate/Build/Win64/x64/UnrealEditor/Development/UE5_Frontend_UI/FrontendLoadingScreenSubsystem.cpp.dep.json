@@ -21,7 +21,9 @@
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\preloadscreen\\public\\preloadslatethreading.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\applicationcore\\public\\hal\\platformapplicationmisc.h",
             "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\applicationcore\\public\\windows\\windowsplatformapplicationmisc.h",
-            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\genericplatformapplicationmisc.h"
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\applicationcore\\public\\genericplatform\\genericplatformapplicationmisc.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\source\\ue5_frontend_ui\\public\\frontendsettings\\frontendloadingscreensettings.h",
+            "c:\\users\\sayan\\projects\\ue5-ui-framework\\ue5_frontend_ui\\intermediate\\build\\win64\\unrealeditor\\inc\\ue5_frontend_ui\\uht\\frontendloadingscreensettings.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
