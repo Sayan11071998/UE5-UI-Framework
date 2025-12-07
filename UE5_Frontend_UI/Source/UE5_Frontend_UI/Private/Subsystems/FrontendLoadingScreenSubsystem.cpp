@@ -1,7 +1,5 @@
 #include "Subsystems/FrontendLoadingScreenSubsystem.h"
 
-#include "FrontendDebugHelper.h"
-
 bool UFrontendLoadingScreenSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 {
 	if (!CastChecked<UGameInstance>(Outer)->IsDedicatedServerInstance())
@@ -39,7 +37,7 @@ UWorld* UFrontendLoadingScreenSubsystem::GetTickableGameObjectWorld() const
 
 void UFrontendLoadingScreenSubsystem::Tick(float DeltaTime)
 {
-	Debug::Print(TEXT("Ticking"));
+	TryUpdateLoadingScreen();
 }
 
 ETickableTickType UFrontendLoadingScreenSubsystem::GetTickableTickType() const
@@ -64,8 +62,29 @@ TStatId UFrontendLoadingScreenSubsystem::GetStatId() const
 
 void UFrontendLoadingScreenSubsystem::OnMapPreLoaded(const FWorldContext& WorldContext, const FString& MapName)
 {
+	if (WorldContext.OwningGameInstance != GetGameInstance()) return;
+
+	SetTickableTickType(ETickableTickType::Conditional);
+	bIsCurrentlyLoadingMap = true;
+	TryUpdateLoadingScreen();
 }
 
 void UFrontendLoadingScreenSubsystem::OnMapPostLoaded(UWorld* LoadedWorld)
 {
+	if (LoadedWorld && LoadedWorld->GetGameInstance() == GetGameInstance())
+	{
+		bIsCurrentlyLoadingMap = false;
+	}
+}
+
+void UFrontendLoadingScreenSubsystem::TryUpdateLoadingScreen()
+{
+	if (true)
+	{
+		
+	}
+	else
+	{
+		SetTickableTickType(ETickableTickType::Never);
+	}
 }
