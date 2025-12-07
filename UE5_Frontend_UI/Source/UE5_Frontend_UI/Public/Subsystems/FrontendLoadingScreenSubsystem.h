@@ -5,7 +5,7 @@
 #include "FrontendLoadingScreenSubsystem.generated.h"
 
 UCLASS()
-class UE5_FRONTEND_UI_API UFrontendLoadingScreenSubsystem : public UGameInstanceSubsystem
+class UE5_FRONTEND_UI_API UFrontendLoadingScreenSubsystem : public UGameInstanceSubsystem, public  FTickableGameObject
 {
 	GENERATED_BODY()
 
@@ -13,6 +13,11 @@ public:
 	virtual bool ShouldCreateSubsystem(UObject* Outer) const override;
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	virtual void Deinitialize() override;
+	virtual UWorld* GetTickableGameObjectWorld() const override;
+	virtual void Tick(float DeltaTime) override;
+	virtual ETickableTickType GetTickableTickType() const override;
+	virtual bool IsTickable() const override;
+	virtual TStatId GetStatId() const override;
 
 private:
 	void OnMapPreLoaded(const FWorldContext& WorldContext, const FString& MapName);
