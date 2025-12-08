@@ -13,6 +13,7 @@
 			"FrontendFunctionLibrary.gen.cpp.obj",
 			"FrontendGameUserSettings.gen.cpp.obj",
 			"FrontendLoadingScreenSettings.gen.cpp.obj",
+			"FrontendLoadingScreenSubsystem.gen.cpp.obj",
 			"FrontendPlayerController.gen.cpp.obj",
 			"FrontendStructTypes.gen.cpp.obj",
 			"FrontendTabListWidgetBase.gen.cpp.obj",
@@ -25,6 +26,7 @@
 			"ListDataObject_StringResolution.gen.cpp.obj",
 			"ListDataObject_Value.gen.cpp.obj",
 			"OptionsDataRegistry.gen.cpp.obj",
+			"UE5_Frontend_UI.init.gen.cpp.obj",
 			"Widget_ActivatableBase.gen.cpp.obj",
 			"Widget_ConfirmScreen.gen.cpp.obj",
 			"Widget_KeyRemapScreen.gen.cpp.obj",
@@ -44,6 +46,7 @@
 			"FrontendDeveloperSettings.cpp.obj",
 			"FrontendGameUserSettings.cpp.obj",
 			"FrontendLoadingScreenSettings.cpp.obj",
+			"FrontendLoadingScreenSubsystem.cpp.obj",
 			"FrontendUISubsystem.cpp.obj",
 			"FrontendCommonButtonBase.cpp.obj",
 			"FrontendCommonListView.cpp.obj",
@@ -69,10 +72,7 @@
 			"Widget_ActivatableBase.cpp.obj",
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
-			"UE5_Frontend_UI.cpp.obj",
-			"FrontendLoadingScreenSubsystem.gen.cpp.obj",
-			"UE5_Frontend_UI.init.gen.cpp.obj",
-			"FrontendLoadingScreenSubsystem.cpp.obj"
+			"UE5_Frontend_UI.cpp.obj"
 		]
 	}
 }
