@@ -10,6 +10,11 @@ class UE5_FRONTEND_UI_API UFrontendLoadingScreenSubsystem : public UGameInstance
 	GENERATED_BODY()
 
 public:
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLoadingReasonUpdatedDelegate, const FString&, CurrentLoadingReason);
+
+	UPROPERTY(BlueprintAssignable)
+	FOnLoadingReasonUpdatedDelegate OnLoadingReasonUpdated;
+	
 	virtual bool ShouldCreateSubsystem(UObject* Outer) const override;
 	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
 	virtual void Deinitialize() override;
@@ -30,4 +35,5 @@ private:
 	
 	float HoldLoadingScreenStartupTime = -1.f;
 	bool bIsCurrentlyLoadingMap = false;
+	FString CurrentLoadingReason;
 };

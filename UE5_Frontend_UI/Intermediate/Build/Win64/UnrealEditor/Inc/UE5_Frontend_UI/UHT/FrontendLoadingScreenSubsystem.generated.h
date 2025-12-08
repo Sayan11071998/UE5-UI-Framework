@@ -16,6 +16,13 @@
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
+// ********** Begin Delegate FOnLoadingReasonUpdatedDelegate ***************************************
+#define FID_Users_sayan_Projects_UE5_UI_Framework_UE5_Frontend_UI_Source_UE5_Frontend_UI_Public_Subsystems_FrontendLoadingScreenSubsystem_h_13_DELEGATE \
+static void FOnLoadingReasonUpdatedDelegate_DelegateWrapper(const FMulticastScriptDelegate& OnLoadingReasonUpdatedDelegate, const FString& CurrentLoadingReason);
+
+
+// ********** End Delegate FOnLoadingReasonUpdatedDelegate *****************************************
+
 // ********** Begin Class UFrontendLoadingScreenSubsystem ******************************************
 UE5_FRONTEND_UI_API UClass* Z_Construct_UClass_UFrontendLoadingScreenSubsystem_NoRegister();
 
