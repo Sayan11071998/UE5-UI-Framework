@@ -12,6 +12,7 @@
 			"FrontendEnumTypes.gen.cpp.obj",
 			"FrontendFunctionLibrary.gen.cpp.obj",
 			"FrontendGameUserSettings.gen.cpp.obj",
+			"FrontendLoadingScreenInterface.gen.cpp.obj",
 			"FrontendLoadingScreenSettings.gen.cpp.obj",
 			"FrontendLoadingScreenSubsystem.gen.cpp.obj",
 			"FrontendPlayerController.gen.cpp.obj",
@@ -72,7 +73,8 @@
 			"Widget_ActivatableBase.cpp.obj",
 			"Widget_ConfirmScreen.cpp.obj",
 			"Widget_PrimaryLayout.cpp.obj",
-			"UE5_Frontend_UI.cpp.obj"
+			"UE5_Frontend_UI.cpp.obj",
+			"FrontendLoadingScreenInterface.cpp.obj"
 		]
 	}
 }
