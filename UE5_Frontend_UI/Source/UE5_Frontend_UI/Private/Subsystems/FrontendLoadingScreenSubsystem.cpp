@@ -1,5 +1,6 @@
 #include "Subsystems/FrontendLoadingScreenSubsystem.h"
 #include "PreLoadScreenManager.h"
+#include "Blueprint/UserWidget.h"
 #include "FrontendSettings/FrontendLoadingScreenSettings.h"
 
 bool UFrontendLoadingScreenSubsystem::ShouldCreateSubsystem(UObject* Outer) const
@@ -85,12 +86,28 @@ void UFrontendLoadingScreenSubsystem::TryUpdateLoadingScreen()
 	
 	if (ShouldShowLoadingScreen())
 	{
+		TryDisplayLoadingScreenIfNone();
 		OnLoadingReasonUpdated.Broadcast(CurrentLoadingReason);
 	}
 	else
 	{
 		SetTickableTickType(ETickableTickType::Never);
 	}
+}
+
+void UFrontendLoadingScreenSubsystem::TryDisplayLoadingScreenIfNone()
+{
+	if (CachedCreatedLoadingScreenWidget) return;
+	
+	const UFrontendLoadingScreenSettings* LoadingScreenSettings = GetDefault<UFrontendLoadingScreenSettings>();
+	TSubclassOf<UUserWidget> LoadedWidgetClass = LoadingScreenSettings->GetLoadingScreenWidgetClassChecked();
+	UUserWidget* CreatedWidget = UUserWidget::CreateWidgetInstance(*GetGameInstance(), LoadedWidgetClass, NAME_None);
+
+	check(CreatedWidget);
+	
+	CachedCreatedLoadingScreenWidget = CreatedWidget->TakeWidget();
+
+	GetGameInstance()->GetGameViewportClient()->AddViewportWidgetContent(CachedCreatedLoadingScreenWidget.ToSharedRef(),1000);
 }
 
 bool UFrontendLoadingScreenSubsystem::IsPreLoadScreenActive() const

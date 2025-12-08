@@ -29,6 +29,7 @@ private:
 	void OnMapPostLoaded(UWorld* LoadedWorld);
 
 	void TryUpdateLoadingScreen();
+	void TryDisplayLoadingScreenIfNone();
 	bool IsPreLoadScreenActive() const;
 	bool ShouldShowLoadingScreen();
 	bool CheckTheNeedToShowLoadingScreen();
@@ -36,4 +37,5 @@ private:
 	float HoldLoadingScreenStartupTime = -1.f;
 	bool bIsCurrentlyLoadingMap = false;
 	FString CurrentLoadingReason;
+	TSharedPtr<SWidget> CachedCreatedLoadingScreenWidget;
 };
