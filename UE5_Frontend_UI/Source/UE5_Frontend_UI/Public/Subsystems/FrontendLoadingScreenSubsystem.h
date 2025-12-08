@@ -30,6 +30,8 @@ private:
 
 	void TryUpdateLoadingScreen();
 	void TryDisplayLoadingScreenIfNone();
+	void TryRemoveLoadingScreen();
+	
 	bool IsPreLoadScreenActive() const;
 	bool ShouldShowLoadingScreen();
 	bool CheckTheNeedToShowLoadingScreen();
