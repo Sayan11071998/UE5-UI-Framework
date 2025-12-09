@@ -18,7 +18,8 @@ public class UE5_Frontend_UI : ModuleRules
 			"UMG",
 			"CommonInput",
 			"PropertyPath",
-			"EnhancedInput"
+			"EnhancedInput",
+			"PreLoadScreen"
 		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });

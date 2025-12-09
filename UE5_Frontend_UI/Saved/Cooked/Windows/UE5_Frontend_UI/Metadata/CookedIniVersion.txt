@@ -1919,8 +1919,14 @@ ConfigSystem.<Editor>.Game:/Script/EngineSettings.GeneralProjectSettings:Project
 ConfigSystem.<Editor>.Game:/Script/EngineSettings.GeneralProjectSettings:ProjectName:0=
 ConfigSystem.<Editor>.Game:/Script/EngineSettings.GeneralProjectSettings:ProjectVersion:0=1.0.0.0
 ConfigSystem.<Editor>.Game:/Script/EngineSettings.GeneralProjectSettings:SupportContact:0=
-ConfigSystem.<Editor>.Game:/Script/UE5_Frontend_UI.FrontendDeveloperSettings:FrontendWidgetMap:0=(((TagName="Frontend.Widget.PressAnyKeyScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_PressAnyKey.WBP_CAW_PressAnyKey_C"),((TagName="Frontend.Widget.MainMenuScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu.WBP_CAW_MainMenu_C"),((TagName="Frontend.Widget.ConfirmScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen.WBP_CAW_ConfirmScreen_C"),((TagName="Frontend.Widget.StoryScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_StoryScreen.WBP_CAW_StoryScreen_C"),((TagName="Frontend.Widget.OptionsScreen"), "/Game/Blueprints/UI/Widgets/Options/WBP_CAW_OptionsScreen.WBP_CAW_OptionsScreen_C"))
+ConfigSystem.<Editor>.Game:/Script/MoviePlayer.MoviePlayerSettings:bMoviesAreSkippable:0=False
+ConfigSystem.<Editor>.Game:/Script/MoviePlayer.MoviePlayerSettings:bWaitForMoviesToComplete:0=True
+ConfigSystem.<Editor>.Game:/Script/MoviePlayer.MoviePlayerSettings:StartupMovies:0=LoadingScreenSequence5s
+ConfigSystem.<Editor>.Game:/Script/UE5_Frontend_UI.FrontendDeveloperSettings:FrontendWidgetMap:0=(((TagName="Frontend.Widget.PressAnyKeyScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_PressAnyKey.WBP_CAW_PressAnyKey_C"),((TagName="Frontend.Widget.MainMenuScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_MainMenu.WBP_CAW_MainMenu_C"),((TagName="Frontend.Widget.ConfirmScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_ConfirmScreen.WBP_CAW_ConfirmScreen_C"),((TagName="Frontend.Widget.StoryScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_StoryScreen.WBP_CAW_StoryScreen_C"),((TagName="Frontend.Widget.OptionsScreen"), "/Game/Blueprints/UI/Widgets/Options/WBP_CAW_OptionsScreen.WBP_CAW_OptionsScreen_C"),((TagName="Frontend.Widget.KeyRemapScreen"), "/Game/Blueprints/UI/Widgets/Options/WBP_CAW_KeyRemapScreen.WBP_CAW_KeyRemapScreen_C"),((TagName="Frontend.Widget.CreditScreen"), "/Game/Blueprints/UI/Widgets/WBP_CAW_CreditScreen.WBP_CAW_CreditScreen_C"))
 ConfigSystem.<Editor>.Game:/Script/UE5_Frontend_UI.FrontendDeveloperSettings:OptionsScreenSoftImageMap:0=(((TagName="Frontend.Image.TestImage"), "/Fab/Placeholders/FabLogo.FabLogo"))
+ConfigSystem.<Editor>.Game:/Script/UE5_Frontend_UI.FrontendLoadingScreenSettings:bShouldLoadingScreenInEditor:0=False
+ConfigSystem.<Editor>.Game:/Script/UE5_Frontend_UI.FrontendLoadingScreenSettings:HoldLoadingScreenExtraSeconds:0=3.000000
+ConfigSystem.<Editor>.Game:/Script/UE5_Frontend_UI.FrontendLoadingScreenSettings:SoftLoadingScreenWidgetClass:0=/Game/Blueprints/UI/Widgets/WBP_LoadingScreen.WBP_LoadingScreen_C
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:ApplocalPrerequisitesDirectory:0=(Path="")
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bBuildHttpChunkInstallData:0=False
 ConfigSystem.<Editor>.Game:/Script/UnrealEd.ProjectPackagingSettings:bChunkHardReferencesOnly:0=False
@@ -2033,7 +2039,8 @@ ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:All
 ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:bDynamicReplication:0=False
 ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:ClearInvalidTags:0=False
 ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:FastReplication:0=False
-ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:GameplayTagList:0=(Tag="Frontend.Widget.StoryScreen",DevComment="")
+ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:GameplayTagList:0=(Tag="Frontend.Widget.CreditScreen",DevComment="")
+ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:GameplayTagList:1=(Tag="Frontend.Widget.StoryScreen",DevComment="")
 ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:ImportTagsFromConfig:0=True
 ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:InvalidTagCharacters:0="\"\',"
 ConfigSystem.<Editor>.GameplayTags:/Script/GameplayTags.GameplayTagsSettings:NetIndexFirstBitSegment:0=16
@@ -2325,6 +2332,7 @@ ConfigSystem.<Editor>.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCom
 ConfigSystem.<Editor>.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:187=(Command="ShowDebug DeviceProperty",Desc="Display debug information about currently active Input Device Properties")
 ConfigSystem.<Editor>.Input:/Script/EngineSettings.ConsoleSettings:ManualAutoCompleteList:188=(Command="ShowDebug Devices",Desc="Displays all current Platform Users and their Input Devices.")
 ConfigSystem.<Editor>.Input:/Script/EngineSettings.ConsoleSettings:MaxScrollbackSize:0=1024
+ConfigSystem.<Editor>.Input:/Script/EnhancedInput.EnhancedInputDeveloperSettings:bEnableUserSettings:0=True
 ConfigSystem.<Editor>.Input:/Script/EnhancedInput.EnhancedInputDeveloperSettings:DefaultInputMode:0=(GameplayTags=((TagName="EnhancedInput.Modes.Default")))
 ConfigSystem.<Editor>.Input:/Script/EnhancedInput.EnhancedInputDeveloperSettings:DefaultMappingContextInputModeQuery:0=(TokenStreamVersion=0,TagDictionary=((TagName="EnhancedInput.Modes.Default")),QueryTokenStream=(0,1,2,1,0),UserDescription="",AutoDescription="")
 ConfigSystem.<Editor>.Input:InputPlatformSettings_Windows InputPlatformSettings:HardwareDevices:0=(InputClassName="WindowsApplication",HardwareDeviceIdentifier="KBM",PrimaryDeviceType=KeyboardAndMouse,SupportedFeaturesMask=3)

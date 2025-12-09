@@ -3338,6 +3338,33 @@
 			}
 		},
 		{
+			"File": "../../../Engine/Plugins/Media/MediaMovieStreamer/MediaMovieStreamer.uplugin",
+			"Descriptor": 
+			{
+				"FileVersion": 3,
+				"Version": 0,
+				"VersionName": "0.1",
+				"FriendlyName": "Media Movie Streamer",
+				"Description": "Movie Streamer using MediaFramework.",
+				"Category": "Movie Players",
+				"CreatedBy": "Epic Games, Inc.",
+				"CreatedByURL": "https://epicgames.com",
+				"DocsURL": "https://docs.unrealengine.com/en-US/Engine/MediaFramework/Overview",
+				"MarketplaceURL": "",
+				"SupportURL": "",
+				"EnabledByDefault": false,
+				"CanContainContent": false,
+				"IsBetaVersion": true,
+				"Modules": [
+					{
+						"Name": "MediaMovieStreamer",
+						"Type": "Runtime",
+						"LoadingPhase": "Default"
+					}
+				]
+			}
+		},
+		{
 			"File": "../../../Engine/Plugins/Media/MediaPlate/MediaPlate.uplugin",
 			"Descriptor": 
 			{

@@ -3390,6 +3390,14 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaMovieStreamer/Binaries/Win64/UnrealEditor-MediaMovieStreamer.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaMovieStreamer/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Media/MediaPlate/Binaries/Win64/UnrealEditor-MediaPlate.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -28464,6 +28472,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaMovieStreamer/MediaMovieStreamer.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Media/MediaPlate/MediaPlate.uplugin",
 			"Type": "UFS"
 		},
@@ -28873,6 +28885,7 @@
 		"MassInsights",
 		"MaterialAnalyzer",
 		"MediaCompositing",
+		"MediaMovieStreamer",
 		"MediaPlate",
 		"MediaPlayerEditor",
 		"MeshLODToolset",
