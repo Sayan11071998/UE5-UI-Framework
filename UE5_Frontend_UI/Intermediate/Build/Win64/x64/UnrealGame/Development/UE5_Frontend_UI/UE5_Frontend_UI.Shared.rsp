@@ -148,6 +148,7 @@
 /I "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/UnrealGame/Inc/UE5_Frontend_UI/UHT"
 /I "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source"
 /I "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Source/UE5_Frontend_UI/Public"
+/I "Runtime/PreLoadScreen/Public"
 /I "C:/Users/sayan/Projects/UE5-UI-Framework/UE5_Frontend_UI/Intermediate/Build/Win64/x64/UE5_Frontend_UI/Development/Engine"
 /external:W0
 /external:I "ThirdParty/GuidelinesSupportLibrary/GSL-1144/include"

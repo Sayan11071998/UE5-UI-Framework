@@ -3463,6 +3463,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(EngineDir)/Plugins/Media/MediaMovieStreamer/MediaMovieStreamer.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(EngineDir)/Plugins/Media/MediaPlate/MediaPlate.uplugin",
 			"Type": "UFS"
 		},
@@ -3851,6 +3855,7 @@
 		"MassInsights",
 		"MaterialAnalyzer",
 		"MediaCompositing",
+		"MediaMovieStreamer",
 		"MediaPlate",
 		"MediaPlayerEditor",
 		"MeshPainting",

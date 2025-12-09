@@ -323,8 +323,7 @@
 		{
 			"ShaderMapHash": "CD1CFA7F3014B922848ABBD8A7042E314552F548",
 			"Assets": [
-				"/Engine/EngineMaterials/Widget3DPassThrough",
-				"/Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided"
+				"/Engine/EngineMaterials/Widget3DPassThrough"
 			]
 		},
 		{
@@ -366,8 +365,7 @@
 		{
 			"ShaderMapHash": "1C895596118D4A874FF2A1317F2664AECDF72A68",
 			"Assets": [
-				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/Instances/Manny/MI_Manny_01",
-				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/M_Mannequin"
+				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/Instances/Manny/MI_Manny_01"
 			]
 		},
 		{
@@ -409,7 +407,6 @@
 		{
 			"ShaderMapHash": "8162F59EFE908B41191A8CD1E400331EFF189AC4",
 			"Assets": [
-				"/Engine/EditorLandscapeResources/MaskBrushMaterial",
 				"/Engine/EditorLandscapeResources/MaskBrushMaterial_MaskedRegion"
 			]
 		},
@@ -548,7 +545,6 @@
 		{
 			"ShaderMapHash": "3AF6C4DDB7E9187E210D4C95FC64CB37CF082A04",
 			"Assets": [
-				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/Instances/Manny/MI_Manny_02",
 				"/Game/Assets/LevelVisuals/Characters/Mannequins/Materials/Instances/Quinn/MI_Quinn_02"
 			]
 		},
