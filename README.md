@@ -4,15 +4,19 @@ A comprehensive, modular frontend UI system for Unreal Engine 5 built with Commo
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Core Systems](#core-systems)
-- [Code Structure](#code-structure)
-- [Best Practices](#best-practices)
-- [Getting Started](#getting-started)
-- [Usage Examples](#usage-examples)
-- [Dependencies](#dependencies)
+* [Overview](#overview)
+* [Features](#features)
+* [Architecture](#architecture)
+* [Core Systems](#core-systems)
+* [Code Structure](#code-structure)
+* [Best Practices](#best-practices)
+* [Getting Started](#getting-started)
+* [Usage Examples](#usage-examples)
+* [Dependencies](#dependencies)
+* [Contributing](#contributing)
+* [License](#license)
+
+---
 
 ## 🎯 Overview
 
@@ -20,141 +24,122 @@ This system provides a production-ready, scalable frontend UI framework for Unre
 
 ### Key Design Principles
 
-- **Data-Driven**: Options and UI configurations are defined through data objects
-- **Separation of Concerns**: Clear distinction between data, presentation, and logic
-- **Modularity**: Easy to extend with new option types and widgets
-- **Type Safety**: Strongly typed with C++ templates and enums
-- **Async Operations**: Non-blocking UI operations with async actions
+* **Data-Driven**: Options and UI configurations are defined through data objects
+* **Separation of Concerns**: Clear distinction between data, presentation, and logic
+* **Modularity**: Easy to extend with new option types and widgets
+* **Type Safety**: Strongly typed with C++ templates and enums
+* **Async Operations**: Non-blocking UI operations with async actions
+
+---
 
 ## ✨ Features
 
-- ✅ **Dynamic Options System** with multiple data types (Scalar, String, Boolean, Enum, Resolution)
-- ✅ **Widget Stack Management** with gameplay tag-based routing
-- ✅ **Async Widget Loading** for improved performance
-- ✅ **Custom Loading Screen System** with state management
-- ✅ **Key Remapping** for keyboard, mouse, and gamepad
-- ✅ **Edit Conditions & Dependencies** between options
-- ✅ **Confirm Screens** (OK, Yes/No, OK/Cancel)
-- ✅ **Settings Persistence** via GameUserSettings
-- ✅ **Tab-Based Navigation** for organized settings
-- ✅ **Accessibility Support** with proper focus management
+* ✅ **Dynamic Options System** with multiple data types (Scalar, String, Boolean, Enum, Resolution)
+* ✅ **Widget Stack Management** with gameplay tag-based routing
+* ✅ **Async Widget Loading** for improved performance
+* ✅ **Custom Loading Screen System** with state management
+* ✅ **Key Remapping** for keyboard, mouse, and gamepad
+* ✅ **Edit Conditions & Dependencies** between options
+* ✅ **Confirm Screens** (OK, Yes/No, OK/Cancel)
+* ✅ **Settings Persistence** via GameUserSettings
+* ✅ **Tab-Based Navigation** for organized settings
+* ✅ **Accessibility Support** with proper focus management
+
+---
 
 ## 🏗 Architecture
 
-### High-Level Architecture Diagram─────────────────────────────────────────────────────┐
-│                     Game Instance                            │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │         FrontendUISubsystem                           │  │
-│  │  - Widget Stack Management                            │  │
-│  │  - Async Widget Loading                               │  │
-│  │  - Primary Layout Registration                        │  │
-│  └───────────────────────────────────────────────────────┘  │
-│  ┌───────────────────────────────────────────────────────┐  │
-│  │    FrontendLoadingScreenSubsystem                     │  │
-│  │  - Loading Screen Display Logic                       │  │
-│  │  - Map Loading Detection                              │  │
-│  │  - Texture Streaming Monitoring                       │  │
-│  └───────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Widget Hierarchy                           │
-│                                                              │
-│  Widget_PrimaryLayout (Root)                                │
-│    ├── Widget Stack (Frontend)                              │
-│    │     └── Widget_MainMenuScreen                          │
-│    ├── Widget Stack (Modal)                                 │
-│    │     ├── Widget_ConfirmScreen                           │
-│    │     └── Widget_KeyRemapScreen                          │
-│    ├── Widget Stack (GameMenu)                              │
-│    │     └── Widget_OptionsScreen                           │
-│    └── Widget Stack (GameHud)                               │
-└─────────────────────────────────────────────────────────────┘
-                            │
-                            ▼
-┌─────────────────────────────────────────────────────────────┐
-│              Options System Architecture                     │
-│                                                              │
-│  OptionsDataRegistry                                         │
-│    └── Creates & Manages ListDataObject Collections         │
-│                                                              │
-│  ListDataObject_Base (Abstract)                             │
-│    ├── ListDataObject_Collection (Tab/Category)            │
-│    ├── ListDataObject_Value (Abstract)                     │
-│    │     ├── ListDataObject_Scalar                         │
-│    │     └── ListDataObject_String                         │
-│    │           ├── ListDataObject_StringBool                │
-│    │           ├── ListDataObject_StringEnum                │
-│    │           ├── ListDataObject_StringInteger             │
-│    │           └── ListDataObject_StringResolution          │
-│    └── ListDataObject_KeyRemap                              │
-│                                                              │
-│  Widget_ListEntry_Base (Abstract)                           │
-│    ├── Widget_ListEntry_Scalar                              │
-│    ├── Widget_ListEntry_String                              │
-│    └── Widget_ListEntry_KeyRemap                            │
-└─────────────────────────────────────────────────────────────┘
+### High-Level Architecture Diagram
+
+```mermaid
+graph TB
+    subgraph GameInstance["Game Instance"]
+        UI[FrontendUISubsystem<br/>Widget Stack Management<br/>Async Widget Loading]
+        LS[FrontendLoadingScreenSubsystem<br/>Loading Screen Display<br/>Map Loading Detection]
+    end
+    
+    subgraph Widgets["Widget Hierarchy"]
+        PL[Widget_PrimaryLayout]
+        FS[Frontend Stack]
+        MS[Modal Stack]
+        GM[GameMenu Stack]
+        GH[GameHud Stack]
+        
+        PL --> FS
+        PL --> MS
+        PL --> GM
+        PL --> GH
+        
+        FS --> MMS[MainMenuScreen]
+        MS --> CS[ConfirmScreen]
+        MS --> KR[KeyRemapScreen]
+        GM --> OS[OptionsScreen]
+    end
+    
+    subgraph Options["Options System"]
+        OR[OptionsDataRegistry]
+        LDB[ListDataObject_Base]
+        LDC[ListDataObject_Collection]
+        LDV[ListDataObject_Value]
+        LDS[ListDataObject_Scalar]
+        LDST[ListDataObject_String]
+        LDKR[ListDataObject_KeyRemap]
+        
+        WLB[Widget_ListEntry_Base]
+        WLSC[Widget_ListEntry_Scalar]
+        WLST[Widget_ListEntry_String]
+        WLKR[Widget_ListEntry_KeyRemap]
+        
+        OR --> LDB
+        LDB --> LDC
+        LDB --> LDV
+        LDB --> LDKR
+        LDV --> LDS
+        LDV --> LDST
+        
+        WLB --> WLSC
+        WLB --> WLST
+        WLB --> WLKR
+    end
+    
+    UI --> Widgets
 ```
 
 ### Data Flow Diagram
 
-```
-┌──────────────────┐
-│  User Settings   │
-│  (Config File)   │
-└────────┬─────────┘
-         │
-         ▼
-┌──────────────────────────────┐
-│ FrontendGameUserSettings     │
-│ - Getter/Setter Methods      │
-│ - Property Storage           │
-└────────┬─────────────────────┘
-         │
-         ▼
-┌──────────────────────────────┐
-│ OptionsDataInteractionHelper │
-│ - PropertyPath Resolution    │
-│ - String Conversion          │
-└────────┬─────────────────────┘
-         │
-         ▼
-┌──────────────────────────────┐
-│ ListDataObject_* (Data)      │
-│ - Current Value              │
-│ - Available Options          │
-│ - Edit Conditions            │
-└────────┬─────────────────────┘
-         │
-         ▼
-┌──────────────────────────────┐
-│ Widget_ListEntry_* (UI)      │
-│ - Visual Representation      │
-│ - User Interaction           │
-└──────────────────────────────┘
+```mermaid
+flowchart TD
+    A[User Settings<br/>Config File] --> B[FrontendGameUserSettings<br/>Getter/Setter Methods<br/>Property Storage]
+    B --> C[OptionsDataInteractionHelper<br/>PropertyPath Resolution<br/>String Conversion]
+    C --> D[ListDataObject_*<br/>Current Value<br/>Available Options<br/>Edit Conditions]
+    D --> E[Widget_ListEntry_*<br/>Visual Representation<br/>User Interaction]
+    E -->|User Input| D
+    D -->|Save Settings| B
 ```
 
 ### Widget Stack Flow
 
+```mermaid
+sequenceDiagram
+    participant User
+    participant AsyncAction
+    participant Subsystem
+    participant AssetManager
+    participant WidgetStack
+    participant Widget
+    
+    User->>AsyncAction: Trigger Widget Push
+    AsyncAction->>Subsystem: PushSoftWidgetToStackAsync()
+    Subsystem->>AssetManager: RequestAsyncLoad()
+    AssetManager-->>Subsystem: Widget Class Loaded
+    Subsystem->>WidgetStack: AddWidget()
+    WidgetStack->>Widget: Create Instance
+    Subsystem->>AsyncAction: Callback(BeforePush)
+    WidgetStack->>Widget: Push to Stack
+    Subsystem->>AsyncAction: Callback(AfterPush)
 ```
-User Action → Async Action → FrontendUISubsystem → AssetManager
-                                      │
-                                      ▼
-                            Widget Stack Container
-                                      │
-                                      ▼
-                            Created Widget Instance
-                                      │
-                                      ▼
-                            Callback (Before Push)
-                                      │
-                                      ▼
-                            Widget Pushed to Stack
-                                      │
-                                      ▼
-                            Callback (After Push)
-```
+
+---
 
 ## 🔧 Core Systems
 
@@ -162,15 +147,15 @@ User Action → Async Action → FrontendUISubsystem → AssetManager
 
 The system uses **Gameplay Tags** to organize widgets into logical stacks:
 
-- `Frontend.WidgetStack.Frontend` - Main menu screens
-- `Frontend.WidgetStack.Modal` - Popup dialogs and confirmations
-- `Frontend.WidgetStack.GameMenu` - In-game pause menus
-- `Frontend.WidgetStack.GameHud` - HUD elements
+* `Frontend.WidgetStack.Frontend` - Main menu screens
+* `Frontend.WidgetStack.Modal` - Popup dialogs and confirmations
+* `Frontend.WidgetStack.GameMenu` - In-game pause menus
+* `Frontend.WidgetStack.GameHud` - HUD elements
 
 **Key Classes:**
-- `UFrontendUISubsystem` - Central management system
-- `UWidget_PrimaryLayout` - Root widget containing all stacks
-- `UAsyncAction_PushSoftWidget` - Async widget loading
+* `UFrontendUISubsystem` - Central management system
+* `UWidget_PrimaryLayout` - Root widget containing all stacks
+* `UAsyncAction_PushSoftWidget` - Async widget loading
 
 ### 2. Options System
 
@@ -188,23 +173,23 @@ UListDataObject_Base (Abstract)
 **Specialized Data Objects:**
 
 1. **ListDataObject_Scalar** - Float values with ranges
-   - Display/Output range mapping
-   - Step size configuration
-   - Numeric formatting options
+   * Display/Output range mapping
+   * Step size configuration
+   * Numeric formatting options
 
 2. **ListDataObject_String** - Dropdown selections
-   - Dynamic option population
-   - Display text separate from value
-   - Support for enum wrappers
+   * Dynamic option population
+   * Display text separate from value
+   * Support for enum wrappers
 
 3. **ListDataObject_Collection** - Category/tab grouping
-   - Hierarchical organization
-   - Child data management
+   * Hierarchical organization
+   * Child data management
 
 4. **ListDataObject_KeyRemap** - Input binding
-   - Enhanced Input System integration
-   - Per-input-device configurations
-   - Reset to default support
+   * Enhanced Input System integration
+   * Per-input-device configurations
+   * Reset to default support
 
 #### Edit Conditions System
 
@@ -225,8 +210,8 @@ The system uses **property path reflection** to dynamically bind UI to settings:
 
 ```cpp
 #define MAKE_OPTIONS_DATA_CONTROL(FuncName) \
-    MakeShared<FOptionsDataInteractionHelper>(
-        GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, FuncName)
+    MakeShared<FOptionsDataInteractionHelper>( \
+        GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, FuncName) \
     )
 
 // Usage
@@ -235,24 +220,24 @@ DataObject->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetVolume));
 ```
 
 This approach:
-- ✅ Eliminates manual binding code
-- ✅ Type-safe at compile time
-- ✅ Automatically handles serialization
-- ✅ Easy to add new options
+* ✅ Eliminates manual binding code
+* ✅ Type-safe at compile time
+* ✅ Automatically handles serialization
+* ✅ Easy to add new options
 
 ### 4. Loading Screen System
 
 **Components:**
-- `UFrontendLoadingScreenSubsystem` - State management
-- `FTickableGameObject` - Frame-by-frame updates
-- Map load detection via delegates
-- Texture streaming monitoring
+* `UFrontendLoadingScreenSubsystem` - State management
+* `FTickableGameObject` - Frame-by-frame updates
+* Map load detection via delegates
+* Texture streaming monitoring
 
 **Loading Reasons Tracked:**
-- Level loading
-- World initialization
-- Player controller creation
-- Texture streaming
+* Level loading
+* World initialization
+* Player controller creation
+* Texture streaming
 
 ### 5. Async Actions (Blueprint Nodes)
 
@@ -269,6 +254,8 @@ UAsyncAction_PushConfirmScreen::PushConfirmScreen(
     WorldContext, ScreenType, Title, Message
 );
 ```
+
+---
 
 ## 📁 Code Structure
 
@@ -323,9 +310,11 @@ UE5_Frontend_UI/
 │           └── [Corresponding Headers]
 ```
 
+---
+
 ## 🎨 Best Practices
 
-### 1. **Separation of Concerns**
+### 1. Separation of Concerns
 
 ```cpp
 // ✅ GOOD: Data separate from presentation
@@ -340,7 +329,7 @@ class UWidget_ListEntry_Scalar : public UWidget_ListEntry_Base {
 };
 ```
 
-### 2. **Factory Pattern for Object Creation**
+### 2. Factory Pattern for Object Creation
 
 ```cpp
 // Confirm screen factory methods
@@ -349,7 +338,7 @@ UConfirmScreenInfoObject::CreateYesNoScreen(Title, Message);
 UConfirmScreenInfoObject::CreateOkCancelScreen(Title, Message);
 ```
 
-### 3. **Observer Pattern for Updates**
+### 3. Observer Pattern for Updates
 
 ```cpp
 // Data objects notify listeners of changes
@@ -362,7 +351,7 @@ DataObject->OnListDataModified.AddUObject(
 );
 ```
 
-### 4. **Template Specialization**
+### 4. Template Specialization
 
 ```cpp
 // Type-safe enum options
@@ -375,7 +364,7 @@ void AddEnumOption(EnumType InEnumOption, const FText& InDisplayText) {
 }
 ```
 
-### 5. **RAII and Smart Pointers**
+### 5. RAII and Smart Pointers
 
 ```cpp
 // Proper cleanup in input processor
@@ -389,7 +378,7 @@ void UWidget_KeyRemapScreen::NativeOnDeactivated() {
 }
 ```
 
-### 6. **Delegate-Based Callbacks**
+### 6. Delegate-Based Callbacks
 
 ```cpp
 // Async operations with callbacks
@@ -403,7 +392,7 @@ PushSoftWidgetToStackAsync(
 );
 ```
 
-### 7. **Validation and Error Checking**
+### 7. Validation and Error Checking
 
 ```cpp
 // Editor-time validation
@@ -418,13 +407,15 @@ void ValidateCompiledDefaults(IWidgetCompilerLog& CompileLog) const override {
 #endif
 ```
 
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Unreal Engine 5.0+
-- CommonUI Plugin enabled
-- EnhancedInput Plugin enabled
+* Unreal Engine 5.0+
+* CommonUI Plugin enabled
+* EnhancedInput Plugin enabled
 
 ### Installation
 
@@ -448,17 +439,19 @@ void ValidateCompiledDefaults(IWidgetCompilerLog& CompileLog) const override {
 ### Configuration
 
 1. **Set Game User Settings Class**
-   - Project Settings → Game → Game User Settings Class
-   - Set to `FrontendGameUserSettings`
+   * Project Settings → Game → Game User Settings Class
+   * Set to `FrontendGameUserSettings`
 
 2. **Configure Widget Mappings**
-   - Project Settings → Frontend UI Settings
-   - Map Gameplay Tags to Widget Classes
+   * Project Settings → Frontend UI Settings
+   * Map Gameplay Tags to Widget Classes
 
 3. **Setup Primary Layout**
-   - Create Blueprint based on `Widget_PrimaryLayout`
-   - Register widget stacks with appropriate tags
-   - Set as viewport in GameMode or PlayerController
+   * Create Blueprint based on `Widget_PrimaryLayout`
+   * Register widget stacks with appropriate tags
+   * Set as viewport in GameMode or PlayerController
+
+---
 
 ## 📖 Usage Examples
 
@@ -482,8 +475,9 @@ CustomOption->SetDefaultValueFromString(LexToString(50.f));
 
 ### Pushing a Widget to Stack
 
+**C++ Async:**
+
 ```cpp
-// C++ Async
 UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
     FrontendGameplayTags::Frontend_WidgetStack_Modal,
     MyWidgetClass,
@@ -494,8 +488,11 @@ UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
         }
     }
 );
+```
 
-// Blueprint
+**Blueprint:**
+
+```cpp
 UAsyncAction_PushSoftWidget* Action = UAsyncAction_PushSoftWidget::PushSoftWidget(
     this, PlayerController, WidgetClass, StackTag, true
 );
@@ -538,6 +535,8 @@ OptionB->AddEditCondition(Condition);
 OptionB->AddEditDependencyData(OptionA);
 ```
 
+---
+
 ## 📦 Dependencies
 
 ### Unreal Engine Modules
@@ -563,9 +562,11 @@ PublicDependencyModuleNames.AddRange(new string[]
 
 ### Plugins Required
 
-- CommonUI
-- EnhancedInput
-- CommonInput
+* CommonUI
+* EnhancedInput
+* CommonInput
+
+---
 
 ## 🔍 Advanced Topics
 
@@ -602,20 +603,26 @@ virtual bool ShouldCreateSubsystem(UObject* Outer) const override {
 }
 ```
 
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Areas for enhancement:
 
-- Additional option types (Color picker, File browser)
-- Localization support
-- Accessibility improvements (Screen reader support)
-- Animation system for transitions
-- Save slot management
-- Cloud save integration
+* Additional option types (Color picker, File browser)
+* Localization support
+* Accessibility improvements (Screen reader support)
+* Animation system for transitions
+* Save slot management
+* Cloud save integration
+
+---
 
 ## 📝 License
 
 This project is provided as-is for educational and commercial use.
+
+---
 
 ## 🙏 Acknowledgments
 
@@ -626,3 +633,11 @@ Built with Unreal Engine's CommonUI framework and Enhanced Input System.
 **Author**: Sayan Nandi  
 **Version**: 1.0  
 **Last Updated**: 2024
+
+---
+
+### Quick Links
+
+* [Unreal Engine CommonUI Documentation](https://docs.unrealengine.com/5.0/en-US/commonui-plugin-for-advanced-user-interfaces-in-unreal-engine/)
+* [Enhanced Input System](https://docs.unrealengine.com/5.0/en-US/enhanced-input-in-unreal-engine/)
+* [Gameplay Tags](https://docs.unrealengine.com/5.0/en-US/using-gameplay-tags-in-unreal-engine/)
