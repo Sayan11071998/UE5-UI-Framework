@@ -13,8 +13,6 @@ A comprehensive, modular frontend UI system for Unreal Engine 5 built with Commo
 * [Getting Started](#getting-started)
 * [Usage Examples](#usage-examples)
 * [Dependencies](#dependencies)
-* [Contributing](#contributing)
-* [License](#license)
 
 ---
 
@@ -602,42 +600,3 @@ virtual bool ShouldCreateSubsystem(UObject* Outer) const override {
     // Ensure no derived classes exist (singleton pattern)
 }
 ```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Areas for enhancement:
-
-* Additional option types (Color picker, File browser)
-* Localization support
-* Accessibility improvements (Screen reader support)
-* Animation system for transitions
-* Save slot management
-* Cloud save integration
-
----
-
-## 📝 License
-
-This project is provided as-is for educational and commercial use.
-
----
-
-## 🙏 Acknowledgments
-
-Built with Unreal Engine's CommonUI framework and Enhanced Input System.
-
----
-
-**Author**: Sayan Nandi  
-**Version**: 1.0  
-**Last Updated**: 2024
-
----
-
-### Quick Links
-
-* [Unreal Engine CommonUI Documentation](https://docs.unrealengine.com/5.0/en-US/commonui-plugin-for-advanced-user-interfaces-in-unreal-engine/)
-* [Enhanced Input System](https://docs.unrealengine.com/5.0/en-US/enhanced-input-in-unreal-engine/)
-* [Gameplay Tags](https://docs.unrealengine.com/5.0/en-US/using-gameplay-tags-in-unreal-engine/)
