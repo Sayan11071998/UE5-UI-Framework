@@ -191,7 +191,3 @@ The system uses a data-driven approach where UI options are separate from their 
 Widget stacks are organized by gameplay tags (Frontend, Modal, GameMenu, GameHud), making it easy to manage different UI layers. Everything loads asynchronously to keep your game responsive.
 
 Settings automatically persist through the standard GameUserSettings system, and the property path reflection means you rarely need to write binding code manually.
-
-## License
-
-[Your License Here]
