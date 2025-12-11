@@ -5,7 +5,7 @@ A comprehensive, modular frontend UI system for Unreal Engine 5 built with Commo
 ## 📋 Table of Contents
 
 * [Overview]
-* [Features](#features)
+* [Features](## ✨ Features)
 * [Architecture](#architecture)
 * [Core Systems](#core-systems)
 * [Code Structure](#code-structure)
