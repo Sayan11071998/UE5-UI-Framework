@@ -208,6 +208,10 @@ There's also editor-time validation to catch configuration errors before runtime
 ---
 
 Built for UE5 projects that need a solid, extensible frontend UI foundation without reinventing the wheel every time.
+---
+
+[![Watch the video](https://img.youtube.com/vi/Gqz48TDXHsA/maxresdefault.jpg)](https://youtu.be/Gqz48TDXHsA)
+### [Gameplay Video](https://youtu.be/Gqz48TDXHsA)
 
 <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/5dfba44c-61d9-4f6a-8678-2dff51a71e7e" />
 
