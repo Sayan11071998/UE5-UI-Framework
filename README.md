@@ -1,20 +1,26 @@
 # UE5 Frontend UI System
 
-A modular frontend UI system for Unreal Engine 5 built with CommonUI. Handles menus, settings screens, loading states, and key remapping with a clean, data-driven architecture.
+A modular frontend UI framework for Unreal Engine 5 games, built on CommonUI with support for dynamic options, widget stacking, loading screens, and input remapping.
 
-## Features
+## What This Is
 
-- **Dynamic Options System** - Supports scalars, strings, booleans, enums, and resolutions
-- **Widget Stack Management** - Organize UI with gameplay tag-based routing
-- **Async Widget Loading** - Non-blocking UI operations
-- **Loading Screen System** - Automatic loading state management
-- **Key Remapping** - Full input customization for keyboard, mouse, and gamepad
-- **Settings Persistence** - Automatic save/load via GameUserSettings
-- **Edit Conditions** - Options can depend on other settings
+This is a production UI system I built to handle the common patterns you see in modern game frontends - main menus, settings screens, confirmation dialogs, and loading transitions. It's designed to be data-driven so you can add new options without writing a bunch of boilerplate code.
+
+The key idea is separating your data (what the settings actually are) from presentation (how they look) and logic (how they behave). This makes everything easier to maintain and extend.
+
+## Core Features
+
+- **Options system** supporting multiple types (sliders, dropdowns, booleans, enums, resolutions)
+- **Widget stack management** using gameplay tags to organize different UI layers
+- **Async widget loading** so your UI doesn't block the game thread
+- **Loading screen system** with proper state tracking
+- **Key remapping** for keyboard, mouse, and gamepad inputs
+- **Conditional options** that show/hide based on other settings
+- **Settings persistence** through GameUserSettings
 
 ## Architecture
 
-### High-Level Overview
+Here's how the main systems connect:
 
 ```mermaid
 graph TB
@@ -70,7 +76,9 @@ graph TB
     UI --> Widgets
 ```
 
-### Data Flow
+### How Data Flows
+
+Settings changes flow through a clean pipeline from config files to the UI and back:
 
 ```mermaid
 flowchart TD
@@ -83,6 +91,8 @@ flowchart TD
 ```
 
 ### Widget Stack Flow
+
+Widgets load asynchronously so you don't get hitches when opening menus:
 
 ```mermaid
 sequenceDiagram
@@ -104,90 +114,97 @@ sequenceDiagram
     Subsystem->>AsyncAction: Callback(AfterPush)
 ```
 
-## Quick Start
-
-### Requirements
-
-- Unreal Engine 5.0+
-- CommonUI Plugin
-- EnhancedInput Plugin
-
-### Setup
-
-1. Copy `UE5_Frontend_UI` to your project's `Source` directory
-
-2. Add to your `.uproject`:
-```json
-{
-    "Modules": [
-        {
-            "Name": "UE5_Frontend_UI",
-            "Type": "Runtime",
-            "LoadingPhase": "Default"
-        }
-    ]
-}
-```
-
-3. Configure in Project Settings:
-   - Set Game User Settings Class to `FrontendGameUserSettings`
-   - Map widget gameplay tags in Frontend UI Settings
-   - Create Blueprint from `Widget_PrimaryLayout` and set as viewport
-
-## Usage Examples
-
-### Push a Widget
-
-**C++:**
-```cpp
-UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
-    FrontendGameplayTags::Frontend_WidgetStack_Modal,
-    MyWidgetClass,
-    [](EAsyncPushWidgetState State, UWidget_ActivatableBase* Widget) {
-        if (State == EAsyncPushWidgetState::OnCreatedBeforePush) {
-            Cast<UMyWidget>(Widget)->SetupData(MyData);
-        }
-    }
-);
-```
-
-**Blueprint:**
-```cpp
-UAsyncAction_PushSoftWidget::PushSoftWidget(
-    this, PlayerController, WidgetClass, StackTag, true
-);
-```
-
-### Show Confirmation Dialog
-
-```cpp
-UFrontendUISubsystem::Get(this)->PushConfirmScreenToModelStackAsync(
-    EConfirmScreenType::YesNo,
-    FText::FromString("Delete Save"),
-    FText::FromString("Are you sure?"),
-    [](EConfirmScreenButtonType ButtonType) {
-        if (ButtonType == EConfirmScreenButtonType::Confirmed) {
-            DeleteSaveFile();
-        }
-    }
-);
-```
-
-### Create Custom Option
-
-```cpp
-UListDataObject_Scalar* Option = NewObject<UListDataObject_Scalar>();
-Option->SetDataID(FName("Volume"));
-Option->SetDataDisplayName(FText::FromString("Master Volume"));
-Option->SetDisplayValueRange(TRange<float>(0.f, 100.f));
-Option->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetVolume));
-Option->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetVolume));
-```
-
 ## How It Works
 
-The system uses a data-driven approach where UI options are separate from their visual representation. Options are defined as data objects that handle logic and state, while widgets simply display and interact with that data.
+### Widget Stacks
 
-Widget stacks are organized by gameplay tags (Frontend, Modal, GameMenu, GameHud), making it easy to manage different UI layers. Everything loads asynchronously to keep your game responsive.
+Widgets are organized into different stacks using gameplay tags:
 
-Settings automatically persist through the standard GameUserSettings system, and the property path reflection means you rarely need to write binding code manually.
+- `Frontend.WidgetStack.Frontend` - Your main menu screens
+- `Frontend.WidgetStack.Modal` - Pop-ups and confirmation dialogs
+- `Frontend.WidgetStack.GameMenu` - In-game pause menus
+- `Frontend.WidgetStack.GameHud` - HUD overlays
+
+The `UFrontendUISubsystem` manages all of this, and `UWidget_PrimaryLayout` is the root widget that contains everything.
+
+### Options System
+
+Options are built from data objects that inherit from `UListDataObject_Base`. Each type handles its own data:
+
+- **ListDataObject_Scalar** - Float sliders with min/max ranges
+- **ListDataObject_String** - Dropdown menus
+- **ListDataObject_Collection** - Category groupings for tabs
+- **ListDataObject_KeyRemap** - Input binding controls
+
+The neat part is the property path reflection system. Instead of manually wiring up getters and setters, you can do this:
+
+```cpp
+#define MAKE_OPTIONS_DATA_CONTROL(FuncName) \
+    MakeShared<FOptionsDataInteractionHelper>( \
+        GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, FuncName) \
+    )
+
+DataObject->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetVolume));
+DataObject->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetVolume));
+```
+
+This automatically handles type conversion and serialization for you.
+
+### Edit Conditions
+
+Options can depend on other options. For example, you might only want to show V-Sync settings when the player is in fullscreen mode:
+
+```cpp
+FOptionsDataEditConditionDescriptor Condition;
+Condition.SetEditConditionFunc([]() -> bool {
+    return WindowMode == Fullscreen;
+});
+Condition.SetDisabledRichReason("Only available in fullscreen");
+```
+
+### Loading Screens
+
+The loading screen subsystem implements `FTickableGameObject` and tracks multiple loading reasons (map loading, world initialization, texture streaming). It shows the loading screen when any reason is active and hides it when all are cleared.
+
+## Project Structure
+
+```
+Source/UE5_Frontend_UI/
+├── Private/
+│   ├── AsyncActions/          # Async Blueprint nodes
+│   ├── Controllers/           # Player controller implementations
+│   ├── FrontendSettings/      # Config and user settings
+│   ├── Subsystems/            # UI and loading screen subsystems
+│   └── Widgets/
+│       ├── Components/        # Reusable UI components
+│       └── Options/
+│           ├── DataObjects/   # Option data classes
+│           └── ListEntries/   # Option widget classes
+└── Public/                    # Header files
+```
+
+## Dependencies
+
+You'll need these UE5 modules:
+- Core, CoreUObject, Engine, InputCore
+- GameplayTags, UMG
+- CommonUI, CommonInput, EnhancedInput
+- PropertyPath, Slate, SlateCore
+
+Make sure the CommonUI, EnhancedInput, and CommonInput plugins are enabled in your project.
+
+## Design Patterns Used
+
+The code follows some common patterns that make it maintainable:
+
+- **Observer pattern** for data changes (widgets subscribe to updates)
+- **Factory pattern** for creating confirm screens and data objects
+- **Template specialization** for type-safe enum handling
+- **RAII and smart pointers** for proper cleanup
+- **Delegate-based callbacks** for async operations
+
+There's also editor-time validation to catch configuration errors before runtime.
+
+---
+
+Built for UE5 projects that need a solid, extensible frontend UI foundation without reinventing the wheel every time.
