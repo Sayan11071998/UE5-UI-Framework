@@ -1,19 +1,6 @@
 # UE5 Frontend UI System
 
 A comprehensive, modular frontend UI system for Unreal Engine 5 built with CommonUI, featuring advanced options management, dynamic widget stacking, loading screens, and key remapping.
-
-## 📋 Table of Contents
-
-* [Overview]
-* [Features](## ✨ Features)
-* [Architecture](#architecture)
-* [Core Systems](#core-systems)
-* [Code Structure](#code-structure)
-* [Best Practices](#best-practices)
-* [Getting Started](#getting-started)
-* [Usage Examples](#usage-examples)
-* [Dependencies](#dependencies)
-
 ---
 
 ## 🎯 Overview
