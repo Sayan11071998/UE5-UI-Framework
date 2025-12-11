@@ -1,411 +1,201 @@
 # UE5 Frontend UI System
 
-A comprehensive, modular frontend UI system for Unreal Engine 5 built with CommonUI, featuring advanced options management, dynamic widget stacking, loading screens, and key remapping.
----
+A modular frontend UI framework for Unreal Engine 5 built on CommonUI. Handles options menus, widget stack management, loading screens, and input remapping.
 
-## 🎯 Overview
+## What This Is
 
-This system provides a production-ready, scalable frontend UI framework for Unreal Engine 5 games. It implements a data-driven architecture with clear separation of concerns, making it easy to extend and maintain.
+I got tired of rebuilding the same UI infrastructure for every UE5 project, so I made this. It's a reusable system for handling all the annoying parts of game UI: settings screens, widget routing, async loading, and making sure your loading screens actually show up when you need them.
 
-### Key Design Principles
+The core idea is data-driven options. You define your settings once, and the UI builds itself from that data. Want to add a new graphics option? Create a data object, point it at your getter/setter, done.
 
-* **Data-Driven**: Options and UI configurations are defined through data objects
-* **Separation of Concerns**: Clear distinction between data, presentation, and logic
-* **Modularity**: Easy to extend with new option types and widgets
-* **Type Safety**: Strongly typed with C++ templates and enums
-* **Async Operations**: Non-blocking UI operations with async actions
+## Main Features
 
----
+- **Options system** that supports scalars, dropdowns, booleans, and resolution pickers
+- **Widget stack management** using gameplay tags for routing
+- **Async widget loading** so you don't freeze the game loading menus
+- **Loading screen system** that actually works (harder than it sounds)
+- **Key remapping** for keyboard, mouse, and gamepad
+- **Edit conditions** so options can show/hide based on other settings
+- **Confirmation dialogs** (OK, Yes/No, OK/Cancel)
+- **Settings persistence** through GameUserSettings
+- **Tab navigation** for organizing settings into categories
 
-## ✨ Features
+## Why I Built It This Way
 
-* ✅ **Dynamic Options System** with multiple data types (Scalar, String, Boolean, Enum, Resolution)
-* ✅ **Widget Stack Management** with gameplay tag-based routing
-* ✅ **Async Widget Loading** for improved performance
-* ✅ **Custom Loading Screen System** with state management
-* ✅ **Key Remapping** for keyboard, mouse, and gamepad
-* ✅ **Edit Conditions & Dependencies** between options
-* ✅ **Confirm Screens** (OK, Yes/No, OK/Cancel)
-* ✅ **Settings Persistence** via GameUserSettings
-* ✅ **Tab-Based Navigation** for organized settings
-* ✅ **Accessibility Support** with proper focus management
+### Data-Driven Architecture
 
----
-
-## 🏗 Architecture
-
-### High-Level Architecture Diagram
-
-```mermaid
-graph TB
-    subgraph GameInstance["Game Instance"]
-        UI[FrontendUISubsystem<br/>Widget Stack Management<br/>Async Widget Loading]
-        LS[FrontendLoadingScreenSubsystem<br/>Loading Screen Display<br/>Map Loading Detection]
-    end
-    
-    subgraph Widgets["Widget Hierarchy"]
-        PL[Widget_PrimaryLayout]
-        FS[Frontend Stack]
-        MS[Modal Stack]
-        GM[GameMenu Stack]
-        GH[GameHud Stack]
-        
-        PL --> FS
-        PL --> MS
-        PL --> GM
-        PL --> GH
-        
-        FS --> MMS[MainMenuScreen]
-        MS --> CS[ConfirmScreen]
-        MS --> KR[KeyRemapScreen]
-        GM --> OS[OptionsScreen]
-    end
-    
-    subgraph Options["Options System"]
-        OR[OptionsDataRegistry]
-        LDB[ListDataObject_Base]
-        LDC[ListDataObject_Collection]
-        LDV[ListDataObject_Value]
-        LDS[ListDataObject_Scalar]
-        LDST[ListDataObject_String]
-        LDKR[ListDataObject_KeyRemap]
-        
-        WLB[Widget_ListEntry_Base]
-        WLSC[Widget_ListEntry_Scalar]
-        WLST[Widget_ListEntry_String]
-        WLKR[Widget_ListEntry_KeyRemap]
-        
-        OR --> LDB
-        LDB --> LDC
-        LDB --> LDV
-        LDB --> LDKR
-        LDV --> LDS
-        LDV --> LDST
-        
-        WLB --> WLSC
-        WLB --> WLST
-        WLB --> WLKR
-    end
-    
-    UI --> Widgets
-```
-
-### Data Flow Diagram
-
-```mermaid
-flowchart TD
-    A[User Settings<br/>Config File] --> B[FrontendGameUserSettings<br/>Getter/Setter Methods<br/>Property Storage]
-    B --> C[OptionsDataInteractionHelper<br/>PropertyPath Resolution<br/>String Conversion]
-    C --> D[ListDataObject_*<br/>Current Value<br/>Available Options<br/>Edit Conditions]
-    D --> E[Widget_ListEntry_*<br/>Visual Representation<br/>User Interaction]
-    E -->|User Input| D
-    D -->|Save Settings| B
-```
-
-### Widget Stack Flow
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant AsyncAction
-    participant Subsystem
-    participant AssetManager
-    participant WidgetStack
-    participant Widget
-    
-    User->>AsyncAction: Trigger Widget Push
-    AsyncAction->>Subsystem: PushSoftWidgetToStackAsync()
-    Subsystem->>AssetManager: RequestAsyncLoad()
-    AssetManager-->>Subsystem: Widget Class Loaded
-    Subsystem->>WidgetStack: AddWidget()
-    WidgetStack->>Widget: Create Instance
-    Subsystem->>AsyncAction: Callback(BeforePush)
-    WidgetStack->>Widget: Push to Stack
-    Subsystem->>AsyncAction: Callback(AfterPush)
-```
-
----
-
-## 🔧 Core Systems
-
-### 1. Widget Stack Management
-
-The system uses **Gameplay Tags** to organize widgets into logical stacks:
-
-* `Frontend.WidgetStack.Frontend` - Main menu screens
-* `Frontend.WidgetStack.Modal` - Popup dialogs and confirmations
-* `Frontend.WidgetStack.GameMenu` - In-game pause menus
-* `Frontend.WidgetStack.GameHud` - HUD elements
-
-**Key Classes:**
-* `UFrontendUISubsystem` - Central management system
-* `UWidget_PrimaryLayout` - Root widget containing all stacks
-* `UAsyncAction_PushSoftWidget` - Async widget loading
-
-### 2. Options System
-
-#### Data Object Hierarchy
+The old way of doing UI in Unreal is to manually wire up every button and slider. That gets old fast. This system uses data objects to define options, then automatically generates the UI from those definitions.
 
 ```cpp
-UListDataObject_Base (Abstract)
-├── DataID (FName)
-├── DataDisplayName (FText)
-├── DescriptionRichText (FText)
-├── EditConditions (Array)
-└── Dependencies (Array)
+// This is all you need to add a new option
+UListDataObject_Scalar* VolumeOption = NewObject<UListDataObject_Scalar>();
+VolumeOption->SetDataID(FName("MasterVolume"));
+VolumeOption->SetDataDisplayName(FText::FromString("Master Volume"));
+VolumeOption->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetMasterVolume));
+VolumeOption->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetMasterVolume));
 ```
 
-**Specialized Data Objects:**
+The macro `MAKE_OPTIONS_DATA_CONTROL` uses reflection to find your getter/setter functions. It's type-safe at compile time, which saves you from typos and refactoring headaches.
 
-1. **ListDataObject_Scalar** - Float values with ranges
-   * Display/Output range mapping
-   * Step size configuration
-   * Numeric formatting options
+### Widget Stack Tags
 
-2. **ListDataObject_String** - Dropdown selections
-   * Dynamic option population
-   * Display text separate from value
-   * Support for enum wrappers
+Instead of hardcoding widget relationships, I use gameplay tags to organize them:
 
-3. **ListDataObject_Collection** - Category/tab grouping
-   * Hierarchical organization
-   * Child data management
+- `Frontend.WidgetStack.Frontend` - Main menu stuff
+- `Frontend.WidgetStack.Modal` - Popups and dialogs
+- `Frontend.WidgetStack.GameMenu` - Pause menus
+- `Frontend.WidgetStack.GameHud` - HUD elements
 
-4. **ListDataObject_KeyRemap** - Input binding
-   * Enhanced Input System integration
-   * Per-input-device configurations
-   * Reset to default support
+This makes it easy to push/pop widgets without tight coupling. Want to show a confirmation dialog? Just push it to the Modal stack. The system handles focus, input mode, and cleanup automatically.
 
-#### Edit Conditions System
+### Async Everything
 
-Options can have **conditional visibility/editability**:
+Loading widgets synchronously is a great way to get hitches. This system loads everything async by default:
 
 ```cpp
-FOptionsDataEditConditionDescriptor Condition;
-Condition.SetEditConditionFunc([]() -> bool {
-    return WindowMode == Fullscreen;
-});
-Condition.SetDisabledRichReason("Only available in fullscreen");
-Condition.SetDisabledForcedStringValue("DefaultValue");
-```
-
-### 3. Data-Driven Configuration
-
-The system uses **property path reflection** to dynamically bind UI to settings:
-
-```cpp
-#define MAKE_OPTIONS_DATA_CONTROL(FuncName) \
-    MakeShared<FOptionsDataInteractionHelper>( \
-        GET_FUNCTION_NAME_STRING_CHECKED(UFrontendGameUserSettings, FuncName) \
-    )
-
-// Usage
-DataObject->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetVolume));
-DataObject->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetVolume));
-```
-
-This approach:
-* ✅ Eliminates manual binding code
-* ✅ Type-safe at compile time
-* ✅ Automatically handles serialization
-* ✅ Easy to add new options
-
-### 4. Loading Screen System
-
-**Components:**
-* `UFrontendLoadingScreenSubsystem` - State management
-* `FTickableGameObject` - Frame-by-frame updates
-* Map load detection via delegates
-* Texture streaming monitoring
-
-**Loading Reasons Tracked:**
-* Level loading
-* World initialization
-* Player controller creation
-* Texture streaming
-
-### 5. Async Actions (Blueprint Nodes)
-
-Custom async Blueprint nodes for common operations:
-
-```cpp
-// Push widget asynchronously
-UAsyncAction_PushSoftWidget::PushSoftWidget(
-    WorldContext, PlayerController, WidgetClass, StackTag
-);
-
-// Show confirmation dialog
-UAsyncAction_PushConfirmScreen::PushConfirmScreen(
-    WorldContext, ScreenType, Title, Message
-);
-```
-
----
-
-## 📁 Code Structure
-
-```
-UE5_Frontend_UI/
-├── Source/
-│   └── UE5_Frontend_UI/
-│       ├── Private/
-│       │   ├── AsyncActions/
-│       │   │   ├── AsyncAction_PushConfirmScreen.cpp
-│       │   │   └── AsyncAction_PushSoftWidget.cpp
-│       │   ├── Controllers/
-│       │   │   └── FrontendPlayerController.cpp
-│       │   ├── FrontendSettings/
-│       │   │   ├── FrontendDeveloperSettings.cpp
-│       │   │   ├── FrontendGameUserSettings.cpp
-│       │   │   └── FrontendLoadingScreenSettings.cpp
-│       │   ├── Subsystems/
-│       │   │   ├── FrontendLoadingScreenSubsystem.cpp
-│       │   │   └── FrontendUISubsystem.cpp
-│       │   ├── Widgets/
-│       │   │   ├── Components/
-│       │   │   │   ├── FrontendCommonButtonBase.cpp
-│       │   │   │   ├── FrontendCommonListView.cpp
-│       │   │   │   ├── FrontendCommonRotator.cpp
-│       │   │   │   └── FrontendTabListWidgetBase.cpp
-│       │   │   ├── Options/
-│       │   │   │   ├── DataObjects/
-│       │   │   │   │   ├── ListDataObject_Base.cpp
-│       │   │   │   │   ├── ListDataObject_Collection.cpp
-│       │   │   │   │   ├── ListDataObject_KeyRemap.cpp
-│       │   │   │   │   ├── ListDataObject_Scalar.cpp
-│       │   │   │   │   ├── ListDataObject_String.cpp
-│       │   │   │   │   ├── ListDataObject_StringResolution.cpp
-│       │   │   │   │   └── ListDataObject_Value.cpp
-│       │   │   │   ├── ListEntries/
-│       │   │   │   │   ├── Widget_ListEntry_Base.cpp
-│       │   │   │   │   ├── Widget_ListEntry_KeyRemap.cpp
-│       │   │   │   │   ├── Widget_ListEntry_Scalar.cpp
-│       │   │   │   │   └── Widget_ListEntry_String.cpp
-│       │   │   │   ├── OptionsDataInteractionHelper.cpp
-│       │   │   │   ├── OptionsDataRegistry.cpp
-│       │   │   │   ├── Widget_KeyRemapScreen.cpp
-│       │   │   │   ├── Widget_OptionsDetailsView.cpp
-│       │   │   │   └── Widget_OptionsScreen.cpp
-│       │   │   ├── Widget_ActivatableBase.cpp
-│       │   │   ├── Widget_ConfirmScreen.cpp
-│       │   │   └── Widget_PrimaryLayout.cpp
-│       │   ├── FrontendFunctionLibrary.cpp
-│       │   └── FrontendGameplayTags.cpp
-│       └── Public/
-│           └── [Corresponding Headers]
-```
-
----
-
-## 🎨 Best Practices
-
-### 1. Separation of Concerns
-
-```cpp
-// ✅ GOOD: Data separate from presentation
-class UListDataObject_Scalar : public UListDataObject_Value {
-    float GetCurrentValue() const;
-    void SetCurrentValueFromSlider(float NewValue);
-};
-
-class UWidget_ListEntry_Scalar : public UWidget_ListEntry_Base {
-    void OnOwningListDataObjectSet(UListDataObject_Base* DataObject);
-    void OnOwningListDataObjectModified(/* ... */);
-};
-```
-
-### 2. Factory Pattern for Object Creation
-
-```cpp
-// Confirm screen factory methods
-UConfirmScreenInfoObject::CreateOKScreen(Title, Message);
-UConfirmScreenInfoObject::CreateYesNoScreen(Title, Message);
-UConfirmScreenInfoObject::CreateOkCancelScreen(Title, Message);
-```
-
-### 3. Observer Pattern for Updates
-
-```cpp
-// Data objects notify listeners of changes
-DECLARE_MULTICAST_DELEGATE_TwoParams(FOnListDataModifiedDelegate, 
-    TObjectPtr<UListDataObject_Base>, EOptionsListDataModifyReason)
-
-// Widgets subscribe to data changes
-DataObject->OnListDataModified.AddUObject(
-    this, &UWidget_ListEntry_Base::OnOwningListDataObjectModified
-);
-```
-
-### 4. Template Specialization
-
-```cpp
-// Type-safe enum options
-template<typename EnumType>
-void AddEnumOption(EnumType InEnumOption, const FText& InDisplayText) {
-    const UEnum* StaticEnumOption = StaticEnum<EnumType>();
-    const FString ConvertedEnumString = 
-        StaticEnumOption->GetNameStringByValue(InEnumOption);
-    AddDynamicOption(ConvertedEnumString, InDisplayText);
-}
-```
-
-### 5. RAII and Smart Pointers
-
-```cpp
-// Proper cleanup in input processor
-void UWidget_KeyRemapScreen::NativeOnDeactivated() {
-    if (CachedInputPreprocessor) {
-        FSlateApplication::Get().UnregisterInputPreProcessor(
-            CachedInputPreprocessor
-        );
-        CachedInputPreprocessor.Reset();
-    }
-}
-```
-
-### 6. Delegate-Based Callbacks
-
-```cpp
-// Async operations with callbacks
-PushSoftWidgetToStackAsync(
-    StackTag, WidgetClass,
+UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
+    FrontendGameplayTags::Frontend_WidgetStack_Modal,
+    MyWidgetClass,
     [](EAsyncPushWidgetState State, UWidget_ActivatableBase* Widget) {
         if (State == EAsyncPushWidgetState::OnCreatedBeforePush) {
-            // Initialize widget before push
+            // Initialize widget data here
         }
     }
 );
 ```
 
-### 7. Validation and Error Checking
+The callback fires at different stages so you can configure the widget before it appears.
 
-```cpp
-// Editor-time validation
-#if WITH_EDITOR
-void ValidateCompiledDefaults(IWidgetCompilerLog& CompileLog) const override {
-    if (!DataListEntryMapping) {
-        CompileLog.Error(FText::FromString(
-            "DataListEntryMapping has no valid data asset assigned"
-        ));
-    }
-}
-#endif
+## Architecture Overview
+
+Here's how the pieces fit together:
+
+```mermaid
+graph TB
+    subgraph GameInstance
+        UI[FrontendUISubsystem]
+        LS[FrontendLoadingScreenSubsystem]
+    end
+    
+    subgraph Widgets
+        PL[Widget_PrimaryLayout]
+        FS[Frontend Stack]
+        MS[Modal Stack]
+        
+        PL --> FS
+        PL --> MS
+        
+        FS --> MMS[MainMenuScreen]
+        MS --> CS[ConfirmScreen]
+        MS --> OS[OptionsScreen]
+    end
+    
+    subgraph Options
+        OR[OptionsDataRegistry]
+        LDB[ListDataObject_Base]
+        LDV[ListDataObject_Value]
+        LDS[ListDataObject_Scalar]
+        
+        WLB[Widget_ListEntry_Base]
+        WLSC[Widget_ListEntry_Scalar]
+        
+        OR --> LDB
+        LDB --> LDV
+        LDV --> LDS
+        
+        WLB --> WLSC
+    end
+    
+    UI --> Widgets
 ```
 
----
+The `FrontendUISubsystem` manages all widget operations. It sits in the GameInstance, so it persists across level loads. The `Widget_PrimaryLayout` is the root widget that contains all your stacks.
 
-## 🚀 Getting Started
+## How Options Work
 
-### Prerequisites
+Options use an observer pattern. Data objects hold the actual values, and widgets observe those objects for changes:
 
-* Unreal Engine 5.0+
-* CommonUI Plugin enabled
-* EnhancedInput Plugin enabled
+1. User moves a slider
+2. Widget calls `DataObject->SetCurrentValue()`
+3. Data object updates and broadcasts a change event
+4. All listening widgets update their display
+5. Data object saves to `GameUserSettings`
 
-### Installation
+This decouples the UI from the data. You can have multiple widgets showing the same option, and they all stay in sync.
 
-1. Copy the `UE5_Frontend_UI` folder to your project's `Source` directory
-2. Add the module to your `.uproject` file:
+### Edit Conditions
+
+Options can be conditional. For example, "VSync" only makes sense in fullscreen mode:
+
+```cpp
+FOptionsDataEditConditionDescriptor Condition;
+Condition.SetEditConditionFunc([WindowModeOption]() -> bool {
+    return WindowModeOption->GetCurrentValue() == "Fullscreen";
+});
+Condition.SetDisabledRichReason("Only available in fullscreen mode");
+
+VSyncOption->AddEditCondition(Condition);
+VSyncOption->AddEditDependencyData(WindowModeOption);
+```
+
+When the window mode changes, VSync automatically enables/disables itself. The reason text shows up in a tooltip.
+
+## Loading Screen System
+
+Getting loading screens to work properly in UE5 is surprisingly annoying. The `FrontendLoadingScreenSubsystem` handles this by:
+
+- Listening for map load events
+- Monitoring texture streaming
+- Tracking world initialization
+- Using a `FTickableGameObject` to update per-frame
+
+It shows the loading screen when any of these conditions are active, and hides it when they're all done. This catches edge cases like late-streaming textures that would otherwise show a black screen.
+
+## Code Structure
+
+```
+UE5_Frontend_UI/
+├── Private/
+│   ├── AsyncActions/
+│   │   ├── AsyncAction_PushConfirmScreen.cpp
+│   │   └── AsyncAction_PushSoftWidget.cpp
+│   ├── FrontendSettings/
+│   │   ├── FrontendGameUserSettings.cpp
+│   │   └── FrontendLoadingScreenSettings.cpp
+│   ├── Subsystems/
+│   │   ├── FrontendLoadingScreenSubsystem.cpp
+│   │   └── FrontendUISubsystem.cpp
+│   ├── Widgets/
+│   │   ├── Options/
+│   │   │   ├── DataObjects/
+│   │   │   │   ├── ListDataObject_Base.cpp
+│   │   │   │   ├── ListDataObject_Scalar.cpp
+│   │   │   │   ├── ListDataObject_String.cpp
+│   │   │   │   └── ListDataObject_KeyRemap.cpp
+│   │   │   └── ListEntries/
+│   │   │       ├── Widget_ListEntry_Base.cpp
+│   │   │       ├── Widget_ListEntry_Scalar.cpp
+│   │   │       └── Widget_ListEntry_String.cpp
+│   │   ├── Widget_ConfirmScreen.cpp
+│   │   └── Widget_PrimaryLayout.cpp
+│   └── FrontendGameplayTags.cpp
+└── Public/
+    └── [Headers]
+```
+
+## Getting Started
+
+### Requirements
+
+- Unreal Engine 5.0+
+- CommonUI plugin
+- EnhancedInput plugin
+
+### Setup
+
+1. Copy `UE5_Frontend_UI` to your project's `Source` directory
+
+2. Add to your `.uproject`:
 
 ```json
 {
@@ -421,46 +211,41 @@ void ValidateCompiledDefaults(IWidgetCompilerLog& CompileLog) const override {
 
 3. Regenerate project files and compile
 
-### Configuration
+4. In Project Settings → Game, set Game User Settings Class to `FrontendGameUserSettings`
 
-1. **Set Game User Settings Class**
-   * Project Settings → Game → Game User Settings Class
-   * Set to `FrontendGameUserSettings`
+5. Create a Blueprint based on `Widget_PrimaryLayout` and add it to your viewport
 
-2. **Configure Widget Mappings**
-   * Project Settings → Frontend UI Settings
-   * Map Gameplay Tags to Widget Classes
+## Usage Examples
 
-3. **Setup Primary Layout**
-   * Create Blueprint based on `Widget_PrimaryLayout`
-   * Register widget stacks with appropriate tags
-   * Set as viewport in GameMode or PlayerController
-
----
-
-## 📖 Usage Examples
-
-### Creating a Custom Option
+### Adding a Custom Option
 
 ```cpp
-// In OptionsDataRegistry
 UListDataObject_Scalar* CustomOption = NewObject<UListDataObject_Scalar>();
 CustomOption->SetDataID(FName("MyOption"));
 CustomOption->SetDataDisplayName(FText::FromString("My Custom Option"));
 CustomOption->SetDisplayValueRange(TRange<float>(0.f, 100.f));
 CustomOption->SetOutputValueRange(TRange<float>(0.f, 1.f));
-CustomOption->SetDataDynamicGetter(
-    MAKE_OPTIONS_DATA_CONTROL(GetMyCustomValue)
-);
-CustomOption->SetDataDynamicSetter(
-    MAKE_OPTIONS_DATA_CONTROL(SetMyCustomValue)
-);
+CustomOption->SetDataDynamicGetter(MAKE_OPTIONS_DATA_CONTROL(GetMyCustomValue));
+CustomOption->SetDataDynamicSetter(MAKE_OPTIONS_DATA_CONTROL(SetMyCustomValue));
 CustomOption->SetDefaultValueFromString(LexToString(50.f));
 ```
 
-### Pushing a Widget to Stack
+### Showing a Confirmation Dialog
 
-**C++ Async:**
+```cpp
+UFrontendUISubsystem::Get(this)->PushConfirmScreenToModelStackAsync(
+    EConfirmScreenType::YesNo,
+    FText::FromString("Delete Save"),
+    FText::FromString("Are you sure?"),
+    [](EConfirmScreenButtonType ButtonType) {
+        if (ButtonType == EConfirmScreenButtonType::Confirmed) {
+            DeleteSaveFile();
+        }
+    }
+);
+```
+
+### Pushing a Widget Async (C++)
 
 ```cpp
 UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
@@ -468,122 +253,61 @@ UFrontendUISubsystem::Get(this)->PushSoftWidgetToStackAsync(
     MyWidgetClass,
     [](EAsyncPushWidgetState State, UWidget_ActivatableBase* Widget) {
         if (State == EAsyncPushWidgetState::OnCreatedBeforePush) {
-            // Configure widget before showing
             Cast<UMyWidget>(Widget)->SetupData(MyData);
         }
     }
 );
 ```
 
-**Blueprint:**
+### Pushing a Widget Async (Blueprint)
 
-```cpp
-UAsyncAction_PushSoftWidget* Action = UAsyncAction_PushSoftWidget::PushSoftWidget(
-    this, PlayerController, WidgetClass, StackTag, true
-);
-Action->OnWidgetCreatedBeforePush.AddDynamic(this, &AMyClass::OnWidgetCreated);
-Action->Activate();
-```
+Use the `PushSoftWidget` async action node. It has callbacks for different stages of the widget lifecycle.
 
-### Showing Confirmation Dialog
+## Things to Watch Out For
 
-```cpp
-UFrontendUISubsystem::Get(this)->PushConfirmScreenToModelStackAsync(
-    EConfirmScreenType::YesNo,
-    FText::FromString("Delete Save"),
-    FText::FromString("Are you sure you want to delete this save file?"),
-    [](EConfirmScreenButtonType ButtonType) {
-        if (ButtonType == EConfirmScreenButtonType::Confirmed) {
-            // User clicked Yes
-            DeleteSaveFile();
-        }
-    }
-);
-```
+### Property Path Reflection
 
-### Adding Edit Dependencies
+The `MAKE_OPTIONS_DATA_CONTROL` macro uses reflection to find getter/setter functions. This means:
 
-```cpp
-UListDataObject_String* OptionA = NewObject<UListDataObject_String>();
-UListDataObject_Scalar* OptionB = NewObject<UListDataObject_Scalar>();
+- Function names must match exactly (case-sensitive)
+- Functions must be `UFUNCTION()` marked
+- Renaming functions will break at runtime, not compile time
 
-// OptionB depends on OptionA
-FOptionsDataEditConditionDescriptor Condition;
-Condition.SetEditConditionFunc([OptionA]() -> bool {
-    return OptionA->GetCurrentDisplayText().ToString() == "Enabled";
-});
-Condition.SetDisabledRichReason(
-    "<Disabled>This option requires OptionA to be Enabled</>"
-);
+I've considered switching to a delegate-based approach, but the convenience of the macro outweighs the slight brittleness for now.
 
-OptionB->AddEditCondition(Condition);
-OptionB->AddEditDependencyData(OptionA);
-```
+### Loading Screen Timing
 
----
+The loading screen subsystem is pretty robust, but it can have issues if you manually call `OpenLevel` in unusual ways. It expects the standard `UGameplayStatics::OpenLevel` flow. If you're doing custom map loading, you might need to manually trigger `ShowLoadingScreen()`.
 
-## 📦 Dependencies
+### Widget Stack Lifecycle
 
-### Unreal Engine Modules
+CommonUI's activatable widget system has specific lifecycle expectations. Make sure you're calling `ActivateWidget()` and `DeactivateWidget()` properly, especially if you're manually managing widgets instead of using the stack system.
 
-```cpp
-PublicDependencyModuleNames.AddRange(new string[]
-{
-    "Core",
-    "CoreUObject",
-    "Engine",
-    "InputCore",
-    "GameplayTags",
-    "UMG",
-    "CommonInput",
-    "CommonUI",
-    "PropertyPath",
-    "EnhancedInput",
-    "PreLoadScreen",
-    "Slate",
-    "SlateCore"
-});
-```
+## Dependencies
 
-### Plugins Required
+The system requires these Unreal modules:
 
-* CommonUI
-* EnhancedInput
-* CommonInput
+- Core, CoreUObject, Engine (standard)
+- GameplayTags (for stack routing)
+- UMG, Slate, SlateCore (UI)
+- CommonUI, CommonInput (UI framework)
+- EnhancedInput (input system)
+- PropertyPath (reflection)
+- PreLoadScreen (loading screen API)
 
----
+Make sure CommonUI and EnhancedInput plugins are enabled in your project.
 
-## 🔍 Advanced Topics
+## What I'd Do Differently
 
-### Custom List Entry Widget
+If I were starting from scratch today:
 
-1. Create data object class inheriting from `UListDataObject_Base`
-2. Create widget class inheriting from `UWidget_ListEntry_Base`
-3. Map them in `DataAsset_DataListEntryMapping`
-4. Override `OnOwningListDataObjectSet()` to bind data
+- **Use Enhanced Input Actions directly** instead of wrapping them. The current key remap system works but adds a layer of indirection.
+- **Better separation of settings storage**. Right now everything goes through `GameUserSettings`, which can get messy. A separate config system might be cleaner.
+- **More granular callbacks** for widget lifecycle events. The current system is a bit coarse.
+- **Better error messages**. When you misconfigure something, the errors aren't always helpful.
 
-### Input Preprocessing
+That said, the system works well for what it does. It's saved me a ton of time across multiple projects.
 
-The key remap screen uses custom input preprocessing:
+## License
 
-```cpp
-class FKeyRemapScreenInputPreprocessor : public IInputProcessor {
-    virtual bool HandleKeyDownEvent(FSlateApplication&, const FKeyEvent&);
-    virtual bool HandleMouseButtonDownEvent(FSlateApplication&, const FPointerEvent&);
-    
-    // Filters input by device type
-    // Validates against gameplay requirements
-    // Handles cancellation (ESC key)
-};
-```
-
-### Subsystem Pattern
-
-Both `UFrontendUISubsystem` and `UFrontendLoadingScreenSubsystem` implement:
-
-```cpp
-virtual bool ShouldCreateSubsystem(UObject* Outer) const override {
-    // Only create in non-dedicated server instances
-    // Ensure no derived classes exist (singleton pattern)
-}
-```
+Do whatever you want with this code. Attribution appreciated but not required.
